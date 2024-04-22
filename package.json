@@ -12,8 +12,8 @@
     "prepare": "husky",
     "format": "prettier --ignore-unknown **/*",
     "format:write": "prettier --write --ignore-unknown **/*",
-    "stylelint:all": "stylelint **/*.{css,scss}",
-    "stylelint:all::fix": "stylelint **/*.{css,scss} --fix"
+    "stylelint": "stylelint **/*.{css,scss}",
+    "stylelint:fix": "stylelint **/*.{css,scss} --fix"
   },
   "private": true,
   "dependencies": {
