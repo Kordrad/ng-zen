@@ -8,7 +8,6 @@
 
 # Node
 /node_modules
-/**/node_modules/*
 npm-debug.log
 yarn-error.log
 
@@ -37,9 +36,13 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-/.nx
-/.nx/*
+.nx
 
 # System files
 .DS_Store
 Thumbs.db
+
+
+# Other
+
+src/index.html
