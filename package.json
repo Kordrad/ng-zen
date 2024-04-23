@@ -5,16 +5,17 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build:watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:watch": "ng test --watch",
     "lint": "ng lint",
-    "prepare": "husky",
+    "lint:fix": "ng lint --fix",
     "format": "prettier --ignore-unknown **/*",
     "format:write": "prettier --write --ignore-unknown **/*",
     "stylelint": "stylelint **/*.{css,scss}",
+    "stylelint:fix": "stylelint **/*.{css,scss} --fix",
     "performance": "npx oxlint -D correctness -D perf --deny-warnings",
-    "stylelint:fix": "stylelint **/*.{css,scss} --fix"
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {

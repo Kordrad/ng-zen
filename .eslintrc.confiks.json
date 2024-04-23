@@ -1,5 +1,4 @@
 {
-  "ignorePatterns": ["**/*"],
   "plugins": ["unused-imports", "simple-import-sort", "prettier", "unicorn"],
   "overrides": [
     {
