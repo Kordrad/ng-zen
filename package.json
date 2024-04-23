@@ -58,7 +58,7 @@
     "oxlint": "^0.3.1",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-attributes": "^1.0.0",
-    "stylelint": "^16.3.1",
+    "stylelint": "^16.4.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "~5.4.2"
   }
