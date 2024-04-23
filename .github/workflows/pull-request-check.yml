@@ -1,0 +1,76 @@
+name: Check pull request
+
+on:
+  pull_request:
+    branches: [master, develop]
+
+env:
+  NODE_VERSION: 18
+  RETENTION_DAYS: 30
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - run: npm ci
+      - run: npm run lint
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lint-report
+          path: lint-report/
+          retention-days: ${{env.RETENTION_DAYS}}
+
+  performance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - run: npm ci
+      - run: npm run performance
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: performance-report
+          path: performance-report/
+          retention-days: ${{env.RETENTION_DAYS}}
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - run: npm ci
+      - run: npm run test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-report
+          path: test-report/
+          retention-days: ${{env.RETENTION_DAYS}}
+
+  build:
+    needs: [lint, performance, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-report
+          path: build-report/
+          retention-days: ${{env.RETENTION_DAYS}}
+
