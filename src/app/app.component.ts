@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { KitComponent } from '@zen-hubs/ng-zen/lib/kit.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, KitComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
