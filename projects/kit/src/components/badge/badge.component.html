@@ -1,0 +1,10 @@
+<div style="color: black">
+  @if (badgeTemplate()) {
+    <ng-container *ngTemplateOutlet="badgeTemplate()" />
+  } @else if (badge()) {
+    xDD
+    {{ badge() }}
+  }
+</div>
+
+<ng-content />

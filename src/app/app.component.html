@@ -268,7 +268,13 @@
           ];
           track item.title
         ) {
-          <a class="pill" [href]="item.link" target="_blank" rel="noopener">
+          <a
+            class="pill"
+            [href]="item.link"
+            [zenBadge]="123"
+            target="_blank"
+            rel="noopener"
+          >
             <span>{{ item.title }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -286,6 +292,7 @@
       </div>
       <div class="social-links">
         <a
+          zenBadge
           href="https://github.com/angular/angular"
           aria-label="Github"
           target="_blank"
