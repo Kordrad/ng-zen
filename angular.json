@@ -10,7 +10,7 @@
     }
   },
   "projects": {
-    "ng-zen": {
+    "app": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -109,7 +109,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "configPath": "projects/kit/jest.config.ts"
+            "configPath": "./jest.config.ts"
           }
         },
         "lint": {
