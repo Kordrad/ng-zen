@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'zen-badge',
+  selector: 'zen-badge,[zenBadge]',
   standalone: true,
   template: `
     <ng-content select="[topRight]" />

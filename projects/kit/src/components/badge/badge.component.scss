@@ -2,7 +2,8 @@
   --zen-badge-position: -5px;
 }
 
-zen-badge {
+zen-badge,
+[zenBadge] {
   display: inline-flex;
   position: relative;
 
