@@ -10,7 +10,7 @@
     }
   },
   "projects": {
-    "app": {
+    "ng-zen": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
