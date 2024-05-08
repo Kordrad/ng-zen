@@ -15,7 +15,9 @@
     "stylelint": "stylelint **/*.{css,scss}",
     "stylelint:fix": "stylelint **/*.{css,scss} --fix",
     "performance": "npx oxlint -D correctness -D perf --deny-warnings",
-    "prepare": "husky"
+    "prepare": "husky",
+    "app:test": "ng test app",
+    "kit:test": "ng test kit"
   },
   "private": true,
   "dependencies": {
@@ -55,6 +57,7 @@
     "jasmine-core": "~5.1.0",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.2",
+    "ng-packagr": "^17.3.0",
     "oxlint": "^0.3.1",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-attributes": "^1.0.0",
