@@ -14,7 +14,7 @@ import {
     <ng-content select="[bottomLeft]" />
     <ng-content />
   `,
-  styleUrls: ['./badge.component.scss'],
+  styleUrl: './badge.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
