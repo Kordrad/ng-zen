@@ -1,0 +1,35 @@
+:root {
+  --zen-badge-position: -5px;
+}
+
+zen-badge {
+  display: inline-flex;
+  position: relative;
+
+  [topRight],
+  [topLeft],
+  [bottomRight],
+  [bottomLeft] {
+    position: absolute;
+  }
+
+  [topRight] {
+    top: var(--zen-badge-position);
+    right: var(--zen-badge-position);
+  }
+
+  [topLeft] {
+    top: var(--zen-badge-position);
+    left: var(--zen-badge-position);
+  }
+
+  [bottomRight] {
+    bottom: var(--zen-badge-position);
+    right: var(--zen-badge-position);
+  }
+
+  [bottomLeft] {
+    bottom: var(--zen-badge-position);
+    left: var(--zen-badge-position);
+  }
+}
