@@ -1,5 +1,7 @@
 :root {
-  --zen-badge-position: -5px;
+  --zen-badge-offset: unset;
+  --zen-badge-offset-x: unset;
+  --zen-badge-offset-y: unset;
 }
 
 zen-badge,
@@ -7,30 +9,62 @@ zen-badge,
   display: inline-flex;
   position: relative;
 
-  [topRight],
   [topLeft],
+  [top],
+  [topRight],
+  [right],
   [bottomRight],
-  [bottomLeft] {
+  [bottom],
+  [bottomLeft],
+  [left] {
     position: absolute;
   }
 
-  [topRight] {
-    top: var(--zen-badge-position);
-    right: var(--zen-badge-position);
+  [topLeft] {
+    top: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    left: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    transform: translateY(-50%) translateX(-50%);
   }
 
-  [topLeft] {
-    top: var(--zen-badge-position);
-    left: var(--zen-badge-position);
+  [top] {
+    top: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  [topRight] {
+    top: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    right: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  [right] {
+    right: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
   }
 
   [bottomRight] {
-    bottom: var(--zen-badge-position);
-    right: var(--zen-badge-position);
+    bottom: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    right: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    transform: translateY(50%) translateX(50%);
+  }
+
+  [bottom] {
+    bottom: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
   }
 
   [bottomLeft] {
-    bottom: var(--zen-badge-position);
-    left: var(--zen-badge-position);
+    bottom: var(--zen-badge-offset-y, calc(var(--zen-badge-offset, 0px) * -1));
+    left: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    transform: translateY(50%) translateX(-50%);
+  }
+
+  [left] {
+    left: var(--zen-badge-offset-x, calc(var(--zen-badge-offset, 0px) * -1));
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
   }
 }
