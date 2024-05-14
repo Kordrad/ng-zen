@@ -16,7 +16,6 @@
     "stylelint:fix": "stylelint **/*.{css,scss} --fix",
     "performance": "npx oxlint -D correctness -D perf --deny-warnings",
     "prepare": "husky",
-    "app:test": "ng test app",
     "kit:test": "ng test kit"
   },
   "private": true,
