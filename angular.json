@@ -45,6 +45,26 @@
               "projects/kit/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/kit/.storybook",
+            "browserTarget": "kit:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/kit/.storybook",
+            "browserTarget": "kit:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
+            "outputDir": "storybook-static"
+          }
         }
       },
       "schematics": {

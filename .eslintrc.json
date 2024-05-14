@@ -40,5 +40,5 @@
       }
     }
   ],
-  "extends": ["./.eslintrc.confiks.json"]
+  "extends": ["./.eslintrc.confiks.json", "plugin:storybook/recommended"]
 }
