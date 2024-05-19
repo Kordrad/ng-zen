@@ -1,0 +1,193 @@
+{
+  "pipes": [],
+  "interfaces": [],
+  "injectables": [],
+  "guards": [],
+  "interceptors": [],
+  "classes": [],
+  "directives": [],
+  "components": [
+    {
+      "name": "ZenBadgeComponent",
+      "id": "component-ZenBadgeComponent-7de9fec261066c4b398a785c938cb125d60c028fe87be97fd104343eb8eb1a22e4a8fb2f5e83c16a31f11277bc15f0f346b25856864c43562ca66d43e9a706c9",
+      "file": "projects/kit/src/components/badge/badge.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": ["ViewEncapsulation.None"],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "zen-badge,[zenBadge]",
+      "styleUrls": [],
+      "styles": [],
+      "template": "<ng-content select=\"[topLeft]\" />\n<ng-content select=\"[top]\" />\n<ng-content select=\"[topRight]\" />\n<ng-content select=\"[left]\" />\n<ng-content select=\"[right]\" />\n<ng-content select=\"[bottomLeft]\" />\n<ng-content select=\"[bottom]\" />\n<ng-content select=\"[bottomRight]\" />\n<ng-content />\n",
+      "templateUrl": [],
+      "viewProviders": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning:</p>\n<ul>\n<li>--zen-badge-offset: Controls the overall offset of the badge. Default is &#39;unset&#39;.</li>\n<li>--zen-badge-offset-x: Controls the horizontal offset of the badge. Default is &#39;unset&#39;.</li>\n<li>--zen-badge-offset-y: Controls the vertical offset of the badge. Default is &#39;unset&#39;.</li>\n</ul>\n",
+      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning:\n  - --zen-badge-offset: Controls the overall offset of the badge. Default is 'unset'.\n  - --zen-badge-offset-x: Controls the horizontal offset of the badge. Default is 'unset'.\n  - --zen-badge-offset-y: Controls the vertical offset of the badge. Default is 'unset'.\n\n\n",
+      "type": "component",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\n * in various positions within its parent container. It allows for flexible placement\n * of badge content such as icons, text, or other elements in the top-left, top,\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\n *\n * This component offers standalone usage and is highly customizable through its\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\n * for optimal performance.\n *\n * Additionally, it provides support for CSS variables to customize badge positioning:\n *   - --zen-badge-offset: Controls the overall offset of the badge. Default is 'unset'.\n *   - --zen-badge-offset-x: Controls the horizontal offset of the badge. Default is 'unset'.\n *   - --zen-badge-offset-y: Controls the vertical offset of the badge. Default is 'unset'.\n *\n *\n * @summary ZenBadgeComponent: Angular component for flexible badge placement, standalone usage, and CSS variable support for easy customization.\n */\n@Component({\n  selector: 'zen-badge,[zenBadge]',\n  standalone: true,\n  template: `\n    <ng-content select=\"[topLeft]\" />\n    <ng-content select=\"[top]\" />\n    <ng-content select=\"[topRight]\" />\n    <ng-content select=\"[left]\" />\n    <ng-content select=\"[right]\" />\n    <ng-content select=\"[bottomLeft]\" />\n    <ng-content select=\"[bottom]\" />\n    <ng-content select=\"[bottomRight]\" />\n    <ng-content />\n  `,\n  styleUrl: './badge.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenBadgeComponent {}\n",
+      "styleUrl": "./badge.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": ""
+    }
+  ],
+  "modules": [],
+  "miscellaneous": {
+    "variables": [
+      {
+        "name": "Attribute",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/kit/src/components/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+      },
+      {
+        "name": "Component",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/kit/src/components/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+      },
+      {
+        "name": "preview",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/kit/.storybook/preview.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Preview",
+        "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n  /*  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },*/\n}"
+      }
+    ],
+    "functions": [],
+    "typealiases": [
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenBadgeComponent>",
+        "file": "projects/kit/src/components/badge/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 177
+      }
+    ],
+    "enumerations": [],
+    "groupedVariables": {
+      "projects/kit/src/components/badge/badge.stories.ts": [
+        {
+          "name": "Attribute",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/kit/src/components/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+        },
+        {
+          "name": "Component",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/kit/src/components/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+        }
+      ],
+      "projects/kit/.storybook/preview.ts": [
+        {
+          "name": "preview",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/kit/.storybook/preview.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Preview",
+          "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n  /*  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },*/\n}"
+        }
+      ]
+    },
+    "groupedFunctions": {},
+    "groupedEnumerations": {},
+    "groupedTypeAliases": {
+      "projects/kit/src/components/badge/badge.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenBadgeComponent>",
+          "file": "projects/kit/src/components/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 177
+        }
+      ]
+    }
+  },
+  "routes": [],
+  "coverage": {
+    "count": 25,
+    "status": "low",
+    "files": [
+      {
+        "filePath": "projects/kit/.storybook/preview.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "preview",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/kit/src/components/badge/badge.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenBadgeComponent",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "projects/kit/src/components/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Attribute",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/kit/src/components/badge/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Component",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      }
+    ]
+  }
+}
