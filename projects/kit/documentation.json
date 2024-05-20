@@ -76,7 +76,7 @@
     },
     {
       "name": "ZenBadgeComponent",
-      "id": "component-ZenBadgeComponent-63e17e89a0bd0566a375c88c25ab08204d7737168acb435f9fe96d02a40c152e5505da9e9e07336329fcc47b2393f1221e819e250fb69679f318d03484c86b1d",
+      "id": "component-ZenBadgeComponent-e566a9672aceaa00bdc7490d31fc6133aab3b39cc8133ffa62818401cf0243ef2d58c817dd4381e5a9e504a403ba5e207848f64f9c4ed1e7008839e526b8e8bf",
       "file": "projects/kit/src/components/badge/badge.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -98,10 +98,10 @@
       "deprecationMessage": "",
       "hostBindings": [],
       "hostListeners": [],
-      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset;\n--zen-badge-offset-x: unset;\n--zen-badge-offset-y: unset;</code></pre></div>",
-      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n```css\n--zen-badge-offset: unset;\n--zen-badge-offset-x: unset;\n--zen-badge-offset-y: unset;\n```\n\n\n",
+      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.</code></pre></div>",
+      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n\n```css\n--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n```\n\n",
       "type": "component",
-      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\n * in various positions within its parent container. It allows for flexible placement\n * of badge content such as icons, text, or other elements in the top-left, top,\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\n *\n * This component offers standalone usage and is highly customizable through its\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\n * for optimal performance.\n *\n * Additionally, it provides support for CSS variables to customize badge positioning\n * ```css\n * --zen-badge-offset: unset;\n * --zen-badge-offset-x: unset;\n * --zen-badge-offset-y: unset;\n * ```\n * @css-property `--zen-badge-offset` Controls the overall offset of the badge.\n * @css-property `--zen-badge-offset-x` Controls the horizontal offset of the badge.\n * @css-property `--zen-badge-offset-y` Controls the vertical offset of the badge.\n *\n *\n * @selector `zen-badge`,`[zenBadge]`\n */\n@Component({\n  selector: 'zen-badge,[zenBadge]',\n  standalone: true,\n  template: `\n    <ng-content />\n    <ng-content select=\"[topLeft]\" />\n    <ng-content select=\"[top]\" />\n    <ng-content select=\"[topRight]\" />\n    <ng-content select=\"[left]\" />\n    <ng-content select=\"[right]\" />\n    <ng-content select=\"[bottomLeft]\" />\n    <ng-content select=\"[bottom]\" />\n    <ng-content select=\"[bottomRight]\" />\n  `,\n  styleUrl: './badge.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenBadgeComponent {}\n",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\n * in various positions within its parent container. It allows for flexible placement\n * of badge content such as icons, text, or other elements in the top-left, top,\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\n *\n * This component offers standalone usage and is highly customizable through its\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\n * for optimal performance.\n *\n * Additionally, it provides support for CSS variables to customize badge positioning\n *\n * @example\n * ```css\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n * ```\n\n * @selector `zen-badge`,`[zenBadge]`\n */\n@Component({\n  selector: 'zen-badge,[zenBadge]',\n  standalone: true,\n  template: `\n    <ng-content />\n    <ng-content select=\"[topLeft]\" />\n    <ng-content select=\"[top]\" />\n    <ng-content select=\"[topRight]\" />\n    <ng-content select=\"[left]\" />\n    <ng-content select=\"[right]\" />\n    <ng-content select=\"[bottomLeft]\" />\n    <ng-content select=\"[bottom]\" />\n    <ng-content select=\"[bottomRight]\" />\n  `,\n  styleUrl: './badge.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenBadgeComponent {}\n",
       "styleUrl": "./badge.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -202,7 +202,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <div style=\"display: flex; gap: 24px\">\n          <zen-badge style=\"--zen-badge-offset: -4px\">\n              <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n              <zen-avatar src=\"https://picsum.photos/32\" />\n          </zen-badge>\n\n          <zen-badge style=\"--zen-badge-offset: -4px\">\n              <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n              <zen-avatar style=\"color:white\">AB</zen-avatar>\n          </zen-badge>\n        </div>\n     `,\n  }),\n}"
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n        <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n          <zen-badge>\n              <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n              <zen-avatar src=\"https://picsum.photos/32\" />\n          </zen-badge>\n\n          <zen-badge>\n              <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n              <zen-avatar style=\"color:white\">AB</zen-avatar>\n          </zen-badge>\n        </div>\n     `,\n  }),\n}"
       },
       {
         "name": "preview",
@@ -252,8 +252,8 @@
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
-        "rawtype": "StoryObj<ZenPinComponent>",
-        "file": "projects/kit/src/components/pin/pin.stories.ts",
+        "rawtype": "StoryObj<ZenBadgeComponent>",
+        "file": "projects/kit/src/components/badge/badge.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -263,8 +263,8 @@
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
-        "rawtype": "StoryObj<ZenBadgeComponent>",
-        "file": "projects/kit/src/components/badge/badge.stories.ts",
+        "rawtype": "StoryObj<ZenPinComponent>",
+        "file": "projects/kit/src/components/pin/pin.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -324,7 +324,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <div style=\"display: flex; gap: 24px\">\n          <zen-badge style=\"--zen-badge-offset: -4px\">\n              <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n              <zen-avatar src=\"https://picsum.photos/32\" />\n          </zen-badge>\n\n          <zen-badge style=\"--zen-badge-offset: -4px\">\n              <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n              <zen-avatar style=\"color:white\">AB</zen-avatar>\n          </zen-badge>\n        </div>\n     `,\n  }),\n}"
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n        <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n          <zen-badge>\n              <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n              <zen-avatar src=\"https://picsum.photos/32\" />\n          </zen-badge>\n\n          <zen-badge>\n              <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n              <zen-avatar style=\"color:white\">AB</zen-avatar>\n          </zen-badge>\n        </div>\n     `,\n  }),\n}"
         }
       ],
       "projects/kit/src/components/avatar/avatar.stories.ts": [
@@ -388,19 +388,6 @@
           "kind": 177
         }
       ],
-      "projects/kit/src/components/pin/pin.stories.ts": [
-        {
-          "name": "Story",
-          "ctype": "miscellaneous",
-          "subtype": "typealias",
-          "rawtype": "StoryObj<ZenPinComponent>",
-          "file": "projects/kit/src/components/pin/pin.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "description": "",
-          "kind": 177
-        }
-      ],
       "projects/kit/src/components/badge/badge.stories.ts": [
         {
           "name": "Story",
@@ -408,6 +395,19 @@
           "subtype": "typealias",
           "rawtype": "StoryObj<ZenBadgeComponent>",
           "file": "projects/kit/src/components/badge/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 177
+        }
+      ],
+      "projects/kit/src/components/pin/pin.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenPinComponent>",
+          "file": "projects/kit/src/components/pin/pin.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "description": "",

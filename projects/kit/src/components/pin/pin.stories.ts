@@ -8,11 +8,6 @@ export default {
   title: 'Components/Pin',
   component: ZenPinComponent,
   tags: ['autodocs'],
-  decorators: [
-    moduleMetadata({
-      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],
-    }),
-  ],
   render: args => ({ props: { ...args }, template: `<zen-pin />` }),
 } satisfies Meta<ZenPinComponent>;
 
@@ -21,6 +16,11 @@ type Story = StoryObj<ZenPinComponent>;
 export const Default: Story = {};
 
 export const OnElement: Story = {
+  decorators: [
+    moduleMetadata({
+      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],
+    }),
+  ],
   render: () => ({
     template: `
         <div style="display: flex; gap: 1rem; --zen-badge-offset: -4px">
