@@ -1,11 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 
+import { ZenAvatarComponent } from '../avatar';
+import { ZenPinComponent } from '../pin';
+import { OnElement } from '../pin/pin.stories';
 import { ZenBadgeComponent } from './badge.component';
 
 export default {
   title: 'Components/Badge',
   component: ZenBadgeComponent,
   tags: ['autodocs'],
+  decorators: [
+    moduleMetadata({
+      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],
+    }),
+  ],
   render: args => ({ props: { ...args } }),
 } satisfies Meta<ZenBadgeComponent>;
 
@@ -47,3 +55,5 @@ export const Attribute: Story = {
   `,
   }),
 };
+
+export const Avatar: Story = OnElement;

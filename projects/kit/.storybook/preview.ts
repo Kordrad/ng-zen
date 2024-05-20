@@ -8,14 +8,6 @@ const preview: Preview = {
   parameters: {
     layout: 'centered',
   },
-  /*  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },*/
 };
 
 export default preview;

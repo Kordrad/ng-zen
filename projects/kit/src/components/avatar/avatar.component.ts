@@ -16,14 +16,20 @@ import {
  * ```html
  * <zen-avatar [src]="'/path/to/image.jpg'" />
  * ```
- * If an image source is provided, it will display the image:
+ *
+ * If an image source is provided, it will display the image
+ *
+ * @example
  * ```html
- * <zen-avatar src="/assets/avatar.png"/>
+ * <zen-avatar src="/assets/avatar.png" />
  * ```
- * If no image source is provided, it will display the projected content:
+ *
+ * If no image source is provided, it will display the projected content
+ *
+ * @example
  * ```html
  * <zen-avatar>
- *   <div class="default-avatar">A</div>
+ *   A
  * </zen-avatar>
  * ```
  *
