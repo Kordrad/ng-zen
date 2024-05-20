@@ -1,5 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 
+import { OnElement } from '../pin/pin.stories';
 import { ZenAvatarComponent } from './avatar.component';
 
 export default {
@@ -27,3 +28,4 @@ export const Text: Story = {
       </div> `,
   }),
 };
+export const WithBadge: Story = OnElement;

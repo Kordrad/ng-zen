@@ -14,18 +14,22 @@ import {
  * template and styling. It leverages Angular's change detection strategy 'OnPush'
  * for optimal performance.
  *
- * Additionally, it provides support for CSS variables to customize badge positioning:
- *   - --zen-badge-offset: Controls the overall offset of the badge. Default is 'unset'.
- *   - --zen-badge-offset-x: Controls the horizontal offset of the badge. Default is 'unset'.
- *   - --zen-badge-offset-y: Controls the vertical offset of the badge. Default is 'unset'.
+ * Additionally, it provides support for CSS variables to customize badge positioning
  *
- *
- * @summary ZenBadgeComponent: Angular component for flexible badge placement, standalone usage, and CSS variable support for easy customization.
+ * @example
+ * ```css
+ * --zen-badge-offset: unset; // Controls the overall offset of the badge
+ * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.
+ * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.
+ * ```
+
+ * @selector `zen-badge`,`[zenBadge]`
  */
 @Component({
   selector: 'zen-badge,[zenBadge]',
   standalone: true,
   template: `
+    <ng-content />
     <ng-content select="[topLeft]" />
     <ng-content select="[top]" />
     <ng-content select="[topRight]" />
@@ -34,7 +38,6 @@ import {
     <ng-content select="[bottomLeft]" />
     <ng-content select="[bottom]" />
     <ng-content select="[bottomRight]" />
-    <ng-content />
   `,
   styleUrl: './badge.component.scss',
   encapsulation: ViewEncapsulation.None,
