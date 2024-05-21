@@ -28,4 +28,4 @@ export const Text: Story = {
       </div> `,
   }),
 };
-export const WithBadge: Story = OnElement;
+export const WithBadge = OnElement;

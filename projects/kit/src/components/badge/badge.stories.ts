@@ -49,4 +49,4 @@ export const Attribute: Story = {
   }),
 };
 
-export const Avatar: Story = OnElement;
+export const Avatar = OnElement;
