@@ -1,6 +1,9 @@
 import {
+  booleanAttribute,
   ChangeDetectionStrategy,
   Component,
+  HostBinding,
+  input,
   ViewEncapsulation,
 } from '@angular/core';
 
@@ -24,4 +27,16 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ZenPinComponent {}
+export class ZenPinComponent {
+  /**
+   * Displays waving stream
+   */
+  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {
+    transform: booleanAttribute,
+  });
+
+  @HostBinding('class.stream')
+  get classStream() {
+    return this.stream();
+  }
+}

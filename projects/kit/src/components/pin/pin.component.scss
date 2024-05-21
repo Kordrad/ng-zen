@@ -1,7 +1,29 @@
-zen-pin {
+zen-pin,
+zen-pin.stream::before {
   display: block;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   background-color: #6b7280;
+}
+
+zen-pin {
+  position: relative;
+
+  &.stream::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: stream 1s ease-in-out infinite;
+  }
+}
+
+@keyframes stream {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
