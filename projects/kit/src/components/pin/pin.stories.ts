@@ -11,6 +11,9 @@ export default {
   argTypes: {
     stream: { control: 'boolean' },
   },
+  args: {
+    stream: false,
+  },
   render: args => ({
     props: { ...args },
     template: `<zen-pin ${args.stream ? 'stream' : ''}/>`,

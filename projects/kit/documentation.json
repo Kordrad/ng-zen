@@ -109,7 +109,7 @@
     },
     {
       "name": "ZenPinComponent",
-      "id": "component-ZenPinComponent-39aa9ce77f7fa6e251645b2ee86db92b6703af2377fe5e959f38aced451217f882bb7729252a9008e5c8e9cb76a4617709d23a94cc0f883959d196eb45023aac",
+      "id": "component-ZenPinComponent-79990c91f7a9e4d7295cfbc977ebd153ac3b0520e4fcf2f7eefdaa8c19e665192332395481e09d48b75d599037235c9135a36442b432cada686d7e9a367a05e5",
       "file": "projects/kit/src/components/pin/pin.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -128,14 +128,14 @@
       "propertiesClass": [
         {
           "name": "stream",
-          "defaultValue": "input<boolean, boolean | 'true' | 'false' | ''>(false, {\r\n    transform: booleanAttribute,\r\n  })",
+          "defaultValue": "input<boolean, BooleanAttribute>(false, {\n    transform: booleanAttribute,\n  })",
           "deprecated": false,
           "deprecationMessage": "",
           "type": "",
           "optional": false,
-          "description": "<p>Displays waving stream</p>\n",
-          "line": 34,
-          "rawdescription": "\n\nDisplays waving stream\n",
+          "description": "<p>Displays waving stream animation</p>\n",
+          "line": 36,
+          "rawdescription": "\n\nDisplays waving stream animation\n",
           "modifierKind": [144]
         }
       ],
@@ -147,7 +147,7 @@
           "name": "class.stream",
           "deprecated": false,
           "deprecationMessage": "",
-          "line": 39,
+          "line": 41,
           "type": "any",
           "decorators": []
         }
@@ -156,7 +156,7 @@
       "description": "<p>The ZenPinComponent represents a simple visual pin with a circular shape.</p>\n<div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-pin /&gt;</code></pre></div>",
       "rawdescription": "\n\nThe ZenPinComponent represents a simple visual pin with a circular shape.\n\n```html\n<zen-pin />\n```\n\n",
       "type": "component",
-      "sourceCode": "import {\r\n  booleanAttribute,\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * The ZenPinComponent represents a simple visual pin with a circular shape.\r\n *\r\n * @example\r\n * ```html\r\n * <zen-pin />\r\n * ```\r\n *\r\n * @component\r\n * @selector `zen-pin`\r\n */\r\n@Component({\r\n  selector: 'zen-pin',\r\n  standalone: true,\r\n  imports: [],\r\n  template: ``,\r\n  styleUrl: './pin.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenPinComponent {\r\n  /**\r\n   * Displays waving stream\r\n   */\r\n  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {\r\n    transform: booleanAttribute,\r\n  });\r\n\r\n  @HostBinding('class.stream')\r\n  get classStream() {\r\n    return this.stream();\r\n  }\r\n}\r\n",
+      "sourceCode": "import {\n  booleanAttribute,\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  input,\n  ViewEncapsulation,\n} from '@angular/core';\n\nimport type { BooleanAttribute } from '../../types';\n\n/**\n * The ZenPinComponent represents a simple visual pin with a circular shape.\n *\n * @example\n * ```html\n * <zen-pin />\n * ```\n *\n * @component\n * @selector `zen-pin`\n */\n@Component({\n  selector: 'zen-pin',\n  standalone: true,\n  imports: [],\n  template: ``,\n  styleUrl: './pin.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenPinComponent {\n  /**\n   * Displays waving stream animation\n   */\n  readonly stream = input<boolean, BooleanAttribute>(false, {\n    transform: booleanAttribute,\n  });\n\n  @HostBinding('class.stream')\n  get classStream() {\n    return this.stream();\n  }\n}\n",
       "styleUrl": "./pin.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -168,7 +168,7 @@
             "name": "classStream",
             "type": "",
             "returnType": "",
-            "line": 39
+            "line": 41
           }
         }
       }
@@ -185,7 +185,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
       },
       {
         "name": "Avatar",
@@ -205,7 +205,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -225,7 +225,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  args: {\r\n    src: 'https://picsum.photos/32',\r\n  },\r\n}"
+        "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
       },
       {
         "name": "OnElement",
@@ -235,7 +235,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\r\n        <zen-badge>\r\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\r\n          <zen-avatar src=\"https://picsum.photos/32\" />\r\n        </zen-badge>\r\n\r\n        <zen-badge>\r\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\r\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\r\n        </zen-badge>\r\n      </div>\r\n     `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n        <zen-badge>\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n          <zen-avatar src=\"https://picsum.photos/32\" />\n        </zen-badge>\n\n        <zen-badge>\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\n        </zen-badge>\n      </div>\n     `,\n  }),\n}"
       },
       {
         "name": "preview",
@@ -255,7 +255,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  args: {\r\n    stream: true,\r\n  },\r\n  render: args => ({\r\n    template: `\r\n        <zen-badge style=\"--zen-badge-offset: -4px\">\r\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\r\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\r\n        </zen-badge>\r\n     `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  args: {\n    stream: true,\n  },\n  render: args => ({\n    template: `\n        <zen-badge style=\"--zen-badge-offset: -4px\">\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\n        </zen-badge>\n     `,\n  }),\n}"
       },
       {
         "name": "Text",
@@ -265,7 +265,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; color:white\">\r\n        <zen-avatar>MI</zen-avatar>\r\n        <zen-avatar>IB</zen-avatar>\r\n        <zen-avatar>WP</zen-avatar>\r\n        <zen-avatar>AI</zen-avatar>\r\n      </div> `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
       },
       {
         "name": "WithBadge",
@@ -284,8 +284,8 @@
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
-        "rawtype": "StoryObj<ZenAvatarComponent>",
-        "file": "projects/kit/src/components/avatar/avatar.stories.ts",
+        "rawtype": "StoryObj<ZenBadgeComponent>",
+        "file": "projects/kit/src/components/badge/badge.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -306,8 +306,8 @@
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
-        "rawtype": "StoryObj<ZenBadgeComponent>",
-        "file": "projects/kit/src/components/badge/badge.stories.ts",
+        "rawtype": "StoryObj<ZenAvatarComponent>",
+        "file": "projects/kit/src/components/avatar/avatar.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -325,7 +325,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
         },
         {
           "name": "Avatar",
@@ -345,7 +345,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
         }
       ],
       "projects/kit/src/components/pin/pin.stories.ts": [
@@ -367,7 +367,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\r\n        <zen-badge>\r\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\r\n          <zen-avatar src=\"https://picsum.photos/32\" />\r\n        </zen-badge>\r\n\r\n        <zen-badge>\r\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\r\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\r\n        </zen-badge>\r\n      </div>\r\n     `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n        <zen-badge>\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n          <zen-avatar src=\"https://picsum.photos/32\" />\n        </zen-badge>\n\n        <zen-badge>\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\n        </zen-badge>\n      </div>\n     `,\n  }),\n}"
         },
         {
           "name": "StreamAttribute",
@@ -377,7 +377,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  args: {\r\n    stream: true,\r\n  },\r\n  render: args => ({\r\n    template: `\r\n        <zen-badge style=\"--zen-badge-offset: -4px\">\r\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\r\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\r\n        </zen-badge>\r\n     `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  args: {\n    stream: true,\n  },\n  render: args => ({\n    template: `\n        <zen-badge style=\"--zen-badge-offset: -4px\">\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\n        </zen-badge>\n     `,\n  }),\n}"
         }
       ],
       "projects/kit/src/components/avatar/avatar.stories.ts": [
@@ -389,7 +389,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  args: {\r\n    src: 'https://picsum.photos/32',\r\n  },\r\n}"
+          "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
         },
         {
           "name": "Text",
@@ -399,7 +399,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; color:white\">\r\n        <zen-avatar>MI</zen-avatar>\r\n        <zen-avatar>IB</zen-avatar>\r\n        <zen-avatar>WP</zen-avatar>\r\n        <zen-avatar>AI</zen-avatar>\r\n      </div> `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
         },
         {
           "name": "WithBadge",
@@ -428,13 +428,13 @@
     "groupedFunctions": {},
     "groupedEnumerations": {},
     "groupedTypeAliases": {
-      "projects/kit/src/components/avatar/avatar.stories.ts": [
+      "projects/kit/src/components/badge/badge.stories.ts": [
         {
           "name": "Story",
           "ctype": "miscellaneous",
           "subtype": "typealias",
-          "rawtype": "StoryObj<ZenAvatarComponent>",
-          "file": "projects/kit/src/components/avatar/avatar.stories.ts",
+          "rawtype": "StoryObj<ZenBadgeComponent>",
+          "file": "projects/kit/src/components/badge/badge.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "description": "",
@@ -454,13 +454,13 @@
           "kind": 177
         }
       ],
-      "projects/kit/src/components/badge/badge.stories.ts": [
+      "projects/kit/src/components/avatar/avatar.stories.ts": [
         {
           "name": "Story",
           "ctype": "miscellaneous",
           "subtype": "typealias",
-          "rawtype": "StoryObj<ZenBadgeComponent>",
-          "file": "projects/kit/src/components/badge/badge.stories.ts",
+          "rawtype": "StoryObj<ZenAvatarComponent>",
+          "file": "projects/kit/src/components/avatar/avatar.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "description": "",
