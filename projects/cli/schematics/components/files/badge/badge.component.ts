@@ -24,6 +24,8 @@ import {
  * ```
 
  * @selector `zen-badge`,`[zenBadge]`
+ *
+ *  @source https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-badge,[zenBadge]',

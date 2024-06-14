@@ -35,6 +35,9 @@ import {
  *
  * @component
  * @selector `zen-avatar`
+ *
+ *
+ * @source https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-avatar',

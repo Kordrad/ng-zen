@@ -1,8 +1,8 @@
-import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
-
-import { ZenAvatarComponent } from '../avatar';
-import { ZenBadgeComponent } from '../badge';
-import { ZenPinComponent } from './pin.component';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
+import { ZenAvatarComponent } from 'ng-zen/components/avatar';
+import { ZenBadgeComponent } from 'ng-zen/components/badge';
+import { ZenPinComponent } from 'ng-zen/components/pin';
 
 export default {
   title: 'Components/Pin',

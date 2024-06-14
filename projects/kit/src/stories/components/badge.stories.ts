@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { ZenBadgeComponent } from 'ng-zen/components/badge';
 
-import { OnElement } from '../pin/pin.stories';
-import { ZenBadgeComponent } from './badge.component';
+import { OnElement } from './pin.stories';
 
 export default {
   title: 'Components/Badge',

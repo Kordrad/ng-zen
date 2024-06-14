@@ -7,8 +7,6 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 
-import type { BooleanAttribute } from '../../types';
-
 /**
  * The ZenPinComponent represents a simple visual pin with a circular shape.
  *
@@ -19,6 +17,8 @@ import type { BooleanAttribute } from '../../types';
  *
  * @component
  * @selector `zen-pin`
+ *
+ * @source https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-pin',
@@ -33,7 +33,7 @@ export class ZenPinComponent {
   /**
    * Displays waving stream animation
    */
-  readonly stream = input<boolean, BooleanAttribute>(false, {
+  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {
     transform: booleanAttribute,
   });
 
