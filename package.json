@@ -19,7 +19,8 @@
     "kit:test": "ng test kit",
     "storybook": "ng run kit:storybook",
     "storybook:build": "ng run kit:build-storybook",
-    "doc": "compodoc -e json -d projects/kit -p projects/kit/.storybook/tsconfig.json"
+    "doc": "compodoc -e json -d projects/kit -p projects/kit/.storybook/tsconfig.json",
+    "build-cli": "cd projects/cli/ && npm run build"
   },
   "private": true,
   "dependencies": {
