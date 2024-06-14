@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
+    "build:watch": "tsc -p tsconfig.schematics.json -w",
     "postbuild": "npm run copy-files && npm run clean-packagejson",
     "copy-files": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json package.json **/README.md ../../dist/@ng-zen/cli/",
     "clean-packagejson": "cd ../../dist/@ng-zen/cli && npm pkg delete scripts"
