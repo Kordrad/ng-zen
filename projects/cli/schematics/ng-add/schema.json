@@ -3,5 +3,5 @@
   "$id": "NgZenCliNgAdd",
   "title": "ng add schematic",
   "type": "object",
-  "description": "Installs CLI package and edits the tsconfig file 🔒"
+  "description": "Installs CLI package and edits the tsconfig file 📦"
 }
