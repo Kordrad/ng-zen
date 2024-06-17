@@ -7,6 +7,7 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 
+
 /**
  * The ZenPinComponent represents a simple visual pin with a circular shape.
  *
@@ -21,9 +22,8 @@ import {
 @Component({
   selector: 'zen-pin',
   standalone: true,
-  imports: [],
   template: ``,
-  styleUrl: './pin.component.scss',
+  styleUrl: './pin.component.scss.template',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

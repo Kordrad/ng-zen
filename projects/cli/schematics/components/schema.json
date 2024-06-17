@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NgZenCliComponents",
+  "title": "Schema to create Zen UI components",
+  "type": "object",
+  "description": "Adds Zen UI component📦",
+  "properties": {
+    "components": {
+      "description": "Select component to generate (e.g: --components=avatar pin)",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["avatar", "pin"]
+      },
+      "multiselect": true,
+      "x-prompt": "Which component should be generated?"
+    },
+    "path": {
+      "description": "Where should be created the components",
+      "type": "string",
+      "format": "path",
+      "default": "/projects/ng-zen"
+    }
+  }
+}

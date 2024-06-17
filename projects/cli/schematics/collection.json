@@ -4,6 +4,12 @@
     "ng-add": {
       "description": "Add library to the project.",
       "factory": "./ng-add/index#ngAdd"
+    },
+    "component": {
+      "description": "This schematic generates ui components",
+      "factory": "./components/index#componentGenerator",
+      "schema": "./components/schema.json",
+      "aliases": ["c"]
     }
   }
 }

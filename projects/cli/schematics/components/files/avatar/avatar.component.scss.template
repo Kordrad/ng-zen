@@ -1,0 +1,24 @@
+@use '../../styles/mixins';
+
+zen-avatar {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @include mixins.prevent-interact;
+
+  // Text
+  &:not(:has(img)) {
+    background-color: #6b7280;
+  }
+
+  & > * {
+    height: 100%;
+    width: 100%;
+  }
+}
