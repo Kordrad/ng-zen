@@ -1,7 +1,15 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "NgZenCliNgAdd",
-  "title": "ng add schematic",
+  "$id": "NgZenCliComponents",
+  "title": "Schema to create Zen UI library",
   "type": "object",
-  "description": "Installs CLI package and edits the tsconfig file 📦"
+  "description": "Adds Zen CLI library and configure project 📦",
+  "properties": {
+    "path": {
+      "description": "Where should be created the library",
+      "type": "string",
+      "format": "path",
+      "default": "projects/ng-zen"
+    }
+  }
 }

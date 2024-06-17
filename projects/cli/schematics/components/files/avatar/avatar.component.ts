@@ -35,6 +35,9 @@ import {
  *
  * @component
  * @selector `zen-avatar`
+ *
+ *
+ * @source https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-avatar',
@@ -47,7 +50,7 @@ import {
       <ng-content />
     }
   `,
-  styleUrl: './avatar.component.scss.template',
+  styleUrl: './avatar.component.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

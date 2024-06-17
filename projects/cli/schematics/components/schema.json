@@ -3,7 +3,7 @@
   "$id": "NgZenCliComponents",
   "title": "Schema to create Zen UI components",
   "type": "object",
-  "description": "Adds Zen UI component📦",
+  "description": "Adds Zen UI component 📦",
   "properties": {
     "components": {
       "description": "Select component to generate (e.g: --components=avatar pin)",
@@ -19,7 +19,7 @@
       "description": "Where should be created the components",
       "type": "string",
       "format": "path",
-      "default": "/projects/ng-zen"
+      "default": "/projects/ng-zen/components"
     }
   }
 }
