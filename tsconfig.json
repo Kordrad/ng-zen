@@ -20,7 +20,7 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "@ng-zen/kit/*": ["./projects/kit/src/*"]
+      "ng-zen/components/*": ["projects/cli/schematics/components/files/*"]
     }
   },
   "angularCompilerOptions": {
