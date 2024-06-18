@@ -11,7 +11,7 @@ export default {
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleNameMapper: {
-    '^@ng-zen/kit/(.*)': '<rootDir>/projects/kit/src/$1',
+    '^@ng-zen/cli/(.*)': '<rootDir>/projects/cli/src/$1',
   },
   preset: 'jest-preset-angular',
   testEnvironment: 'jsdom',
