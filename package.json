@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "cd projects/cli/ && npm run build",
     "build:watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:watch": "ng test --watch",
@@ -19,8 +19,7 @@
     "kit:test": "ng test kit",
     "storybook": "ng run kit:storybook",
     "storybook:build": "ng run kit:build-storybook",
-    "doc": "compodoc -e json -d projects/kit -p projects/kit/.storybook/tsconfig.json",
-    "build-cli": "cd projects/cli/ && npm run build"
+    "doc": "compodoc -e json -d projects/kit -p projects/cli/.storybook/tsconfig.json"
   },
   "private": true,
   "dependencies": {

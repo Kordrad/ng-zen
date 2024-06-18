@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.lib.json",
+  "extends": "../../kit/tsconfig.lib.json",
   "compilerOptions": {
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
