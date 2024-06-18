@@ -10,15 +10,15 @@ import {
 /**
  * The ZenPinComponent represents a simple visual pin with a circular shape.
  *
- * @example
  * ```html
  * <zen-pin />
  * ```
  *
+ * @example <zen-pin />
  * @component
  * @selector `zen-pin`
  *
- * @source https://github.com/Kordrad/ng-zen
+ * @link https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-pin',

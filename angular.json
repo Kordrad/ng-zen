@@ -49,20 +49,20 @@
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
-            "configDir": "projects/kit/.storybook",
-            "browserTarget": "kit:build",
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
             "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
             "port": 6006
           }
         },
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
-            "configDir": "projects/kit/.storybook",
-            "browserTarget": "kit:build",
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
             "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
             "outputDir": "storybook-static"
           }
         }

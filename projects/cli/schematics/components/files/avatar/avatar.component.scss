@@ -1,5 +1,3 @@
-@use '../../styles/mixins';
-
 zen-avatar {
   height: 32px;
   width: 32px;
@@ -9,8 +7,9 @@ zen-avatar {
   align-items: center;
   border-radius: 50%;
   overflow: hidden;
-
-  @include mixins.prevent-interact;
+  touch-action: none;
+  pointer-events: none;
+  user-select: none;
 
   // Text
   &:not(:has(img)) {
