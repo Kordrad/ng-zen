@@ -1,4 +1,4 @@
 export interface ComponentGeneratorSchema {
-  components: ('pin' | 'avatar')[];
+  components: ('avatar' | 'badge' | 'pin')[];
   path: string;
 }
