@@ -16,7 +16,6 @@ import {
  *
  * Additionally, it provides support for CSS variables to customize badge positioning
  *
- * @example
  * ```css
  * --zen-badge-offset: unset; // Controls the overall offset of the badge
  * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.
@@ -25,7 +24,7 @@ import {
 
  * @selector `zen-badge`,`[zenBadge]`
  *
- *  @source https://github.com/Kordrad/ng-zen
+ * @link https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-badge,[zenBadge]',

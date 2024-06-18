@@ -12,32 +12,22 @@ import {
  *
  * The component uses Angular's optimized image directives for enhanced performance.
  *
- * @example
+ * Usage:
+ *
  * ```html
+ * <!-- If an image source is provided, it will display the image -->
  * <zen-avatar [src]="'/path/to/image.jpg'" />
- * ```
  *
- * If an image source is provided, it will display the image
+ * <!-- If no image source is provided, it will display the projected content -->
+ * <zen-avatar> A </zen-avatar>
+ * ```
  *
  * @example
- * ```html
- * <zen-avatar src="/assets/avatar.png" />
- * ```
- *
- * If no image source is provided, it will display the projected content
- *
- * @example
- * ```html
- * <zen-avatar>
- *   A
- * </zen-avatar>
- * ```
+ * <zen-avatar src="https://picsum.photos/32" />
  *
  * @component
  * @selector `zen-avatar`
- *
- *
- * @source https://github.com/Kordrad/ng-zen
+ * @link https://github.com/Kordrad/ng-zen
  */
 @Component({
   selector: 'zen-avatar',
@@ -60,6 +50,8 @@ export class ZenAvatarComponent {
    * Otherwise, the content projected into this component will be displayed.
    *
    * @default ''
+   * @input
+   * @type string
    */
   readonly src = input<string>('');
 }

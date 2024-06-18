@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
-import { ZenAvatarComponent } from 'ng-zen/components/avatar';
-import { ZenBadgeComponent } from 'ng-zen/components/badge';
-import { ZenPinComponent } from 'ng-zen/components/pin';
+
+import { ZenAvatarComponent } from '../../schematics/components/files/avatar';
+import { ZenBadgeComponent } from '../../schematics/components/files/badge';
+import { ZenPinComponent } from '../../schematics/components/files/pin';
 
 export default {
   title: 'Components/Pin',

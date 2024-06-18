@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { ZenAvatarComponent } from 'ng-zen/components/avatar';
 
+import { ZenAvatarComponent } from '../../schematics/components/files/avatar';
 import { OnElement } from './pin.stories';
 
 export default {

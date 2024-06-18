@@ -1,0 +1,673 @@
+{
+  "pipes": [],
+  "interfaces": [],
+  "injectables": [],
+  "guards": [],
+  "interceptors": [],
+  "classes": [],
+  "directives": [],
+  "components": [
+    {
+      "name": "ZenAvatarComponent",
+      "id": "component-ZenAvatarComponent-b3cbfe15c117ed761d72db44657973809343a038c401ec23d0fbf0effcf7bfb203ef165bb7d5e81a129278bb57329fb57d2daffb8935887c86e5590add6d04be",
+      "file": "projects/cli/schematics/components/files/avatar/avatar.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": ["ViewEncapsulation.None"],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "zen-avatar",
+      "styleUrls": [],
+      "styles": [],
+      "template": "@if (src()) {\n  <img [ngSrc]=\"src()\" alt=\"\" fill />\n} @else {\n  <ng-content />\n}\n",
+      "templateUrl": [],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "src",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Path to the image source. If the <code>src</code> is provided, an image element will be rendered.\nOtherwise, the content projected into this component will be displayed.</p>\n",
+          "line": 56,
+          "rawdescription": "\n\nPath to the image source. If the `src` is provided, an image element will be rendered.\nOtherwise, the content projected into this component will be displayed.\n\n",
+          "modifierKind": [148],
+          "jsdoctags": [
+            {
+              "pos": 1399,
+              "end": 1416,
+              "flags": 16842752,
+              "modifierFlagsCache": 0,
+              "transformFlags": 0,
+              "kind": 334,
+              "tagName": {
+                "pos": 1400,
+                "end": 1407,
+                "flags": 16842752,
+                "modifierFlagsCache": 0,
+                "transformFlags": 0,
+                "kind": 80,
+                "escapedText": "default"
+              },
+              "comment": "<p>&#39;&#39;</p>\n"
+            },
+            {
+              "pos": 1416,
+              "end": 1428,
+              "flags": 16842752,
+              "modifierFlagsCache": 0,
+              "transformFlags": 0,
+              "kind": 334,
+              "tagName": {
+                "pos": 1417,
+                "end": 1422,
+                "flags": 16842752,
+                "modifierFlagsCache": 0,
+                "transformFlags": 0,
+                "kind": 80,
+                "escapedText": "input"
+              },
+              "comment": ""
+            },
+            {
+              "pos": 1428,
+              "end": 1440,
+              "flags": 16842752,
+              "modifierFlagsCache": 0,
+              "transformFlags": 0,
+              "kind": 351,
+              "tagName": {
+                "pos": 1429,
+                "end": 1433,
+                "flags": 16842752,
+                "modifierFlagsCache": 0,
+                "transformFlags": 0,
+                "kind": 80,
+                "escapedText": "type"
+              },
+              "comment": "",
+              "typeExpression": {
+                "pos": 1434,
+                "end": 1440,
+                "flags": 16842752,
+                "modifierFlagsCache": 0,
+                "transformFlags": 0,
+                "kind": 316,
+                "type": {
+                  "pos": 1434,
+                  "end": 1440,
+                  "flags": 16777216,
+                  "modifierFlagsCache": 0,
+                  "transformFlags": 1,
+                  "kind": 154
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [
+        {
+          "name": "NgOptimizedImage"
+        }
+      ],
+      "description": "<p>A component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.</p>\n<p>The component uses Angular&#39;s optimized image directives for enhanced performance.</p>\n<p>Usage:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;!-- If an image source is provided, it will display the image --&gt;\n&lt;zen-avatar [src]=&quot;&#39;/path/to/image.jpg&#39;&quot; /&gt;\n\n&lt;!-- If no image source is provided, it will display the projected content --&gt;\n&lt;zen-avatar&gt; A &lt;/zen-avatar&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-avatar src=&quot;https://picsum.photos/32&quot; /&gt;</code></pre></div>",
+      "rawdescription": "\n\nA component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.\n\nThe component uses Angular's optimized image directives for enhanced performance.\n\nUsage:\n\n```html\n<!-- If an image source is provided, it will display the image -->\n<zen-avatar [src]=\"'/path/to/image.jpg'\" />\n\n<!-- If no image source is provided, it will display the projected content -->\n<zen-avatar> A </zen-avatar>\n```\n\n```html\n<zen-avatar src=\"https://picsum.photos/32\" />\n```\n",
+      "type": "component",
+      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  input,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * A component to display an avatar image. If a valid image source URL is provided,\n * it will render an image element. Otherwise, it will display projected content.\n *\n * The component uses Angular's optimized image directives for enhanced performance.\n *\n * Usage:\n *\n * ```html\n * <!-- If an image source is provided, it will display the image -->\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\n *\n * <!-- If no image source is provided, it will display the projected content -->\n * <zen-avatar> A </zen-avatar>\n * ```\n *\n * @example\n * <zen-avatar src=\"https://picsum.photos/32\" />\n *\n * @component\n * @selector `zen-avatar`\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-avatar',\n  standalone: true,\n  imports: [NgOptimizedImage],\n  template: `\n    @if (src()) {\n      <img [ngSrc]=\"src()\" alt=\"\" fill />\n    } @else {\n      <ng-content />\n    }\n  `,\n  styleUrl: './avatar.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenAvatarComponent {\n  /**\n   * Path to the image source. If the `src` is provided, an image element will be rendered.\n   * Otherwise, the content projected into this component will be displayed.\n   *\n   * @default ''\n   * @input\n   * @type string\n   */\n  readonly src = input<string>('');\n}\n",
+      "styleUrl": "./avatar.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": []
+    },
+    {
+      "name": "ZenBadgeComponent",
+      "id": "component-ZenBadgeComponent-761ba552215ecc1cf7f815fc20ef3593056fac1e94d40fbea6b2554e6afdf6441296805e47f21ab9f7d42707bbd34c306bedf49544762ead969a9ca117b28c0d",
+      "file": "projects/cli/schematics/components/files/badge/badge.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": ["ViewEncapsulation.None"],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "zen-badge,[zenBadge]",
+      "styleUrls": [],
+      "styles": [],
+      "template": "<ng-content />\n<ng-content select=\"[topLeft]\" />\n<ng-content select=\"[top]\" />\n<ng-content select=\"[topRight]\" />\n<ng-content select=\"[left]\" />\n<ng-content select=\"[right]\" />\n<ng-content select=\"[bottomLeft]\" />\n<ng-content select=\"[bottom]\" />\n<ng-content select=\"[bottomRight]\" />\n",
+      "templateUrl": [],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [],
+      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.</code></pre></div>",
+      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n\n```css\n--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n```\n\n\n",
+      "type": "component",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\n * in various positions within its parent container. It allows for flexible placement\n * of badge content such as icons, text, or other elements in the top-left, top,\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\n *\n * This component offers standalone usage and is highly customizable through its\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\n * for optimal performance.\n *\n * Additionally, it provides support for CSS variables to customize badge positioning\n *\n * ```css\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n * ```\n\n * @selector `zen-badge`,`[zenBadge]`\n *\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-badge,[zenBadge]',\n  standalone: true,\n  template: `\n    <ng-content />\n    <ng-content select=\"[topLeft]\" />\n    <ng-content select=\"[top]\" />\n    <ng-content select=\"[topRight]\" />\n    <ng-content select=\"[left]\" />\n    <ng-content select=\"[right]\" />\n    <ng-content select=\"[bottomLeft]\" />\n    <ng-content select=\"[bottom]\" />\n    <ng-content select=\"[bottomRight]\" />\n  `,\n  styleUrl: './badge.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenBadgeComponent {}\n",
+      "styleUrl": "./badge.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": []
+    },
+    {
+      "name": "ZenPinComponent",
+      "id": "component-ZenPinComponent-f37b9740bba4991b4b727f8d548f1764bb8c24fe1aaba2888a23e33a6ce3a2232b4c4fb1c462638f0f31197473aece6759c023162bc073aeb15e510e64b86415",
+      "file": "projects/cli/schematics/components/files/pin/pin.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": ["ViewEncapsulation.None"],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "zen-pin",
+      "styleUrls": [],
+      "styles": [],
+      "template": "",
+      "templateUrl": [],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "stream",
+          "defaultValue": "input<boolean, boolean | 'true' | 'false' | ''>(false, {\n    transform: booleanAttribute,\n  })",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Displays waving stream animation</p>\n",
+          "line": 36,
+          "rawdescription": "\n\nDisplays waving stream animation\n",
+          "modifierKind": [148]
+        }
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [
+        {
+          "name": "class.stream",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "line": 41,
+          "type": "any",
+          "decorators": []
+        }
+      ],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [],
+      "description": "<p>The ZenPinComponent represents a simple visual pin with a circular shape.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-pin /&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
+      "rawdescription": "\n\nThe ZenPinComponent represents a simple visual pin with a circular shape.\n\n```html\n<zen-pin />\n```\n\n```html\n```\n",
+      "type": "component",
+      "sourceCode": "import {\n  booleanAttribute,\n  ChangeDetectionStrategy,\n  Component,\n  HostBinding,\n  input,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * The ZenPinComponent represents a simple visual pin with a circular shape.\n *\n * ```html\n * <zen-pin />\n * ```\n *\n * @example <zen-pin />\n * @component\n * @selector `zen-pin`\n *\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-pin',\n  standalone: true,\n  imports: [],\n  template: ``,\n  styleUrl: './pin.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenPinComponent {\n  /**\n   * Displays waving stream animation\n   */\n  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {\n    transform: booleanAttribute,\n  });\n\n  @HostBinding('class.stream')\n  get classStream() {\n    return this.stream();\n  }\n}\n",
+      "styleUrl": "./pin.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": [],
+      "accessors": {
+        "classStream": {
+          "name": "classStream",
+          "getSignature": {
+            "name": "classStream",
+            "type": "",
+            "returnType": "",
+            "line": 41
+          }
+        }
+      }
+    }
+  ],
+  "modules": [],
+  "miscellaneous": {
+    "variables": [
+      {
+        "name": "Attribute",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+      },
+      {
+        "name": "Avatar",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "",
+        "defaultValue": "OnElement"
+      },
+      {
+        "name": "Component",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/pin.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{}"
+      },
+      {
+        "name": "Image",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
+      },
+      {
+        "name": "OnElement",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/pin.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n        <zen-badge>\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n          <zen-avatar src=\"https://picsum.photos/32\" />\n        </zen-badge>\n\n        <zen-badge>\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\n        </zen-badge>\n      </div>\n     `,\n  }),\n}"
+      },
+      {
+        "name": "preview",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/.storybook/preview.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Preview",
+        "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n}"
+      },
+      {
+        "name": "StreamAttribute",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/pin.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  args: {\n    stream: true,\n  },\n  render: args => ({\n    template: `\n        <zen-badge style=\"--zen-badge-offset: -4px\">\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\n        </zen-badge>\n     `,\n  }),\n}"
+      },
+      {
+        "name": "Text",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
+      },
+      {
+        "name": "WithBadge",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "",
+        "defaultValue": "OnElement"
+      }
+    ],
+    "functions": [],
+    "typealiases": [
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenAvatarComponent>",
+        "file": "projects/cli/stories/components/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenBadgeComponent>",
+        "file": "projects/cli/stories/components/badge.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenPinComponent>",
+        "file": "projects/cli/stories/components/pin.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      }
+    ],
+    "enumerations": [],
+    "groupedVariables": {
+      "projects/cli/stories/components/badge.stories.ts": [
+        {
+          "name": "Attribute",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+        },
+        {
+          "name": "Avatar",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "defaultValue": "OnElement"
+        },
+        {
+          "name": "Component",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+        }
+      ],
+      "projects/cli/stories/components/pin.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/pin.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{}"
+        },
+        {
+          "name": "OnElement",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/pin.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; --zen-badge-offset: -4px\">\n        <zen-badge>\n          <zen-pin topRight style=\"background-color: #2a912a; border: 2px solid white\"/>\n          <zen-avatar src=\"https://picsum.photos/32\" />\n        </zen-badge>\n\n        <zen-badge>\n          <zen-pin bottomRight style=\"background-color: #c42929; border: 2px solid white\"/>\n          <zen-avatar style=\"color:white\">AB</zen-avatar>\n        </zen-badge>\n      </div>\n     `,\n  }),\n}"
+        },
+        {
+          "name": "StreamAttribute",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/pin.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  args: {\n    stream: true,\n  },\n  render: args => ({\n    template: `\n        <zen-badge style=\"--zen-badge-offset: -4px\">\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\n        </zen-badge>\n     `,\n  }),\n}"
+        }
+      ],
+      "projects/cli/stories/components/avatar.stories.ts": [
+        {
+          "name": "Image",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
+        },
+        {
+          "name": "Text",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
+        },
+        {
+          "name": "WithBadge",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "defaultValue": "OnElement"
+        }
+      ],
+      "projects/cli/.storybook/preview.ts": [
+        {
+          "name": "preview",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/.storybook/preview.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Preview",
+          "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n}"
+        }
+      ]
+    },
+    "groupedFunctions": {},
+    "groupedEnumerations": {},
+    "groupedTypeAliases": {
+      "projects/cli/stories/components/avatar.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenAvatarComponent>",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
+      "projects/cli/stories/components/badge.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenBadgeComponent>",
+          "file": "projects/cli/stories/components/badge.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
+      "projects/cli/stories/components/pin.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenPinComponent>",
+          "file": "projects/cli/stories/components/pin.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ]
+    }
+  },
+  "routes": [],
+  "coverage": {
+    "count": 20,
+    "status": "low",
+    "files": [
+      {
+        "filePath": "projects/cli/.storybook/preview.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "preview",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/schematics/components/files/avatar/avatar.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenAvatarComponent",
+        "coveragePercent": 100,
+        "coverageCount": "2/2",
+        "status": "very-good"
+      },
+      {
+        "filePath": "projects/cli/schematics/components/files/badge/badge.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenBadgeComponent",
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
+      },
+      {
+        "filePath": "projects/cli/schematics/components/files/pin/pin.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenPinComponent",
+        "coveragePercent": 66,
+        "coverageCount": "2/3",
+        "status": "good"
+      },
+      {
+        "filePath": "projects/cli/stories/components/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Image",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Text",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "WithBadge",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Attribute",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Avatar",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/badge.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Component",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/pin.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/pin.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "OnElement",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/pin.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "StreamAttribute",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      }
+    ]
+  }
+}

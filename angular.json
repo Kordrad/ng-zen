@@ -5,79 +5,15 @@
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss",
-      "standalone": true,
-      "changeDetection": "OnPush"
+      "standalone": true
     }
   },
   "projects": {
-    "kit": {
-      "projectType": "library",
-      "root": "projects/kit",
-      "sourceRoot": "projects/kit/src",
-      "prefix": "zen",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/kit/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/kit/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/kit/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "configPath": "./jest.config.ts"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/kit/**/*.ts",
-              "projects/kit/**/*.html"
-            ]
-          }
-        },
-        "storybook": {
-          "builder": "@storybook/angular:start-storybook",
-          "options": {
-            "configDir": "projects/kit/.storybook",
-            "browserTarget": "kit:build",
-            "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
-            "port": 6006
-          }
-        },
-        "build-storybook": {
-          "builder": "@storybook/angular:build-storybook",
-          "options": {
-            "configDir": "projects/kit/.storybook",
-            "browserTarget": "kit:build",
-            "compodoc": true,
-            "compodocArgs": ["-e", "json", "-d", "projects/kit"],
-            "outputDir": "storybook-static"
-          }
-        }
-      },
-      "schematics": {
-        "@schematics/angular:component": {
-          "viewEncapsulation": "None"
-        }
-      }
-    },
     "cli": {
       "projectType": "library",
       "root": "projects/cli",
-      "sourceRoot": "projects/cli/src",
-      "prefix": "lib",
+      "sourceRoot": "projects/cli/schematics",
+      "prefix": "zen",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -108,6 +44,26 @@
               "projects/cli/**/*.ts",
               "projects/cli/**/*.html"
             ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
+            "outputDir": "storybook-static"
           }
         }
       }
