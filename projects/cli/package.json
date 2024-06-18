@@ -1,10 +1,23 @@
 {
   "name": "@ng-zen/cli",
   "version": "0.0.1",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "url": "https://github.com/Kordrad/ng-zen",
+    "directory": "projects/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/Kordrad/ng-zen/issues"
+  },
+  "author": {
+    "name": "Konrad Stępień",
+    "email": "kord.stp@gmail.com",
+    "url": "https://www.linkedin.com/in/KonradStepien/"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
     "postbuild": "npm run copy-files && npm run clean-packagejson",
-    "copy-files": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/*/templates/** schematics/collection.json **/README.md package.json ../../dist/@ng-zen/cli/",
+    "copy-files": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/*/templates/** schematics/collection.json **/README.md LICENSE package.json ../../dist/@ng-zen/cli/",
     "clean-packagejson": "cd ../../dist/@ng-zen/cli && npm pkg delete scripts"
   },
   "schematics": "./schematics/collection.json",
