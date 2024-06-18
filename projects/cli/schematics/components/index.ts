@@ -17,6 +17,7 @@ export function componentGenerator(options: ComponentGeneratorSchema): Rule {
       const rules: Rule[] = [
         applyTemplates({
           name: component,
+          localeDate: new Date().toLocaleString(),
           ...strings,
         }),
         move(normalize(`${options.path}/${component}`)),
