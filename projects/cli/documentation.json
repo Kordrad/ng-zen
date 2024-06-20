@@ -9,7 +9,7 @@
   "components": [
     {
       "name": "ZenAvatarComponent",
-      "id": "component-ZenAvatarComponent-c1c70b2ab78a2d2de01c96f1e02dffd28942dfa13bfd7daf34f2dfe13d8000e1177c0a20cfcab91141d2545206ba45332267ea8feee6b9b5779d6499882cf72c",
+      "id": "component-ZenAvatarComponent-4df759231d66d3f8cc9321e00adaa26ec9d295e6a54d9a5e96fbe49012d7aaeea3338bff80ee2bf556b082d8e8b0b534bdb0a58fbaec73fce3514378f7959537",
       "file": "projects/cli/schematics/components/files/avatar/avatar.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -40,15 +40,15 @@
           "modifierKind": [148],
           "jsdoctags": [
             {
-              "pos": 1474,
-              "end": 1491,
+              "pos": 1528,
+              "end": 1546,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 334,
               "tagName": {
-                "pos": 1475,
-                "end": 1482,
+                "pos": 1529,
+                "end": 1536,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -58,15 +58,15 @@
               "comment": "<p>&#39;&#39;</p>\n"
             },
             {
-              "pos": 1491,
-              "end": 1503,
+              "pos": 1546,
+              "end": 1559,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 334,
               "tagName": {
-                "pos": 1492,
-                "end": 1497,
+                "pos": 1547,
+                "end": 1552,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -76,15 +76,15 @@
               "comment": ""
             },
             {
-              "pos": 1503,
-              "end": 1515,
+              "pos": 1559,
+              "end": 1571,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 351,
               "tagName": {
-                "pos": 1504,
-                "end": 1508,
+                "pos": 1560,
+                "end": 1564,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -93,15 +93,15 @@
               },
               "comment": "",
               "typeExpression": {
-                "pos": 1509,
-                "end": 1515,
+                "pos": 1565,
+                "end": 1571,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
                 "kind": 316,
                 "type": {
-                  "pos": 1509,
-                  "end": 1515,
+                  "pos": 1565,
+                  "end": 1571,
                   "flags": 16777216,
                   "modifierFlagsCache": 0,
                   "transformFlags": 1,
@@ -126,7 +126,7 @@
       "description": "<p>A component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.</p>\n<p>The component uses Angular&#39;s optimized image directives for enhanced performance.</p>\n<p>Usage:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;!-- If an image source is provided, it will display the image --&gt;\n&lt;zen-avatar [src]=&quot;&#39;/path/to/image.jpg&#39;&quot; /&gt;\n\n&lt;!-- If no image source is provided, it will display the projected content --&gt;\n&lt;zen-avatar&gt; A &lt;/zen-avatar&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-avatar src=&quot;https://picsum.photos/32&quot; /&gt;</code></pre></div>",
       "rawdescription": "\n\nA component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.\n\nThe component uses Angular's optimized image directives for enhanced performance.\n\nUsage:\n\n```html\n<!-- If an image source is provided, it will display the image -->\n<zen-avatar [src]=\"'/path/to/image.jpg'\" />\n\n<!-- If no image source is provided, it will display the projected content -->\n<zen-avatar> A </zen-avatar>\n```\n\n```html\n<zen-avatar src=\"https://picsum.photos/32\" />\n```\n\n",
       "type": "component",
-      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  input,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * A component to display an avatar image. If a valid image source URL is provided,\n * it will render an image element. Otherwise, it will display projected content.\n *\n * The component uses Angular's optimized image directives for enhanced performance.\n *\n * Usage:\n *\n * ```html\n * <!-- If an image source is provided, it will display the image -->\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\n *\n * <!-- If no image source is provided, it will display the projected content -->\n * <zen-avatar> A </zen-avatar>\n * ```\n *\n * @example\n * <zen-avatar src=\"https://picsum.photos/32\" />\n *\n * @component\n * @selector `zen-avatar`\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-avatar',\n  standalone: true,\n  imports: [NgOptimizedImage],\n  template: `\n    @if (src()) {\n      <img [ngSrc]=\"src()\" alt=\"\" fill />\n    } @else {\n      <ng-content />\n    }\n  `,\n  styleUrl: './avatar.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenAvatarComponent {\n  /**\n   * Path to the image source. If the `src` is provided, an image element will be rendered.\n   * Otherwise, the content projected into this component will be displayed.\n   *\n   * @default ''\n   * @input\n   * @type string\n   */\n  readonly src = input<string>('');\n}\n",
+      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * A component to display an avatar image. If a valid image source URL is provided,\r\n * it will render an image element. Otherwise, it will display projected content.\r\n *\r\n * The component uses Angular's optimized image directives for enhanced performance.\r\n *\r\n * Usage:\r\n *\r\n * ```html\r\n * <!-- If an image source is provided, it will display the image -->\r\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\r\n *\r\n * <!-- If no image source is provided, it will display the projected content -->\r\n * <zen-avatar> A </zen-avatar>\r\n * ```\r\n *\r\n * @example\r\n * <zen-avatar src=\"https://picsum.photos/32\" />\r\n *\r\n * @component\r\n * @selector `zen-avatar`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-avatar',\r\n  standalone: true,\r\n  imports: [NgOptimizedImage],\r\n  template: `\r\n    @if (src()) {\r\n      <img [ngSrc]=\"src()\" alt=\"\" fill />\r\n    } @else {\r\n      <ng-content />\r\n    }\r\n  `,\r\n  styleUrl: './avatar.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenAvatarComponent {\r\n  /**\r\n   * Path to the image source. If the `src` is provided, an image element will be rendered.\r\n   * Otherwise, the content projected into this component will be displayed.\r\n   *\r\n   * @default ''\r\n   * @input\r\n   * @type string\r\n   */\r\n  readonly src = input<string>('');\r\n}\r\n",
       "styleUrl": "./avatar.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -135,7 +135,7 @@
     },
     {
       "name": "ZenBadgeComponent",
-      "id": "component-ZenBadgeComponent-71671a8b2d105a1f0687f42fe45ab78400e69e325611e53f7616e070c60e7801822dd72aeccf688b5239479a7126465643fadc51af581f781fc568460e4682d9",
+      "id": "component-ZenBadgeComponent-a18ab634c6366fa273ca9d843ead3428f0cbcd0e6d5fd1a38812e1ce541e8586140a7cf0e6cbadc828bc2c5a6990c3e0c96963ae31ac8e82bdb3e31a069359ed",
       "file": "projects/cli/schematics/components/files/badge/badge.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -163,7 +163,7 @@
       "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
       "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n\n```css\n--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n```\n\n```html\n```\n\n",
       "type": "component",
-      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  ViewEncapsulation,\n} from '@angular/core';\n\n/**\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\n * in various positions within its parent container. It allows for flexible placement\n * of badge content such as icons, text, or other elements in the top-left, top,\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\n *\n * This component offers standalone usage and is highly customizable through its\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\n * for optimal performance.\n *\n * Additionally, it provides support for CSS variables to customize badge positioning\n *\n * ```css\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n * ```\n *\n * @example <zen-badge> Text <span bottom>🦆</span></zen-badge>\n *\n * @component\n * @selector `zen-badge`,`[zenBadge]`\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-badge,[zenBadge]',\n  standalone: true,\n  template: `\n    <ng-content />\n    <ng-content select=\"[topLeft]\" />\n    <ng-content select=\"[top]\" />\n    <ng-content select=\"[topRight]\" />\n    <ng-content select=\"[left]\" />\n    <ng-content select=\"[right]\" />\n    <ng-content select=\"[bottomLeft]\" />\n    <ng-content select=\"[bottom]\" />\n    <ng-content select=\"[bottomRight]\" />\n  `,\n  styleUrl: './badge.component.scss',\n  encapsulation: ViewEncapsulation.None,\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenBadgeComponent {}\n",
+      "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\r\n * in various positions within its parent container. It allows for flexible placement\r\n * of badge content such as icons, text, or other elements in the top-left, top,\r\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\r\n *\r\n * This component offers standalone usage and is highly customizable through its\r\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\r\n * for optimal performance.\r\n *\r\n * Additionally, it provides support for CSS variables to customize badge positioning\r\n *\r\n * ```css\r\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\r\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\r\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\r\n * ```\r\n *\r\n * @example <zen-badge> Text <span bottom>🦆</span></zen-badge>\r\n *\r\n * @component\r\n * @selector `zen-badge`,`[zenBadge]`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-badge,[zenBadge]',\r\n  standalone: true,\r\n  template: `\r\n    <ng-content />\r\n    <ng-content select=\"[topLeft]\" />\r\n    <ng-content select=\"[top]\" />\r\n    <ng-content select=\"[topRight]\" />\r\n    <ng-content select=\"[left]\" />\r\n    <ng-content select=\"[right]\" />\r\n    <ng-content select=\"[bottomLeft]\" />\r\n    <ng-content select=\"[bottom]\" />\r\n    <ng-content select=\"[bottomRight]\" />\r\n  `,\r\n  styleUrl: './badge.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenBadgeComponent {}\r\n",
       "styleUrl": "./badge.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -241,6 +241,107 @@
       }
     },
     {
+      "name": "ZenSwitchComponent",
+      "id": "component-ZenSwitchComponent-51e349f95a64c022d2513c8b1fd3f4104a01dff562730d9d4e7a15b035f18bcab08361d86e82cfc4b715738a1bf673edfe1d35d6b58425f837e47b6631895a00",
+      "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [
+        {
+          "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => ZenSwitchComponent), multi: true,\n}",
+          "type": "component"
+        }
+      ],
+      "selector": "zen-switch",
+      "styleUrls": [],
+      "styles": [],
+      "templateUrl": ["./zen-switch.component.html"],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [
+        {
+          "name": "checked",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the checked state of the switch.</p>\n",
+          "line": 47,
+          "rawdescription": "\nModel for the checked state of the switch.",
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the disabled state of the switch.</p>\n",
+          "line": 50,
+          "rawdescription": "\nModel for the disabled state of the switch.",
+          "required": false
+        }
+      ],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "checked",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the checked state of the switch.</p>\n",
+          "line": 47,
+          "rawdescription": "\nModel for the checked state of the switch.",
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the disabled state of the switch.</p>\n",
+          "line": 50,
+          "rawdescription": "\nModel for the disabled state of the switch.",
+          "required": false
+        }
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [
+        {
+          "name": "FormsModule",
+          "type": "module"
+        },
+        {
+          "name": "NgIf"
+        }
+      ],
+      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor\nto work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
+      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor\nto work seamlessly with Angular forms.\n\n```html\n```\n",
+      "type": "component",
+      "sourceCode": "import { NgIf } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: string) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor\n * to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule, NgIf],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange!: OnChangeFn;\n  /** @ignore */\n  private onTouched!: OnTouchedFn;\n\n  /**\n   * Writes a new value to the component.\n   *\n   * @param {boolean} value The new value for the switch's checked state.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   *\n   * @param {OnChangeFn} fn The function to call on value change.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   *\n   * @param {OnTouchedFn} fn The function to call on touch.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   *\n   * @param {boolean} isDisabled The new disabled state.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n}\n",
+      "styleUrl": "./zen-switch.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": [],
+      "implements": ["ControlValueAccessor"],
+      "templateData": "<div\n  class=\"switch-container\"\n  [class.checked]=\"checked()\"\n  [class.disabled]=\"disabled()\"\n>\n  <input\n    [(ngModel)]=\"checked()\"\n    [disabled]=\"disabled()\"\n    type=\"checkbox\"\n    role=\"switch\"\n    aria-checked=\"false\"\n  />\n  <div class=\"thumb\"></div>\n  <div class=\"content\" *ngIf=\"checked()\">\n    <ng-content select=\"[checked-content]\" />\n  </div>\n  <div class=\"content\" *ngIf=\"!checked()\">\n    <ng-content select=\"[unchecked-content]\" />\n  </div>\n</div>\n"
+    },
+    {
       "name": "ZenTagComponent",
       "id": "component-ZenTagComponent-5228e187c92b9212421b9a731ff7a0a9454a5fce400d56a32c5064c399c1f34718009176b252df35d2b32a63f44b1cf96d3c9c0a89438226dd6b322afd3ecc33",
       "file": "projects/cli/schematics/components/files/tag/tag.component.ts",
@@ -289,7 +390,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
       },
       {
         "name": "Avatar",
@@ -332,6 +433,16 @@
         "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenTagComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-tag bottom>KS</zen-tag>\r\n        <zen-avatar src=\"https://github.com/Kordrad.png\" style=\"height: 64px; width: 64px\"/>\r\n      </zen-badge>`,\r\n  }),\r\n}"
       },
       {
+        "name": "Checked",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/switch.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <zen-switch [ngModel]=\"true\" />\n      <br/>\n      <zen-switch [checked]=\"true\" />\n    `,\n  }),\n}"
+      },
+      {
         "name": "Component",
         "ctype": "miscellaneous",
         "subtype": "variable",
@@ -339,7 +450,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
       },
       {
         "name": "Default",
@@ -355,11 +466,31 @@
         "name": "Default",
         "ctype": "miscellaneous",
         "subtype": "variable",
+        "file": "projects/cli/stories/components/switch.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch>\n          <span inner-checked>Yes</span>\n          <span inner-unchecked>No</span>\n        </zen-switch>\n    `,\n  }),\n}"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
         "file": "projects/cli/stories/components/tag.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
         "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
+      },
+      {
+        "name": "Disabled",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/switch.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `<zen-switch [disabled]=\"true\" />`,\n  }),\n}"
       },
       {
         "name": "Emoji",
@@ -369,7 +500,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-avatar src=\"https://picsum.photos/33\" />\n        <b topRight>💬</b>\n      </zen-badge>\n    `,\n  }),\n}"
+        "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-avatar src=\"https://picsum.photos/33\" />\r\n        <b topRight>💬</b>\r\n      </zen-badge>\r\n    `,\r\n  }),\r\n}"
       },
       {
         "name": "Image",
@@ -435,6 +566,28 @@
     "functions": [],
     "typealiases": [
       {
+        "name": "OnChangeFn",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "function",
+        "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 184
+      },
+      {
+        "name": "OnTouchedFn",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "function",
+        "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 184
+      },
+      {
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
@@ -471,6 +624,17 @@
         "name": "Story",
         "ctype": "miscellaneous",
         "subtype": "typealias",
+        "rawtype": "StoryObj<ZenSwitchComponent>",
+        "file": "projects/cli/stories/components/switch.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
         "rawtype": "StoryObj<ZenTagComponent>",
         "file": "projects/cli/stories/components/tag.stories.ts",
         "deprecated": false,
@@ -490,7 +654,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
         },
         {
           "name": "Avatar",
@@ -520,7 +684,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
         },
         {
           "name": "Emoji",
@@ -530,7 +694,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-avatar src=\"https://picsum.photos/33\" />\n        <b topRight>💬</b>\n      </zen-badge>\n    `,\n  }),\n}"
+          "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-avatar src=\"https://picsum.photos/33\" />\r\n        <b topRight>💬</b>\r\n      </zen-badge>\r\n    `,\r\n  }),\r\n}"
         }
       ],
       "projects/cli/stories/components/avatar.stories.ts": [
@@ -597,6 +761,38 @@
           "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
         }
       ],
+      "projects/cli/stories/components/switch.stories.ts": [
+        {
+          "name": "Checked",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/switch.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <zen-switch [ngModel]=\"true\" />\n      <br/>\n      <zen-switch [checked]=\"true\" />\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/switch.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch>\n          <span inner-checked>Yes</span>\n          <span inner-unchecked>No</span>\n        </zen-switch>\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Disabled",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/switch.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `<zen-switch [disabled]=\"true\" />`,\n  }),\n}"
+        }
+      ],
       "projects/cli/stories/components/pin.stories.ts": [
         {
           "name": "Default",
@@ -645,6 +841,30 @@
     "groupedFunctions": {},
     "groupedEnumerations": {},
     "groupedTypeAliases": {
+      "projects/cli/schematics/components/files/switch/zen-switch.component.ts": [
+        {
+          "name": "OnChangeFn",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "function",
+          "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 184
+        },
+        {
+          "name": "OnTouchedFn",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "function",
+          "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 184
+        }
+      ],
       "projects/cli/stories/components/avatar.stories.ts": [
         {
           "name": "Story",
@@ -684,6 +904,19 @@
           "kind": 183
         }
       ],
+      "projects/cli/stories/components/switch.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenSwitchComponent>",
+          "file": "projects/cli/stories/components/switch.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
       "projects/cli/stories/components/tag.stories.ts": [
         {
           "name": "Story",
@@ -701,7 +934,7 @@
   },
   "routes": [],
   "coverage": {
-    "count": 19,
+    "count": 20,
     "status": "low",
     "files": [
       {
@@ -740,6 +973,15 @@
         "coveragePercent": 66,
         "coverageCount": "2/3",
         "status": "good"
+      },
+      {
+        "filePath": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenSwitchComponent",
+        "coveragePercent": 100,
+        "coverageCount": "5/5",
+        "status": "very-good"
       },
       {
         "filePath": "projects/cli/schematics/components/files/tag/tag.component.ts",
@@ -866,6 +1108,36 @@
         "linktype": "miscellaneous",
         "linksubtype": "variable",
         "name": "StreamAttribute",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/switch.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Checked",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/switch.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/switch.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Disabled",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"

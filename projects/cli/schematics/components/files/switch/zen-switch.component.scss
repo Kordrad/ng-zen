@@ -1,0 +1,77 @@
+$switch-width: 44px;
+$switch-height: 22px;
+$switch-border-radius: 999px;
+$switch-bg-color: #6b7280;
+$switch-bg-disabled-color: #1e1e1e;
+$switch-bg-checked-color: #2a912a;
+$switch-border-color: #ccc;
+$switch-thumb-size: 18px;
+$switch-thumb-bg-color: #fff;
+$switch-thumb-padding: 2px;
+$switch-content-padding: 6px;
+
+.switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: $switch-width;
+  height: $switch-height;
+  border: 1px solid $switch-border-color;
+  border-radius: $switch-border-radius;
+  position: relative;
+  background-color: $switch-bg-color;
+  transition: background-color 0.3s;
+  overflow: hidden;
+
+  &.checked {
+    background-color: $switch-bg-checked-color;
+  }
+
+  &:disabled {
+    background-color: $switch-bg-disabled-color;
+  }
+
+  .thumb {
+    width: $switch-thumb-size;
+    height: $switch-thumb-size;
+    background-color: $switch-thumb-bg-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: $switch-thumb-padding;
+    transition: left 0.3s;
+    translate: 0 -50%;
+
+    &.checked {
+      left: calc(100% - #{$switch-thumb-size + $switch-thumb-padding});
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: opacity 0.3s;
+    padding-left: $switch-content-padding;
+    padding-right: $switch-content-padding;
+    user-select: none;
+
+    &.left-content {
+      left: 0;
+
+      &:not(.checked) {
+        opacity: 0;
+      }
+    }
+
+    &.right-content {
+      right: 0;
+
+      &.checked {
+        opacity: 0;
+      }
+    }
+  }
+}
