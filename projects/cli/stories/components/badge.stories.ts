@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 
 import { ZenBadgeComponent } from '../../schematics/components/files/badge';
 import { OnElement } from './pin.stories';
+import { AvatarWithTag as _AvatarWithTag } from './tag.stories';
 
 export default {
   title: 'Components/Badge',
@@ -50,3 +51,4 @@ export const Attribute: Story = {
 };
 
 export const Avatar = OnElement;
+export const AvatarWithATag = _AvatarWithTag;
