@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
 
+import { ZenAvatarComponent } from '../../schematics/components/files/avatar';
 import { ZenBadgeComponent } from '../../schematics/components/files/badge';
 import { OnElement } from './pin.stories';
 import { AvatarWithTag as _AvatarWithTag } from './tag.stories';
@@ -50,5 +52,20 @@ export const Attribute: Story = {
   }),
 };
 
+export const Emoji: Story = {
+  decorators: [
+    moduleMetadata({
+      imports: [ZenAvatarComponent, ZenBadgeComponent],
+    }),
+  ],
+  render: () => ({
+    template: `
+      <zen-badge style="--zen-badge-offset: -4px">
+        <zen-avatar src="https://picsum.photos/33" />
+        <b topRight>💬</b>
+      </zen-badge>
+    `,
+  }),
+};
 export const Avatar = OnElement;
 export const AvatarWithATag = _AvatarWithTag;

@@ -18,6 +18,8 @@ import {
  * @component
  * @selector `zen-pin`
  *
+ * @license BSD-2-Clause
+ * @author Konrad Stępień <kord.stp@gmail.com>
  * @link https://github.com/Kordrad/ng-zen
  */
 @Component({
