@@ -1,24 +1,39 @@
-# Cli
+# @ng-zen/cli
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## Overview
 
-## Code scaffolding
+The ng-zen CLI is a command-line tool designed to facilitate the generation of UI-kit elements for Angular applications using Angular schematics. It provides out-of-the-box components that can be quickly integrated into Angular projects.
 
-Run `ng generate component component-name --project cli` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project cli`.
-> Note: Don't forget to add `--project cli` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+To install ng-zen CLI, use the following command:
 
-Run `ng build cli` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng add @ng-zen/cli
+```
 
-## Publishing
+This command will add the necessary dependencies and configurations to your Angular project.
 
-After building your library with `ng build cli`, go to the dist folder `cd dist/cli` and run `npm publish`.
+## Generating Components
 
-## Running unit tests
+You can generate components using the ng-zen CLI. Components are generated using the following command format:
 
-Run `ng test cli` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng generate @ng-zen/cli:component
+```
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is licensed under the BSD 2-Clause License. For more details, refer to the LICENSE file in the repository.
+
+
+## Author
+
+**@ng-zen/cli** is maintained by Konrad Stępień.
+
+- Email: kord.stp@gmail.com
+- LinkedIn: [Konrad Stępień](https://www.linkedin.com/in/konradstepien/)
+
+## Documentation
+
+The ng-zen CLI is documented using Storybook for component examples and JSDoc, as well as Compodoc for Angular project documentation.
