@@ -1,27 +1,26 @@
 # NgZen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+## Overview
 
-## Development server
+**ng-zen** is a comprehensive library designed to enhance Angular development by providing a collection of UI-kit elements and utilities. It includes a CLI tool with Angular schematics to streamline the generation of these components directly into Angular projects.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## License
 
-## Code scaffolding
+ng-zen is licensed under the BSD 2-Clause License. See the LICENSE file in the repository for detailed information.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Repository Structure
 
-## Build
+Repository Structure
+- `/packages/cli`: Contains the ng-zen CLI tool with Angular schematics for generating UI-kit components.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Author
 
-## Running unit tests
+**@ng-zen/cli** is maintained by Konrad Stępień.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Email: kord.stp@gmail.com
+- LinkedIn: [Konrad Stępień](https://www.linkedin.com/in/konradstepien/)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contribution
+Contributions to ng-zen are welcome. Fork the repository, make improvements, and submit a pull request.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
