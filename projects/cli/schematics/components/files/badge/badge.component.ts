@@ -21,9 +21,14 @@ import {
  * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.
  * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.
  * ```
-
+ *
+ * @example <zen-badge> Text <span bottom>🦆</span></zen-badge>
+ *
+ * @component
  * @selector `zen-badge`,`[zenBadge]`
  *
+ * @license BSD-2-Clause
+ * @author Konrad Stępień <kord.stp@gmail.com>
  * @link https://github.com/Kordrad/ng-zen
  */
 @Component({

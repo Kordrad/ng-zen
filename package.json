@@ -13,7 +13,7 @@
     "prepare": "husky",
     "storybook": "ng run cli:storybook",
     "storybook:build": "ng run cli:build-storybook",
-    "doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
+    "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
   },
   "private": true,
   "dependencies": {
