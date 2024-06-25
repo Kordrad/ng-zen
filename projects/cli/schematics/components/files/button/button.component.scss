@@ -1,0 +1,37 @@
+/* button.component.scss */
+
+:host {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 99999px; /* Rounded corners */
+  transition: all 0.3s ease;
+  background-color: #000; /* Black primary color */
+  color: #fff; /* White text color */
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  text-decoration: none;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover state */
+:host:hover {
+  background-color: #333; /* Darken on hover */
+}
+
+/* Focus state */
+:host:focus {
+  box-shadow: 0 0 0 3px rgb(0 123 255 / 50%);
+}
+
+/* Disabled state */
+:host[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
