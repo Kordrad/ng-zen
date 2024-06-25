@@ -242,7 +242,7 @@
     },
     {
       "name": "ZenSwitchComponent",
-      "id": "component-ZenSwitchComponent-51e349f95a64c022d2513c8b1fd3f4104a01dff562730d9d4e7a15b035f18bcab08361d86e82cfc4b715738a1bf673edfe1d35d6b58425f837e47b6631895a00",
+      "id": "component-ZenSwitchComponent-6016a30f0e96e5474d8cc5f7e8c943d1950b807b10ed47c79f96b0beed3de9f8b8a9f7d89dc6a67ebb57392a06abe19e63e75d8c489098f1c5469a021a893baf",
       "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -314,7 +314,70 @@
           "required": false
         }
       ],
-      "methodsClass": [],
+      "methodsClass": [
+        {
+          "name": "onKeyDown",
+          "args": [
+            {
+              "name": "event",
+              "type": "KeyboardEvent",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 105,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nHandles keyboard events for accessibility.\n",
+          "description": "<p>Handles keyboard events for accessibility.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "event",
+              "type": "KeyboardEvent",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        },
+        {
+          "name": "onToggle",
+          "args": [
+            {
+              "name": "check",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "optional": true
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 92,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nToggles the switch value and notifies the change.\n",
+          "description": "<p>Toggles the switch value and notifies the change.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "check",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "optional": true,
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        }
+      ],
       "deprecated": false,
       "deprecationMessage": "",
       "hostBindings": [],
@@ -329,17 +392,17 @@
           "name": "NgIf"
         }
       ],
-      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor\nto work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
-      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor\nto work seamlessly with Angular forms.\n\n```html\n```\n",
+      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
+      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n```\n\n",
       "type": "component",
-      "sourceCode": "import { NgIf } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: string) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor\n * to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule, NgIf],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange!: OnChangeFn;\n  /** @ignore */\n  private onTouched!: OnTouchedFn;\n\n  /**\n   * Writes a new value to the component.\n   *\n   * @param {boolean} value The new value for the switch's checked state.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   *\n   * @param {OnChangeFn} fn The function to call on value change.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   *\n   * @param {OnTouchedFn} fn The function to call on touch.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   *\n   * @param {boolean} isDisabled The new disabled state.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n}\n",
+      "sourceCode": "import { NgIf } from '@angular/common';\nimport {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule, NgIf],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.disabled()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
       "styleUrl": "./zen-switch.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
       "stylesData": "",
       "extends": [],
       "implements": ["ControlValueAccessor"],
-      "templateData": "<div\n  class=\"switch-container\"\n  [class.checked]=\"checked()\"\n  [class.disabled]=\"disabled()\"\n>\n  <input\n    [(ngModel)]=\"checked()\"\n    [disabled]=\"disabled()\"\n    type=\"checkbox\"\n    role=\"switch\"\n    aria-checked=\"false\"\n  />\n  <div class=\"thumb\"></div>\n  <div class=\"content\" *ngIf=\"checked()\">\n    <ng-content select=\"[checked-content]\" />\n  </div>\n  <div class=\"content\" *ngIf=\"!checked()\">\n    <ng-content select=\"[unchecked-content]\" />\n  </div>\n</div>\n"
+      "templateData": "<button\n  class=\"switch\"\n  [attr.aria-checked]=\"checked()\"\n  [attr.aria-disabled]=\"disabled()\"\n  [disabled]=\"disabled()\"\n  (click)=\"onToggle()\"\n  (keydown)=\"onKeyDown($event)\"\n  role=\"switch\"\n>\n  <span class=\"slider\"></span>\n</button>\n"
     },
     {
       "name": "ZenTagComponent",
@@ -470,7 +533,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch>\n          <span inner-checked>Yes</span>\n          <span inner-unchecked>No</span>\n        </zen-switch>\n    `,\n  }),\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch />\n    `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -780,7 +843,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch>\n          <span inner-checked>Yes</span>\n          <span inner-unchecked>No</span>\n        </zen-switch>\n    `,\n  }),\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch />\n    `,\n  }),\n}"
         },
         {
           "name": "Disabled",
@@ -980,7 +1043,7 @@
         "linktype": "component",
         "name": "ZenSwitchComponent",
         "coveragePercent": 100,
-        "coverageCount": "5/5",
+        "coverageCount": "7/7",
         "status": "very-good"
       },
       {

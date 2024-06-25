@@ -1,17 +1,11 @@
 <button
   class="switch"
-  [class.checked]="checked()"
+  [attr.aria-checked]="checked()"
+  [attr.aria-disabled]="disabled()"
   [disabled]="disabled()"
-  (click)="toggle()"
-  (keydown.arrowRight)="checked.set(true)"
-  (keydown.arrowLeft)="checked.set(false)"
-  (keydown.space)="toggle()"
+  (click)="onToggle()"
+  (keydown)="onKeyDown($event)"
+  role="switch"
 >
-  <div class="content left-content" [class.checked]="checked()">
-    <ng-content select="[left]" />
-  </div>
-  <div class="content right-content" [class.checked]="checked()">
-    <ng-content select="[right]" />
-  </div>
-  <div class="thumb" [class.checked]="checked()"></div>
+  <span class="slider"></span>
 </button>

@@ -11,14 +11,14 @@ import {
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
 
-type OnChangeFn = (value: string) => void;
+type OnChangeFn = (value: boolean) => void;
 type OnTouchedFn = () => void;
 
 /**
- * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor
- * to work seamlessly with Angular forms.
+ * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.
  *
  * @example <zen-switch />
+ *
  * @export
  * @class ZenSwitchComponent
  * @implements {ControlValueAccessor}
@@ -50,14 +50,12 @@ export class ZenSwitchComponent implements ControlValueAccessor {
   disabled = model<boolean>(false);
 
   /** @ignore */
-  private onChange!: OnChangeFn;
+  private onChange: OnChangeFn = () => {};
   /** @ignore */
-  private onTouched!: OnTouchedFn;
+  private onTouched: OnTouchedFn = () => {};
 
   /**
    * Writes a new value to the component.
-   *
-   * @param {boolean} value The new value for the switch's checked state.
    * @ignore
    */
   writeValue(value: boolean): void {
@@ -66,8 +64,6 @@ export class ZenSwitchComponent implements ControlValueAccessor {
 
   /**
    * Registers a function to be called when the value changes.
-   *
-   * @param {OnChangeFn} fn The function to call on value change.
    * @ignore
    */
   registerOnChange(fn: OnChangeFn): void {
@@ -76,8 +72,6 @@ export class ZenSwitchComponent implements ControlValueAccessor {
 
   /**
    * Registers a function to be called when the component is touched.
-   *
-   * @param {OnTouchedFn} fn The function to call on touch.
    * @ignore
    */
   registerOnTouched(fn: OnTouchedFn): void {
@@ -86,18 +80,44 @@ export class ZenSwitchComponent implements ControlValueAccessor {
 
   /**
    * Sets the disabled state of the component.
-   *
-   * @param {boolean} isDisabled The new disabled state.
    * @ignore
    */
   setDisabledState(isDisabled: boolean): void {
     this.disabled.set(isDisabled);
   }
 
-  toggle(): void {
+  /**
+   * Toggles the switch value and notifies the change.
+   */
+  onToggle(check?: boolean): void {
     if (this.disabled()) return;
 
-    this.checked.set(!this.checked());
+    const value = check ?? !this.checked();
+
+    this.checked.set(value);
+    this.onChange(value);
     this.onTouched();
+  }
+
+  /**
+   * Handles keyboard events for accessibility.
+   */
+  onKeyDown(event: KeyboardEvent): void {
+    switch (event.code) {
+      case 'Enter':
+      case 'Space': {
+        event.preventDefault();
+        this.onToggle();
+        break;
+      }
+      case 'ArrowRight': {
+        this.onToggle(true);
+        break;
+      }
+      case 'ArrowLeft': {
+        this.onToggle(false);
+        break;
+      }
+    }
   }
 }

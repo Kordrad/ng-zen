@@ -21,10 +21,7 @@ type Story = StoryObj<ZenSwitchComponent>;
 export const Default: Story = {
   render: () => ({
     template: `
-        <zen-switch>
-          <span left>✔</span>
-          <span right>✘</span>
-        </zen-switch>
+        <zen-switch />
     `,
   }),
 };
@@ -38,7 +35,7 @@ export const Disabled: Story = {
 export const Checked: Story = {
   render: () => ({
     template: `
-      <zen-switch #swtich1 [ngModel]="true" />
+      <zen-switch [ngModel]="true" />
       <br/>
       <zen-switch [checked]="true" />
     `,
