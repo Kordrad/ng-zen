@@ -1,4 +1,10 @@
-/* button.component.scss */
+$bg-color-hover: #333;
+$bg-color: #000;
+$color: #fff;
+$padding: 8px 24px;
+$shadow-hover: 0 0 0 3px rgb(0 123 255 / 50%);
+$shadow: 0 2px 4px rgb(0 0 0 / 10%);
+$transition-duration: 0.4s;
 
 :host {
   display: inline-block;
@@ -7,12 +13,12 @@
   text-align: center;
   cursor: pointer;
   border: none;
-  padding: 8px 24px;
-  border-radius: 99999px; /* Rounded corners */
-  transition: all 0.3s ease;
-  background-color: #000; /* Black primary color */
-  color: #fff; /* White text color */
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  padding: $padding;
+  border-radius: 99999px;
+  transition: all $transition-duration ease;
+  background-color: $bg-color;
+  color: $color;
+  box-shadow: $shadow;
   text-decoration: none;
   outline: none;
   overflow: hidden;
@@ -21,12 +27,12 @@
 
 /* Hover state */
 :host:hover {
-  background-color: #333; /* Darken on hover */
+  background-color: $bg-color-hover;
 }
 
 /* Focus state */
 :host:focus {
-  box-shadow: 0 0 0 3px rgb(0 123 255 / 50%);
+  box-shadow: $shadow-hover;
 }
 
 /* Disabled state */
@@ -34,4 +40,3 @@
   cursor: not-allowed;
   opacity: 0.6;
 }
-
