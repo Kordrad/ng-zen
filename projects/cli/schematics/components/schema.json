@@ -10,7 +10,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["avatar", "badge", "pin", "switch", "tag"]
+        "enum": ["avatar", "badge", "button", "pin", "switch", "tag"]
       },
       "multiselect": true,
       "x-prompt": "Which component should be generated?"
