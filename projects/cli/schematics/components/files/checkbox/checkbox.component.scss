@@ -1,0 +1,66 @@
+// Define SCSS variables for better maintainability
+$checkbox-size: 22px;
+$transition-duration: 0.4s;
+$checkbox-bg-color: white;
+$checkbox-checked-bg-color: green;
+$checkbox-border-color: grey;
+$checkbox-disabled-bg-color: lightgrey;
+$checkbox-check-color: white;
+
+/* Hide the default checkbox */
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+:host {
+  display: inline-block;
+  height: $checkbox-size;
+  width: $checkbox-size;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $checkbox-bg-color;
+  border: 2px solid $checkbox-border-color;
+  border-radius: 4px;
+  transition:
+    background-color $transition-duration,
+    border-color $transition-duration;
+  user-select: none;
+
+}
+
+/* DISABLED STATE */
+:host[disabled],
+:host:has([disabled]) {
+  background-color: $checkbox-disabled-bg-color;
+  border-color: $checkbox-disabled-bg-color;
+  opacity: 0.6;
+
+  * {
+    cursor: not-allowed;
+  }
+}
+
+/* CHECKED STATE */
+:host:has(input[type='checkbox'][aria-checked='true']) {
+  background-color: $checkbox-checked-bg-color;
+  border-color: $checkbox-checked-bg-color;
+}
+
+/* UNCHECKED STATE */
+:host:has(input[type='checkbox'][aria-checked='false']) {
+  background-color: white;
+}
+
+/* MIXED/INDETERMINATE STATE */
+:host:has(input[type='checkbox'][aria-checked='mixed']) {
+  background-color: lightgray;
+}
