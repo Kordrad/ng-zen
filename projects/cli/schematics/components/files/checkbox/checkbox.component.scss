@@ -35,7 +35,6 @@ input[type='checkbox'] {
     border-color $transition-duration;
   user-select: none;
 
-  // Checked State
 }
 
 /* DISABLED STATE */
@@ -56,12 +55,12 @@ input[type='checkbox'] {
   border-color: $checkbox-checked-bg-color;
 }
 
-/* CHECKED STATE */
+/* UNCHECKED STATE */
 :host:has(input[type='checkbox'][aria-checked='false']) {
   background-color: white;
 }
 
-/* MIXED STATE */
+/* MIXED/INDETERMINATE STATE */
 :host:has(input[type='checkbox'][aria-checked='mixed']) {
   background-color: lightgray;
 }

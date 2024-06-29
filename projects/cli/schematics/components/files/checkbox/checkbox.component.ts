@@ -135,9 +135,9 @@ export class ZenCheckboxComponent
     this.checked$
       .pipe(
         takeUntilDestroyed(this.destroyRef),
-        map(value => value === 'mixed')
+        map((value: CheckedState) => value === 'mixed')
       )
-      .subscribe(value => {
+      .subscribe((value: boolean) => {
         this.renderer2.setProperty(
           this.inputElement()?.nativeElement,
           'indeterminate',
