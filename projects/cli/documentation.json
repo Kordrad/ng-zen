@@ -172,7 +172,7 @@
     },
     {
       "name": "ZenButtonComponent",
-      "id": "component-ZenButtonComponent-f0d2336ba8244149a440b2c41cdb210eaf91d1f9b6b013e07f494f77d6d80f8f4fc3bdb5bdff547861a1dc8cda22aa36e1cb3fb71f22c56771486d18ec6641bf",
+      "id": "component-ZenButtonComponent-b57be6c72da78739ffa0850c3009283a68cdcfd6519985ac31cd93a481f54cef4a5c24052327138402f5398ac7f529d014ec2393601f61bf48c51fd096aeae52",
       "file": "projects/cli/schematics/components/files/button/button.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -200,12 +200,282 @@
       "description": "",
       "rawdescription": "\n",
       "type": "component",
-      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n  // eslint-disable-next-line @angular-eslint/component-selector\n  selector: 'button[zen-button], a[zen-button]',\n  standalone: true,\n  template: ` <ng-content /> `,\n  styleUrl: './button.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenButtonComponent {}\n",
+      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n@Component({\r\n  // eslint-disable-next-line @angular-eslint/component-selector\r\n  selector: 'button[zen-button], a[zen-button]',\r\n  standalone: true,\r\n  template: ` <ng-content /> `,\r\n  styleUrl: './button.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenButtonComponent {}\r\n",
       "styleUrl": "./button.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
       "stylesData": "",
       "extends": []
+    },
+    {
+      "name": "ZenCheckboxComponent",
+      "id": "component-ZenCheckboxComponent-216417c00778117fe5b1d5df6a9e67f7cfac3b2c938db28e63854366ae0fb6a7d09c689d8b84aec2445c75482aa49e734b7787ec2210252c12ba2a25dca568bd",
+      "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [
+        {
+          "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => ZenCheckboxComponent), multi: true,\n}",
+          "type": "component"
+        }
+      ],
+      "selector": "zen-checkbox",
+      "styleUrls": [],
+      "styles": [],
+      "templateUrl": ["./checkbox.component.html"],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [
+        {
+          "name": "checked",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the checked state of the checkbox.</p>\n",
+          "line": 60,
+          "rawdescription": "\nModel for the checked state of the checkbox.",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the disabled state of the checkbox.</p>\n",
+          "line": 63,
+          "rawdescription": "\nModel for the disabled state of the checkbox.",
+          "modifierKind": [148],
+          "required": false
+        }
+      ],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "checked",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the checked state of the checkbox.</p>\n",
+          "line": 60,
+          "rawdescription": "\nModel for the checked state of the checkbox.",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "defaultValue": "false",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the disabled state of the checkbox.</p>\n",
+          "line": 63,
+          "rawdescription": "\nModel for the disabled state of the checkbox.",
+          "modifierKind": [148],
+          "required": false
+        },
+        {
+          "name": "onChange",
+          "defaultValue": "() => {...}",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "OnChangeFn",
+          "optional": false,
+          "description": "",
+          "line": 87,
+          "modifierKind": [123]
+        },
+        {
+          "name": "onTouched",
+          "defaultValue": "() => {...}",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "OnTouchedFn",
+          "optional": false,
+          "description": "",
+          "line": 88,
+          "modifierKind": [123]
+        }
+      ],
+      "methodsClass": [
+        {
+          "name": "initIndeterminate",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 134,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nInitializes the indeterminate state of the checkbox based on the checked state.\nIf the checked state is 'mixed', the checkbox will be set to indeterminate.\n",
+          "description": "<p>Initializes the indeterminate state of the checkbox based on the checked state.\nIf the checked state is &#39;mixed&#39;, the checkbox will be set to indeterminate.</p>\n",
+          "modifierKind": [123]
+        },
+        {
+          "name": "onToggle",
+          "args": [],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 122,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nToggles the checkbox value and notifies the change.\nIf the component is disabled, no action is performed.\n",
+          "description": "<p>Toggles the checkbox value and notifies the change.\nIf the component is disabled, no action is performed.</p>\n"
+        },
+        {
+          "name": "registerOnChange",
+          "args": [
+            {
+              "name": "fn",
+              "type": "OnChangeFn",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 100,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nRegisters a function to be called when the value changes.\n",
+          "description": "<p>Registers a function to be called when the value changes.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "fn",
+              "type": "OnChangeFn",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        },
+        {
+          "name": "registerOnTouched",
+          "args": [
+            {
+              "name": "fn",
+              "type": "OnTouchedFn",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 107,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nRegisters a function to be called when the component is touched.\n",
+          "description": "<p>Registers a function to be called when the component is touched.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "fn",
+              "type": "OnTouchedFn",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        },
+        {
+          "name": "setDisabledState",
+          "args": [
+            {
+              "name": "isDisabled",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 114,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nSets the disabled state of the component.\n",
+          "description": "<p>Sets the disabled state of the component.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "isDisabled",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        },
+        {
+          "name": "writeValue",
+          "args": [
+            {
+              "name": "value",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": ""
+            }
+          ],
+          "optional": false,
+          "returnType": "void",
+          "typeParameters": [],
+          "line": 93,
+          "deprecated": false,
+          "deprecationMessage": "",
+          "rawdescription": "\n\nWrites a new value to the component.\n",
+          "description": "<p>Writes a new value to the component.</p>\n",
+          "jsdoctags": [
+            {
+              "name": "value",
+              "type": "boolean",
+              "deprecated": false,
+              "deprecationMessage": "",
+              "tagName": {
+                "text": "param"
+              }
+            }
+          ]
+        }
+      ],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": true,
+      "imports": [
+        {
+          "name": "FormsModule",
+          "type": "module"
+        }
+      ],
+      "description": "<p>ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-checkbox /&gt;</code></pre></div>",
+      "rawdescription": "\n\nZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).\n\n```html\n<zen-checkbox />\n```\n\n",
+      "type": "component",
+      "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  Component,\n  DestroyRef,\n  ElementRef,\n  forwardRef,\n  inject,\n  model,\n  Renderer2,\n  viewChild,\n} from '@angular/core';\nimport { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\nimport { map } from 'rxjs';\n\ntype CheckedState = boolean | 'mixed';\ntype OnChangeFn = (value: CheckedState) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\n * It supports a tri-state checkbox (checked, unchecked, and indeterminate).\n *\n * @example\n * <zen-checkbox />\n *\n * @export\n * @class ZenCheckboxComponent\n * @implements {ControlValueAccessor}\n * @implements {AfterViewInit}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-checkbox',\n  standalone: true,\n  templateUrl: './checkbox.component.html',\n  styleUrl: './checkbox.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenCheckboxComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenCheckboxComponent\n  implements ControlValueAccessor, AfterViewInit\n{\n  /** Model for the checked state of the checkbox. */\n  readonly checked = model<CheckedState>(false);\n\n  /** Model for the disabled state of the checkbox. */\n  readonly disabled = model<boolean>(false);\n\n  /** @ignore */\n  private readonly checked$ = toObservable(this.checked);\n\n  /** @ignore */\n  private readonly destroyRef = inject(DestroyRef);\n  /** @ignore */\n  private readonly renderer2 = inject(Renderer2);\n\n  /** @ignore */\n  private readonly inputElement =\n    viewChild<ElementRef<HTMLInputElement>>('inputElement');\n\n  /**\n   * Lifecycle hook called after Angular has fully initialized a component's view.\n   * Initializes the indeterminate state of the checkbox.\n   *\n   * @ignore\n   */\n  ngAfterViewInit(): void {\n    this.initIndeterminate();\n  }\n\n  private onChange: OnChangeFn = () => {};\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the checkbox value and notifies the change.\n   * If the component is disabled, no action is performed.\n   */\n  onToggle(): void {\n    if (this.disabled()) return;\n\n    this.checked.update(value => !value);\n    this.onChange(this.checked());\n    this.onTouched();\n  }\n\n  /**\n   * Initializes the indeterminate state of the checkbox based on the checked state.\n   * If the checked state is 'mixed', the checkbox will be set to indeterminate.\n   */\n  private initIndeterminate(): void {\n    this.checked$\n      .pipe(\n        takeUntilDestroyed(this.destroyRef),\n        map((value: CheckedState) => value === 'mixed')\n      )\n      .subscribe((value: boolean) => {\n        this.renderer2.setProperty(\n          this.inputElement()?.nativeElement,\n          'indeterminate',\n          value\n        );\n      });\n  }\n}\n",
+      "styleUrl": "./checkbox.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": [],
+      "implements": ["ControlValueAccessor", "AfterViewInit"],
+      "templateData": "<input\n  #inputElement\n  [attr.aria-checked]=\"checked()\"\n  [checked]=\"checked()\"\n  [attr.aria-disabled]=\"disabled()\"\n  [disabled]=\"disabled()\"\n  (change)=\"onToggle()\"\n  (keydown.enter)=\"onToggle()\"\n  type=\"checkbox\"\n/>\n@switch (checked()) {\n  @case (false) {\n    ✕\n  }\n  @case (true) {\n    ✓\n  }\n  @case ('mixed') {\n    -\n  }\n}\n"
     },
     {
       "name": "ZenPinComponent",
@@ -279,7 +549,7 @@
     },
     {
       "name": "ZenSwitchComponent",
-      "id": "component-ZenSwitchComponent-f383003b1af9fe87fdaecd5205fadec6a763c26636e2d77eeec4e8a6c3ec1b53b5509a1552d81dc5484525eee40c9cf0eb38d69cf2b69d1419f7c6a52634bf9b",
+      "id": "component-ZenSwitchComponent-21e95cc2e3474841d1c6f7e7a582730c45ab9c4a7c663d7477f13f5743cf4a4d22fc82bb499058cf33bd9c31d718eb985536e23a764783804840010e33d1aa86",
       "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -307,7 +577,7 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the switch.</p>\n",
-          "line": 47,
+          "line": 46,
           "rawdescription": "\nModel for the checked state of the switch.",
           "required": false
         },
@@ -319,7 +589,7 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the disabled state of the switch.</p>\n",
-          "line": 50,
+          "line": 49,
           "rawdescription": "\nModel for the disabled state of the switch.",
           "required": false
         }
@@ -334,7 +604,7 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the switch.</p>\n",
-          "line": 47,
+          "line": 46,
           "rawdescription": "\nModel for the checked state of the switch.",
           "required": false
         },
@@ -346,7 +616,7 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the disabled state of the switch.</p>\n",
-          "line": 50,
+          "line": 49,
           "rawdescription": "\nModel for the disabled state of the switch.",
           "required": false
         }
@@ -365,7 +635,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 105,
+          "line": 104,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nHandles keyboard events for accessibility.\n",
@@ -396,7 +666,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 92,
+          "line": 91,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nToggles the switch value and notifies the change.\n",
@@ -424,15 +694,12 @@
         {
           "name": "FormsModule",
           "type": "module"
-        },
-        {
-          "name": "NgIf"
         }
       ],
       "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
       "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n```\n\n",
       "type": "component",
-      "sourceCode": "import { NgIf } from '@angular/common';\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  forwardRef,\r\n  model,\r\n} from '@angular/core';\r\nimport {\r\n  ControlValueAccessor,\r\n  FormsModule,\r\n  NG_VALUE_ACCESSOR,\r\n} from '@angular/forms';\r\n\r\ntype OnChangeFn = (value: boolean) => void;\r\ntype OnTouchedFn = () => void;\r\n\r\n/**\r\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\r\n *\r\n * @example <zen-switch />\r\n *\r\n * @export\r\n * @class ZenSwitchComponent\r\n * @implements {ControlValueAccessor}\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-switch',\r\n  standalone: true,\r\n  templateUrl: './zen-switch.component.html',\r\n  styleUrl: './zen-switch.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  providers: [\r\n    {\r\n      provide: NG_VALUE_ACCESSOR,\r\n      useExisting: forwardRef(() => ZenSwitchComponent),\r\n      multi: true,\r\n    },\r\n  ],\r\n  imports: [FormsModule, NgIf],\r\n})\r\nexport class ZenSwitchComponent implements ControlValueAccessor {\r\n  /** Model for the checked state of the switch. */\r\n  checked = model<boolean>(false);\r\n\r\n  /** Model for the disabled state of the switch. */\r\n  disabled = model<boolean>(false);\r\n\r\n  /** @ignore */\r\n  private onChange: OnChangeFn = () => {};\r\n  /** @ignore */\r\n  private onTouched: OnTouchedFn = () => {};\r\n\r\n  /**\r\n   * Writes a new value to the component.\r\n   * @ignore\r\n   */\r\n  writeValue(value: boolean): void {\r\n    this.checked.set(value);\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the value changes.\r\n   * @ignore\r\n   */\r\n  registerOnChange(fn: OnChangeFn): void {\r\n    this.onChange = fn;\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the component is touched.\r\n   * @ignore\r\n   */\r\n  registerOnTouched(fn: OnTouchedFn): void {\r\n    this.onTouched = fn;\r\n  }\r\n\r\n  /**\r\n   * Sets the disabled state of the component.\r\n   * @ignore\r\n   */\r\n  setDisabledState(isDisabled: boolean): void {\r\n    this.disabled.set(isDisabled);\r\n  }\r\n\r\n  /**\r\n   * Toggles the switch value and notifies the change.\r\n   */\r\n  onToggle(check?: boolean): void {\r\n    if (this.disabled()) return;\r\n\r\n    const value = check ?? !this.checked();\r\n\r\n    this.checked.set(value);\r\n    this.onChange(value);\r\n    this.onTouched();\r\n  }\r\n\r\n  /**\r\n   * Handles keyboard events for accessibility.\r\n   */\r\n  onKeyDown(event: KeyboardEvent): void {\r\n    switch (event.code) {\r\n      case 'Enter':\r\n      case 'Space': {\r\n        event.preventDefault();\r\n        this.onToggle();\r\n        break;\r\n      }\r\n      case 'ArrowRight': {\r\n        this.onToggle(true);\r\n        break;\r\n      }\r\n      case 'ArrowLeft': {\r\n        this.onToggle(false);\r\n        break;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.disabled()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
       "styleUrl": "./zen-switch.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -560,7 +827,17 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button>Test</button>\r\n    `,\r\n  }),\r\n}"
+      },
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/checkbox.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -591,6 +868,26 @@
         "deprecationMessage": "",
         "type": "Story",
         "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
+      },
+      {
+        "name": "Diabled",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/button.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button disabled>Test</button>\r\n    `,\r\n  }),\r\n}"
+      },
+      {
+        "name": "Diabled",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/components/checkbox.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n\n    `,\n  }),\n}"
       },
       {
         "name": "Disabled",
@@ -676,11 +973,44 @@
     "functions": [],
     "typealiases": [
       {
+        "name": "CheckedState",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "boolean | \"mixed\"",
+        "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 192
+      },
+      {
+        "name": "OnChangeFn",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "function",
+        "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 184
+      },
+      {
         "name": "OnChangeFn",
         "ctype": "miscellaneous",
         "subtype": "typealias",
         "rawtype": "function",
         "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 184
+      },
+      {
+        "name": "OnTouchedFn",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "function",
+        "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -725,6 +1055,17 @@
         "subtype": "typealias",
         "rawtype": "StoryObj<ZenButtonComponent>",
         "file": "projects/cli/stories/components/button.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenCheckboxComponent>",
+        "file": "projects/cli/stories/components/checkbox.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -923,7 +1264,39 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button>Test</button>\r\n    `,\r\n  }),\r\n}"
+        },
+        {
+          "name": "Diabled",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/button.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button disabled>Test</button>\r\n    `,\r\n  }),\r\n}"
+        }
+      ],
+      "projects/cli/stories/components/checkbox.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/checkbox.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Diabled",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/checkbox.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n\n    `,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/pin.stories.ts": [
@@ -974,6 +1347,41 @@
     "groupedFunctions": {},
     "groupedEnumerations": {},
     "groupedTypeAliases": {
+      "projects/cli/schematics/components/files/checkbox/checkbox.component.ts": [
+        {
+          "name": "CheckedState",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "boolean | \"mixed\"",
+          "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 192
+        },
+        {
+          "name": "OnChangeFn",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "function",
+          "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 184
+        },
+        {
+          "name": "OnTouchedFn",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "function",
+          "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 184
+        }
+      ],
       "projects/cli/schematics/components/files/switch/zen-switch.component.ts": [
         {
           "name": "OnChangeFn",
@@ -1031,6 +1439,19 @@
           "subtype": "typealias",
           "rawtype": "StoryObj<ZenButtonComponent>",
           "file": "projects/cli/stories/components/button.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
+      "projects/cli/stories/components/checkbox.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenCheckboxComponent>",
+          "file": "projects/cli/stories/components/checkbox.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "description": "",
@@ -1119,6 +1540,15 @@
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
+      },
+      {
+        "filePath": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenCheckboxComponent",
+        "coveragePercent": 84,
+        "coverageCount": "11/13",
+        "status": "very-good"
       },
       {
         "filePath": "projects/cli/schematics/components/files/pin/pin.component.ts",
@@ -1243,6 +1673,36 @@
         "linktype": "miscellaneous",
         "linksubtype": "variable",
         "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/button.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Diabled",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/checkbox.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/components/checkbox.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Diabled",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"

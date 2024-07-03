@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -40,7 +39,7 @@ type OnTouchedFn = () => void;
       multi: true,
     },
   ],
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule],
 })
 export class ZenSwitchComponent implements ControlValueAccessor {
   /** Model for the checked state of the switch. */
