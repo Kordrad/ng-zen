@@ -72,7 +72,7 @@ export class ZenCheckboxComponent
 
   /** @ignore */
   private readonly inputElement =
-    viewChild<ElementRef<HTMLInputElement>>('inputElement');
+    viewChild.required<ElementRef<HTMLInputElement>>('inputElement');
 
   /**
    * Lifecycle hook called after Angular has fully initialized a component's view.
@@ -139,7 +139,7 @@ export class ZenCheckboxComponent
       )
       .subscribe((value: boolean) => {
         this.renderer2.setProperty(
-          this.inputElement()?.nativeElement,
+          this.inputElement().nativeElement,
           'indeterminate',
           value
         );
