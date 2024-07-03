@@ -9,7 +9,7 @@
   "components": [
     {
       "name": "ZenAvatarComponent",
-      "id": "component-ZenAvatarComponent-4df759231d66d3f8cc9321e00adaa26ec9d295e6a54d9a5e96fbe49012d7aaeea3338bff80ee2bf556b082d8e8b0b534bdb0a58fbaec73fce3514378f7959537",
+      "id": "component-ZenAvatarComponent-68169f9b400212c8f05c62ebc650957d5061652c3af1b7b6e4ecacbf0fbda35d9132435f3554e73a5b12ad23fa8104a44406026eb637820b6eac291c872f2e33",
       "file": "projects/cli/schematics/components/files/avatar/avatar.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -40,15 +40,15 @@
           "modifierKind": [148],
           "jsdoctags": [
             {
-              "pos": 1528,
-              "end": 1546,
+              "pos": 1547,
+              "end": 1565,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 334,
               "tagName": {
-                "pos": 1529,
-                "end": 1536,
+                "pos": 1548,
+                "end": 1555,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -58,15 +58,15 @@
               "comment": "<p>&#39;&#39;</p>\n"
             },
             {
-              "pos": 1546,
-              "end": 1559,
+              "pos": 1565,
+              "end": 1578,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 334,
               "tagName": {
-                "pos": 1547,
-                "end": 1552,
+                "pos": 1566,
+                "end": 1571,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -76,15 +76,15 @@
               "comment": ""
             },
             {
-              "pos": 1559,
-              "end": 1571,
+              "pos": 1578,
+              "end": 1590,
               "flags": 16842752,
               "modifierFlagsCache": 0,
               "transformFlags": 0,
               "kind": 351,
               "tagName": {
-                "pos": 1560,
-                "end": 1564,
+                "pos": 1579,
+                "end": 1583,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
@@ -93,15 +93,15 @@
               },
               "comment": "",
               "typeExpression": {
-                "pos": 1565,
-                "end": 1571,
+                "pos": 1584,
+                "end": 1590,
                 "flags": 16842752,
                 "modifierFlagsCache": 0,
                 "transformFlags": 0,
                 "kind": 316,
                 "type": {
-                  "pos": 1565,
-                  "end": 1571,
+                  "pos": 1584,
+                  "end": 1590,
                   "flags": 16777216,
                   "modifierFlagsCache": 0,
                   "transformFlags": 1,
@@ -123,10 +123,10 @@
           "name": "NgOptimizedImage"
         }
       ],
-      "description": "<p>A component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.</p>\n<p>The component uses Angular&#39;s optimized image directives for enhanced performance.</p>\n<p>Usage:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;!-- If an image source is provided, it will display the image --&gt;\n&lt;zen-avatar [src]=&quot;&#39;/path/to/image.jpg&#39;&quot; /&gt;\n\n&lt;!-- If no image source is provided, it will display the projected content --&gt;\n&lt;zen-avatar&gt; A &lt;/zen-avatar&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-avatar src=&quot;https://picsum.photos/32&quot; /&gt;</code></pre></div>",
-      "rawdescription": "\n\nA component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.\n\nThe component uses Angular's optimized image directives for enhanced performance.\n\nUsage:\n\n```html\n<!-- If an image source is provided, it will display the image -->\n<zen-avatar [src]=\"'/path/to/image.jpg'\" />\n\n<!-- If no image source is provided, it will display the projected content -->\n<zen-avatar> A </zen-avatar>\n```\n\n```html\n<zen-avatar src=\"https://picsum.photos/32\" />\n```\n\n",
+      "description": "<p>A component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.</p>\n<p>The component uses Angular&#39;s optimized image directives for enhanced performance.</p>\n<p>Usage:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;!-- If an image source is provided, it will display the image --&gt;\n&lt;zen-avatar [src]=&quot;&#39;/path/to/image.jpg&#39;&quot; /&gt;\n\n&lt;!-- If no image source is provided, it will display the projected content --&gt;\n&lt;zen-avatar&gt; A &lt;/zen-avatar&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-avatar src=&quot;https://picsum.photos/32&quot; /&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nA component to display an avatar image. If a valid image source URL is provided,\nit will render an image element. Otherwise, it will display projected content.\n\nThe component uses Angular's optimized image directives for enhanced performance.\n\nUsage:\n\n```html\n<!-- If an image source is provided, it will display the image -->\n<zen-avatar [src]=\"'/path/to/image.jpg'\" />\n\n<!-- If no image source is provided, it will display the projected content -->\n<zen-avatar> A </zen-avatar>\n```\n\n```html\n<zen-avatar src=\"https://picsum.photos/32\" />\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * A component to display an avatar image. If a valid image source URL is provided,\r\n * it will render an image element. Otherwise, it will display projected content.\r\n *\r\n * The component uses Angular's optimized image directives for enhanced performance.\r\n *\r\n * Usage:\r\n *\r\n * ```html\r\n * <!-- If an image source is provided, it will display the image -->\r\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\r\n *\r\n * <!-- If no image source is provided, it will display the projected content -->\r\n * <zen-avatar> A </zen-avatar>\r\n * ```\r\n *\r\n * @example\r\n * <zen-avatar src=\"https://picsum.photos/32\" />\r\n *\r\n * @component\r\n * @selector `zen-avatar`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-avatar',\r\n  standalone: true,\r\n  imports: [NgOptimizedImage],\r\n  template: `\r\n    @if (src()) {\r\n      <img [ngSrc]=\"src()\" alt=\"\" fill />\r\n    } @else {\r\n      <ng-content />\r\n    }\r\n  `,\r\n  styleUrl: './avatar.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenAvatarComponent {\r\n  /**\r\n   * Path to the image source. If the `src` is provided, an image element will be rendered.\r\n   * Otherwise, the content projected into this component will be displayed.\r\n   *\r\n   * @default ''\r\n   * @input\r\n   * @type string\r\n   */\r\n  readonly src = input<string>('');\r\n}\r\n",
+      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\r\nimport {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * A component to display an avatar image. If a valid image source URL is provided,\r\n * it will render an image element. Otherwise, it will display projected content.\r\n *\r\n * The component uses Angular's optimized image directives for enhanced performance.\r\n *\r\n * Usage:\r\n *\r\n * ```html\r\n * <!-- If an image source is provided, it will display the image -->\r\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\r\n *\r\n * <!-- If no image source is provided, it will display the projected content -->\r\n * <zen-avatar> A </zen-avatar>\r\n * ```\r\n *\r\n * @example\r\n * <zen-avatar src=\"https://picsum.photos/32\" />\r\n *\r\n * @component\r\n * @selector `zen-avatar`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-avatar',\r\n  standalone: true,\r\n  imports: [NgOptimizedImage],\r\n  template: `\r\n    @if (src()) {\r\n      <img [ngSrc]=\"src()\" alt=\"\" fill />\r\n    } @else {\r\n      <ng-content />\r\n    }\r\n  `,\r\n  styleUrl: './avatar.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenAvatarComponent {\r\n  /**\r\n   * Path to the image source. If the `src` is provided, an image element will be rendered.\r\n   * Otherwise, the content projected into this component will be displayed.\r\n   *\r\n   * @default ''\r\n   * @input\r\n   * @type string\r\n   */\r\n  readonly src = input<string>('');\r\n}\r\n",
       "styleUrl": "./avatar.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -135,7 +135,7 @@
     },
     {
       "name": "ZenBadgeComponent",
-      "id": "component-ZenBadgeComponent-a18ab634c6366fa273ca9d843ead3428f0cbcd0e6d5fd1a38812e1ce541e8586140a7cf0e6cbadc828bc2c5a6990c3e0c96963ae31ac8e82bdb3e31a069359ed",
+      "id": "component-ZenBadgeComponent-3a41d599a7b761614734576d06ca8b72aa6c62863a7301c8db322877d9ac0afc532303ae5262357f84d86b0233c185352caa130546890cf945f631a1da7ea735",
       "file": "projects/cli/schematics/components/files/badge/badge.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -160,10 +160,10 @@
       "hostListeners": [],
       "standalone": true,
       "imports": [],
-      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
-      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n\n```css\n--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n```\n\n```html\n```\n\n",
+      "description": "<p>ZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.</p>\n<p>This component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular&#39;s change detection strategy &#39;OnPush&#39;\nfor optimal performance.</p>\n<p>Additionally, it provides support for CSS variables to customize badge positioning</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-css\">--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nZenBadgeComponent is a versatile Angular component used to display badges or indicators\nin various positions within its parent container. It allows for flexible placement\nof badge content such as icons, text, or other elements in the top-left, top,\ntop-right, left, right, bottom-left, bottom, and bottom-right positions.\n\nThis component offers standalone usage and is highly customizable through its\ntemplate and styling. It leverages Angular's change detection strategy 'OnPush'\nfor optimal performance.\n\nAdditionally, it provides support for CSS variables to customize badge positioning\n\n```css\n--zen-badge-offset: unset; // Controls the overall offset of the badge\n--zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\n--zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\n```\n\n```html\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\r\n * in various positions within its parent container. It allows for flexible placement\r\n * of badge content such as icons, text, or other elements in the top-left, top,\r\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\r\n *\r\n * This component offers standalone usage and is highly customizable through its\r\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\r\n * for optimal performance.\r\n *\r\n * Additionally, it provides support for CSS variables to customize badge positioning\r\n *\r\n * ```css\r\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\r\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\r\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\r\n * ```\r\n *\r\n * @example <zen-badge> Text <span bottom>🦆</span></zen-badge>\r\n *\r\n * @component\r\n * @selector `zen-badge`,`[zenBadge]`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-badge,[zenBadge]',\r\n  standalone: true,\r\n  template: `\r\n    <ng-content />\r\n    <ng-content select=\"[topLeft]\" />\r\n    <ng-content select=\"[top]\" />\r\n    <ng-content select=\"[topRight]\" />\r\n    <ng-content select=\"[left]\" />\r\n    <ng-content select=\"[right]\" />\r\n    <ng-content select=\"[bottomLeft]\" />\r\n    <ng-content select=\"[bottom]\" />\r\n    <ng-content select=\"[bottomRight]\" />\r\n  `,\r\n  styleUrl: './badge.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenBadgeComponent {}\r\n",
+      "sourceCode": "import {\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * ZenBadgeComponent is a versatile Angular component used to display badges or indicators\r\n * in various positions within its parent container. It allows for flexible placement\r\n * of badge content such as icons, text, or other elements in the top-left, top,\r\n * top-right, left, right, bottom-left, bottom, and bottom-right positions.\r\n *\r\n * This component offers standalone usage and is highly customizable through its\r\n * template and styling. It leverages Angular's change detection strategy 'OnPush'\r\n * for optimal performance.\r\n *\r\n * Additionally, it provides support for CSS variables to customize badge positioning\r\n *\r\n * ```css\r\n * --zen-badge-offset: unset; // Controls the overall offset of the badge\r\n * --zen-badge-offset-x: unset; // Controls the horizontal offset of the badge.\r\n * --zen-badge-offset-y: unset; // Controls the vertical offset of the badge.\r\n * ```\r\n *\r\n * @example <zen-badge> Text <span bottom>🦆</span></zen-badge>\r\n *\r\n * @component\r\n * @selector `zen-badge`,`[zenBadge]`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-badge,[zenBadge]',\r\n  standalone: true,\r\n  template: `\r\n    <ng-content />\r\n    <ng-content select=\"[topLeft]\" />\r\n    <ng-content select=\"[top]\" />\r\n    <ng-content select=\"[topRight]\" />\r\n    <ng-content select=\"[left]\" />\r\n    <ng-content select=\"[right]\" />\r\n    <ng-content select=\"[bottomLeft]\" />\r\n    <ng-content select=\"[bottom]\" />\r\n    <ng-content select=\"[bottomRight]\" />\r\n  `,\r\n  styleUrl: './badge.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenBadgeComponent {}\r\n",
       "styleUrl": "./badge.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -172,7 +172,7 @@
     },
     {
       "name": "ZenButtonComponent",
-      "id": "component-ZenButtonComponent-b57be6c72da78739ffa0850c3009283a68cdcfd6519985ac31cd93a481f54cef4a5c24052327138402f5398ac7f529d014ec2393601f61bf48c51fd096aeae52",
+      "id": "component-ZenButtonComponent-1bf4f60e0a46640e9d550036733bf9d94ca74d6982d5c762b05590ad562f71081fba46ff4dc08a9002bca02e9fb0658a085d166d0b76f491d643fd72f8cf2664",
       "file": "projects/cli/schematics/components/files/button/button.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -197,10 +197,10 @@
       "hostListeners": [],
       "standalone": true,
       "imports": [],
-      "description": "",
-      "rawdescription": "\n",
+      "description": "<p>ZenButtonComponent is a reusable button component designed to provide\na consistent and customizable button style across the application.\nIt can be used with both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> HTML elements by applying\nthe <code>zen-button</code> attribute.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;button zen-button&gt; ... &lt;/button&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nZenButtonComponent is a reusable button component designed to provide\na consistent and customizable button style across the application.\nIt can be used with both `<button>` and `<a>` HTML elements by applying\nthe `zen-button` attribute.\n\n```html\n<button zen-button> ... </button>\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n@Component({\r\n  // eslint-disable-next-line @angular-eslint/component-selector\r\n  selector: 'button[zen-button], a[zen-button]',\r\n  standalone: true,\r\n  template: ` <ng-content /> `,\r\n  styleUrl: './button.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenButtonComponent {}\r\n",
+      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n/**\n * ZenButtonComponent is a reusable button component designed to provide\n * a consistent and customizable button style across the application.\n * It can be used with both `<button>` and `<a>` HTML elements by applying\n * the `zen-button` attribute.\n *\n * @example\n * <button zen-button> ... </button>\n *\n * @export\n * @class ZenButtonComponent\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  // eslint-disable-next-line @angular-eslint/component-selector\n  selector: 'button[zen-button], a[zen-button]',\n  standalone: true,\n  template: ` <ng-content /> `,\n  styleUrl: './button.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenButtonComponent {}\n",
       "styleUrl": "./button.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -209,7 +209,7 @@
     },
     {
       "name": "ZenCheckboxComponent",
-      "id": "component-ZenCheckboxComponent-216417c00778117fe5b1d5df6a9e67f7cfac3b2c938db28e63854366ae0fb6a7d09c689d8b84aec2445c75482aa49e734b7787ec2210252c12ba2a25dca568bd",
+      "id": "component-ZenCheckboxComponent-e0c4e155bf83b9bf5d68cf5bb72c3c1828b8c63d54900860ac73f2181e653a04e9ec28fe7af6ff58daf534981db4e56765e51bf523b9a48df5420d8a791eb9a1",
       "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -465,10 +465,10 @@
           "type": "module"
         }
       ],
-      "description": "<p>ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-checkbox /&gt;</code></pre></div>",
-      "rawdescription": "\n\nZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).\n\n```html\n<zen-checkbox />\n```\n\n",
+      "description": "<p>ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-checkbox /&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).\n\n```html\n<zen-checkbox />\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  Component,\n  DestroyRef,\n  ElementRef,\n  forwardRef,\n  inject,\n  model,\n  Renderer2,\n  viewChild,\n} from '@angular/core';\nimport { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\nimport { map } from 'rxjs';\n\ntype CheckedState = boolean | 'mixed';\ntype OnChangeFn = (value: CheckedState) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\n * It supports a tri-state checkbox (checked, unchecked, and indeterminate).\n *\n * @example\n * <zen-checkbox />\n *\n * @export\n * @class ZenCheckboxComponent\n * @implements {ControlValueAccessor}\n * @implements {AfterViewInit}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-checkbox',\n  standalone: true,\n  templateUrl: './checkbox.component.html',\n  styleUrl: './checkbox.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenCheckboxComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenCheckboxComponent\n  implements ControlValueAccessor, AfterViewInit\n{\n  /** Model for the checked state of the checkbox. */\n  readonly checked = model<CheckedState>(false);\n\n  /** Model for the disabled state of the checkbox. */\n  readonly disabled = model<boolean>(false);\n\n  /** @ignore */\n  private readonly checked$ = toObservable(this.checked);\n\n  /** @ignore */\n  private readonly destroyRef = inject(DestroyRef);\n  /** @ignore */\n  private readonly renderer2 = inject(Renderer2);\n\n  /** @ignore */\n  private readonly inputElement =\n    viewChild<ElementRef<HTMLInputElement>>('inputElement');\n\n  /**\n   * Lifecycle hook called after Angular has fully initialized a component's view.\n   * Initializes the indeterminate state of the checkbox.\n   *\n   * @ignore\n   */\n  ngAfterViewInit(): void {\n    this.initIndeterminate();\n  }\n\n  private onChange: OnChangeFn = () => {};\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the checkbox value and notifies the change.\n   * If the component is disabled, no action is performed.\n   */\n  onToggle(): void {\n    if (this.disabled()) return;\n\n    this.checked.update(value => !value);\n    this.onChange(this.checked());\n    this.onTouched();\n  }\n\n  /**\n   * Initializes the indeterminate state of the checkbox based on the checked state.\n   * If the checked state is 'mixed', the checkbox will be set to indeterminate.\n   */\n  private initIndeterminate(): void {\n    this.checked$\n      .pipe(\n        takeUntilDestroyed(this.destroyRef),\n        map((value: CheckedState) => value === 'mixed')\n      )\n      .subscribe((value: boolean) => {\n        this.renderer2.setProperty(\n          this.inputElement()?.nativeElement,\n          'indeterminate',\n          value\n        );\n      });\n  }\n}\n",
+      "sourceCode": "import {\r\n  AfterViewInit,\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  DestroyRef,\r\n  ElementRef,\r\n  forwardRef,\r\n  inject,\r\n  model,\r\n  Renderer2,\r\n  viewChild,\r\n} from '@angular/core';\r\nimport { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';\r\nimport {\r\n  ControlValueAccessor,\r\n  FormsModule,\r\n  NG_VALUE_ACCESSOR,\r\n} from '@angular/forms';\r\nimport { map } from 'rxjs';\r\n\r\ntype CheckedState = boolean | 'mixed';\r\ntype OnChangeFn = (value: CheckedState) => void;\r\ntype OnTouchedFn = () => void;\r\n\r\n/**\r\n * ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\r\n * It supports a tri-state checkbox (checked, unchecked, and indeterminate).\r\n *\r\n * @example\r\n * <zen-checkbox />\r\n *\r\n * @export\r\n * @class ZenCheckboxComponent\r\n * @implements {ControlValueAccessor}\r\n * @implements {AfterViewInit}\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-checkbox',\r\n  standalone: true,\r\n  templateUrl: './checkbox.component.html',\r\n  styleUrl: './checkbox.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  providers: [\r\n    {\r\n      provide: NG_VALUE_ACCESSOR,\r\n      useExisting: forwardRef(() => ZenCheckboxComponent),\r\n      multi: true,\r\n    },\r\n  ],\r\n  imports: [FormsModule],\r\n})\r\nexport class ZenCheckboxComponent\r\n  implements ControlValueAccessor, AfterViewInit\r\n{\r\n  /** Model for the checked state of the checkbox. */\r\n  readonly checked = model<CheckedState>(false);\r\n\r\n  /** Model for the disabled state of the checkbox. */\r\n  readonly disabled = model<boolean>(false);\r\n\r\n  /** @ignore */\r\n  private readonly checked$ = toObservable(this.checked);\r\n\r\n  /** @ignore */\r\n  private readonly destroyRef = inject(DestroyRef);\r\n  /** @ignore */\r\n  private readonly renderer2 = inject(Renderer2);\r\n\r\n  /** @ignore */\r\n  private readonly inputElement =\r\n    viewChild.required<ElementRef<HTMLInputElement>>('inputElement');\r\n\r\n  /**\r\n   * Lifecycle hook called after Angular has fully initialized a component's view.\r\n   * Initializes the indeterminate state of the checkbox.\r\n   *\r\n   * @ignore\r\n   */\r\n  ngAfterViewInit(): void {\r\n    this.initIndeterminate();\r\n  }\r\n\r\n  private onChange: OnChangeFn = () => {};\r\n  private onTouched: OnTouchedFn = () => {};\r\n\r\n  /**\r\n   * Writes a new value to the component.\r\n   */\r\n  writeValue(value: boolean): void {\r\n    this.checked.set(value);\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the value changes.\r\n   */\r\n  registerOnChange(fn: OnChangeFn): void {\r\n    this.onChange = fn;\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the component is touched.\r\n   */\r\n  registerOnTouched(fn: OnTouchedFn): void {\r\n    this.onTouched = fn;\r\n  }\r\n\r\n  /**\r\n   * Sets the disabled state of the component.\r\n   */\r\n  setDisabledState(isDisabled: boolean): void {\r\n    this.disabled.set(isDisabled);\r\n  }\r\n\r\n  /**\r\n   * Toggles the checkbox value and notifies the change.\r\n   * If the component is disabled, no action is performed.\r\n   */\r\n  onToggle(): void {\r\n    if (this.disabled()) return;\r\n\r\n    this.checked.update(value => !value);\r\n    this.onChange(this.checked());\r\n    this.onTouched();\r\n  }\r\n\r\n  /**\r\n   * Initializes the indeterminate state of the checkbox based on the checked state.\r\n   * If the checked state is 'mixed', the checkbox will be set to indeterminate.\r\n   */\r\n  private initIndeterminate(): void {\r\n    this.checked$\r\n      .pipe(\r\n        takeUntilDestroyed(this.destroyRef),\r\n        map((value: CheckedState) => value === 'mixed')\r\n      )\r\n      .subscribe((value: boolean) => {\r\n        this.renderer2.setProperty(\r\n          this.inputElement().nativeElement,\r\n          'indeterminate',\r\n          value\r\n        );\r\n      });\r\n  }\r\n}\r\n",
       "styleUrl": "./checkbox.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -479,7 +479,7 @@
     },
     {
       "name": "ZenPinComponent",
-      "id": "component-ZenPinComponent-f5995968e7f450be263b72b602e2f2a0c3f7d7630e6e99318ffec6b45f0f168dfb6727dad03038c4bf305c20da200cbb0a9a17c294c83c6074dfe3f195106be7",
+      "id": "component-ZenPinComponent-0f79c05ce1e4063b9e8008c5f371408b2b9820bce5918be2b02f2de0b2ce7ab0ba1d6ca7688f1e41c9abfa22cf4a427b37051de02df400369d3afa97f4dffb59",
       "file": "projects/cli/schematics/components/files/pin/pin.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": ["ViewEncapsulation.None"],
@@ -526,10 +526,10 @@
       "hostListeners": [],
       "standalone": true,
       "imports": [],
-      "description": "<p>The ZenPinComponent represents a simple visual pin with a circular shape.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-pin /&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
-      "rawdescription": "\n\nThe ZenPinComponent represents a simple visual pin with a circular shape.\n\n```html\n<zen-pin />\n```\n\n```html\n```\n",
+      "description": "<p>The ZenPinComponent represents a simple visual pin with a circular shape.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-pin /&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nThe ZenPinComponent represents a simple visual pin with a circular shape.\n\n```html\n<zen-pin />\n```\n\n```html\n```\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\r\n  booleanAttribute,\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * The ZenPinComponent represents a simple visual pin with a circular shape.\r\n *\r\n * ```html\r\n * <zen-pin />\r\n * ```\r\n *\r\n * @example <zen-pin />\r\n * @component\r\n * @selector `zen-pin`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-pin',\r\n  standalone: true,\r\n  imports: [],\r\n  template: ``,\r\n  styleUrl: './pin.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenPinComponent {\r\n  /**\r\n   * Displays waving stream animation\r\n   */\r\n  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {\r\n    transform: booleanAttribute,\r\n  });\r\n\r\n  @HostBinding('class.stream')\r\n  get classStream() {\r\n    return this.stream();\r\n  }\r\n}\r\n",
+      "sourceCode": "import {\r\n  booleanAttribute,\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  HostBinding,\r\n  input,\r\n  ViewEncapsulation,\r\n} from '@angular/core';\r\n\r\n/**\r\n * The ZenPinComponent represents a simple visual pin with a circular shape.\r\n *\r\n * ```html\r\n * <zen-pin />\r\n * ```\r\n *\r\n * @example <zen-pin />\r\n * @component\r\n * @selector `zen-pin`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-pin',\r\n  standalone: true,\r\n  imports: [],\r\n  template: ``,\r\n  styleUrl: './pin.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenPinComponent {\r\n  /**\r\n   * Displays waving stream animation\r\n   */\r\n  readonly stream = input<boolean, boolean | 'true' | 'false' | ''>(false, {\r\n    transform: booleanAttribute,\r\n  });\r\n\r\n  @HostBinding('class.stream')\r\n  get classStream() {\r\n    return this.stream();\r\n  }\r\n}\r\n",
       "styleUrl": "./pin.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -549,7 +549,7 @@
     },
     {
       "name": "ZenSwitchComponent",
-      "id": "component-ZenSwitchComponent-21e95cc2e3474841d1c6f7e7a582730c45ab9c4a7c663d7477f13f5743cf4a4d22fc82bb499058cf33bd9c31d718eb985536e23a764783804840010e33d1aa86",
+      "id": "component-ZenSwitchComponent-b3b3fce32b2c958eec1a9e7280d5c74341687e1242de9c06582d0d7a6f42a63fa6e77fa338931595d4b48358755e53dbc306b90987c88bdfb2915d22a2d17087",
       "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -696,10 +696,10 @@
           "type": "module"
         }
       ],
-      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
-      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n```\n\n",
+      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @link https://github.com/Kordrad/ng-zen\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.disabled()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.disabled()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
       "styleUrl": "./zen-switch.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -710,7 +710,7 @@
     },
     {
       "name": "ZenTagComponent",
-      "id": "component-ZenTagComponent-5228e187c92b9212421b9a731ff7a0a9454a5fce400d56a32c5064c399c1f34718009176b252df35d2b32a63f44b1cf96d3c9c0a89438226dd6b322afd3ecc33",
+      "id": "component-ZenTagComponent-11b0eed5636f02852de564029c1b187eff33e9db0f0835d7b8614438d68930c48437d48eeff8cdf83c28a8691051920a60feaf93fec70d8e4d548287edad11eb",
       "file": "projects/cli/schematics/components/files/tag/tag.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -735,10 +735,10 @@
       "hostListeners": [],
       "standalone": true,
       "imports": [],
-      "description": "<p>The <code>ZenTagComponent</code> is a reusable UI component designed to display a tag or label.\nIt allows for custom content to be projected inside the tag.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-tag&gt;...&lt;/zen-tag&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div>",
-      "rawdescription": "\n\nThe `ZenTagComponent` is a reusable UI component designed to display a tag or label.\nIt allows for custom content to be projected inside the tag.\n\n```html\n<zen-tag>...</zen-tag>\n```\n\n```html\n```\n",
+      "description": "<p>The <code>ZenTagComponent</code> is a reusable UI component designed to display a tag or label.\nIt allows for custom content to be projected inside the tag.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-tag&gt;...&lt;/zen-tag&gt;</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nThe `ZenTagComponent` is a reusable UI component designed to display a tag or label.\nIt allows for custom content to be projected inside the tag.\n\n```html\n<zen-tag>...</zen-tag>\n```\n\n```html\n```\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n/**\r\n * The `ZenTagComponent` is a reusable UI component designed to display a tag or label.\r\n * It allows for custom content to be projected inside the tag.\r\n *\r\n * ```html\r\n * <zen-tag>...</zen-tag>\r\n * ```\r\n *\r\n * @example <zen-tag>Simple tag</zen-tag>\r\n * @component\r\n * @selector `zen-tag`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @link https://github.com/Kordrad/ng-zen\r\n */\r\n@Component({\r\n  selector: 'zen-tag',\r\n  standalone: true,\r\n  template: `<ng-content />`,\r\n  styleUrl: './tag.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenTagComponent {}\r\n",
+      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\r\n\r\n/**\r\n * The `ZenTagComponent` is a reusable UI component designed to display a tag or label.\r\n * It allows for custom content to be projected inside the tag.\r\n *\r\n * ```html\r\n * <zen-tag>...</zen-tag>\r\n * ```\r\n *\r\n * @example <zen-tag>Simple tag</zen-tag>\r\n * @component\r\n * @selector `zen-tag`\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień <kord.stp@gmail.com>\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-tag',\r\n  standalone: true,\r\n  template: `<ng-content />`,\r\n  styleUrl: './tag.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n})\r\nexport class ZenTagComponent {}\r\n",
       "styleUrl": "./tag.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -837,7 +837,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox />\r\n        <zen-checkbox [checked]=\"true\" />\r\n        <zen-checkbox checked=\"mixed\" />\r\n    `,\r\n  }),\r\n}"
       },
       {
         "name": "Default",
@@ -887,7 +887,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n\n    `,\n  }),\n}"
+        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox disabled=\"true\"/>\r\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\r\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\r\n    `,\r\n  }),\r\n}"
       },
       {
         "name": "Disabled",
@@ -1286,7 +1286,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox />\r\n        <zen-checkbox [checked]=\"true\" />\r\n        <zen-checkbox checked=\"mixed\" />\r\n    `,\r\n  }),\r\n}"
         },
         {
           "name": "Diabled",
@@ -1296,7 +1296,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n\n    `,\n  }),\n}"
+          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox disabled=\"true\"/>\r\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\r\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\r\n    `,\r\n  }),\r\n}"
         }
       ],
       "projects/cli/stories/components/pin.stories.ts": [
@@ -1501,7 +1501,7 @@
   },
   "routes": [],
   "coverage": {
-    "count": 18,
+    "count": 22,
     "status": "low",
     "files": [
       {
@@ -1537,9 +1537,9 @@
         "type": "component",
         "linktype": "component",
         "name": "ZenButtonComponent",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
+        "coveragePercent": 100,
+        "coverageCount": "1/1",
+        "status": "very-good"
       },
       {
         "filePath": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
