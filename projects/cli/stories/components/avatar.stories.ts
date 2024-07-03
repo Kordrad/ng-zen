@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import { ZenAvatarComponent } from 'ng-zen/components/avatar';
 
-import { ZenAvatarComponent } from '../../schematics/components/files/avatar';
-import { OnElement } from './pin.stories';
-import { AvatarWithTag as _AvatarWithTag } from './tag.stories';
+import { OnElement as WithBadge } from './pin.stories';
+import { AvatarWithTag } from './tag.stories';
 
 export default {
   title: 'Components/Avatar',
@@ -29,5 +29,4 @@ export const Text: Story = {
       </div> `,
   }),
 };
-export const WithBadge = OnElement;
-export const AvatarWithATag = _AvatarWithTag;
+export { AvatarWithTag, WithBadge };

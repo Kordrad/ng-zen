@@ -5,7 +5,97 @@
   "guards": [],
   "interceptors": [],
   "classes": [],
-  "directives": [],
+  "directives": [
+    {
+      "name": "ZenDisabledDirective",
+      "id": "directive-ZenDisabledDirective-03d0b4c435692619bea230d443e9c8118e3abaf7303f1f01fd4ca83d9c104ecf97501da599ddb1a21c23cd40313455b902cc1ee07b7ef597b1fc8bd527312a63",
+      "file": "projects/cli/schematics/directives/files/disabled/disabled.directive.ts",
+      "type": "directive",
+      "description": "<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;button zenDisabled&gt; ... &lt;/button&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\n```html\n<button zenDisabled> ... </button>\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
+      "sourceCode": "import { computed, Directive, HostBinding, model } from '@angular/core';\n\n/**\n * @example\n * <button zenDisabled> ... </button>\n *\n * @export\n * @class ZenDisabledDirective\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n * */\n@Directive({\n  selector: '[zenDisabled]',\n  standalone: true,\n})\nexport class ZenDisabledDirective {\n  /** Model for the disabled state of the checkbox. */\n\n  readonly disabled = model<boolean | 'true' | 'false' | ''>(false, {\n    alias: 'zenDisabled',\n  });\n\n  /** @ignore */\n  readonly disabledBoolean = computed(() =>\n    [true, 'true', ''].includes(this.disabled())\n  );\n\n  @HostBinding('disabled')\n  get disabledAttr(): boolean {\n    return this.disabledBoolean();\n  }\n\n  @HostBinding('attr.aria-disabled')\n  get ariaDisabledAttr(): boolean {\n    return this.disabledBoolean();\n  }\n\n  @HostBinding('class.zen-disabled')\n  get disabledClass(): boolean {\n    return this.disabledBoolean();\n  }\n}\n",
+      "selector": "[zenDisabled]",
+      "providers": [],
+      "hostDirectives": [],
+      "standalone": true,
+      "inputsClass": [],
+      "outputsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [
+        {
+          "name": "attr.aria-disabled",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "line": 36,
+          "type": "boolean",
+          "decorators": []
+        },
+        {
+          "name": "class.zen-disabled",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "line": 41,
+          "type": "boolean",
+          "decorators": []
+        },
+        {
+          "name": "disabled",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "line": 31,
+          "type": "boolean",
+          "decorators": []
+        }
+      ],
+      "hostListeners": [],
+      "propertiesClass": [
+        {
+          "name": "disabled",
+          "defaultValue": "model<boolean | 'true' | 'false' | ''>(false, {\n    alias: 'zenDisabled',\n  })",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "optional": false,
+          "description": "<p>Model for the disabled state of the checkbox.</p>\n",
+          "line": 21,
+          "rawdescription": "\nModel for the disabled state of the checkbox.",
+          "modifierKind": [148]
+        }
+      ],
+      "methodsClass": [],
+      "extends": [],
+      "accessors": {
+        "disabledAttr": {
+          "name": "disabledAttr",
+          "getSignature": {
+            "name": "disabledAttr",
+            "type": "boolean",
+            "returnType": "boolean",
+            "line": 31
+          }
+        },
+        "ariaDisabledAttr": {
+          "name": "ariaDisabledAttr",
+          "getSignature": {
+            "name": "ariaDisabledAttr",
+            "type": "boolean",
+            "returnType": "boolean",
+            "line": 36
+          }
+        },
+        "disabledClass": {
+          "name": "disabledClass",
+          "getSignature": {
+            "name": "disabledClass",
+            "type": "boolean",
+            "returnType": "boolean",
+            "line": 41
+          }
+        }
+      }
+    }
+  ],
   "components": [
     {
       "name": "ZenAvatarComponent",
@@ -172,7 +262,7 @@
     },
     {
       "name": "ZenButtonComponent",
-      "id": "component-ZenButtonComponent-1bf4f60e0a46640e9d550036733bf9d94ca74d6982d5c762b05590ad562f71081fba46ff4dc08a9002bca02e9fb0658a085d166d0b76f491d643fd72f8cf2664",
+      "id": "component-ZenButtonComponent-fd72c6b0c51474febd68575220fb7e44ca9f095f5330e6d22aeec902ef6819c6d1f444250683db5a12f520b5d6a1847d27b854ab9846697e4b58d7cb5e95f26d",
       "file": "projects/cli/schematics/components/files/button/button.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -186,7 +276,11 @@
       "template": "<ng-content />",
       "templateUrl": [],
       "viewProviders": [],
-      "hostDirectives": [],
+      "hostDirectives": [
+        {
+          "name": "ZenHostDirective"
+        }
+      ],
       "inputsClass": [],
       "outputsClass": [],
       "propertiesClass": [],
@@ -200,7 +294,7 @@
       "description": "<p>ZenButtonComponent is a reusable button component designed to provide\na consistent and customizable button style across the application.\nIt can be used with both <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> HTML elements by applying\nthe <code>zen-button</code> attribute.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;button zen-button&gt; ... &lt;/button&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
       "rawdescription": "\n\nZenButtonComponent is a reusable button component designed to provide\na consistent and customizable button style across the application.\nIt can be used with both `<button>` and `<a>` HTML elements by applying\nthe `zen-button` attribute.\n\n```html\n<button zen-button> ... </button>\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n/**\n * ZenButtonComponent is a reusable button component designed to provide\n * a consistent and customizable button style across the application.\n * It can be used with both `<button>` and `<a>` HTML elements by applying\n * the `zen-button` attribute.\n *\n * @example\n * <button zen-button> ... </button>\n *\n * @export\n * @class ZenButtonComponent\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  // eslint-disable-next-line @angular-eslint/component-selector\n  selector: 'button[zen-button], a[zen-button]',\n  standalone: true,\n  template: ` <ng-content /> `,\n  styleUrl: './button.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenButtonComponent {}\n",
+      "sourceCode": "import { ChangeDetectionStrategy, Component } from '@angular/core';\nimport { ZenHostDirective } from 'ng-zen/directives/disabled';\n\n/**\n * ZenButtonComponent is a reusable button component designed to provide\n * a consistent and customizable button style across the application.\n * It can be used with both `<button>` and `<a>` HTML elements by applying\n * the `zen-button` attribute.\n *\n * @example\n * <button zen-button> ... </button>\n *\n * @export\n * @class ZenButtonComponent\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  // eslint-disable-next-line @angular-eslint/component-selector\n  selector: 'button[zen-button], a[zen-button]',\n  standalone: true,\n  template: ` <ng-content /> `,\n  styleUrl: './button.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  hostDirectives: [ZenHostDirective],\n})\nexport class ZenButtonComponent {}\n",
       "styleUrl": "./button.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
@@ -209,7 +303,7 @@
     },
     {
       "name": "ZenCheckboxComponent",
-      "id": "component-ZenCheckboxComponent-e0c4e155bf83b9bf5d68cf5bb72c3c1828b8c63d54900860ac73f2181e653a04e9ec28fe7af6ff58daf534981db4e56765e51bf523b9a48df5420d8a791eb9a1",
+      "id": "component-ZenCheckboxComponent-53f0354708e01f2e0543c07b0da79adf1e19d7f38d27e9e25c8081cf9416116de5bf2a9564079ad09a5dcc2841d39c52e10e72f8a6db75cd46b0a36eba194538",
       "file": "projects/cli/schematics/components/files/checkbox/checkbox.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -227,7 +321,11 @@
       "styles": [],
       "templateUrl": ["./checkbox.component.html"],
       "viewProviders": [],
-      "hostDirectives": [],
+      "hostDirectives": [
+        {
+          "name": "ZenHostDirective"
+        }
+      ],
       "inputsClass": [
         {
           "name": "checked",
@@ -237,21 +335,8 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the checkbox.</p>\n",
-          "line": 60,
+          "line": 65,
           "rawdescription": "\nModel for the checked state of the checkbox.",
-          "modifierKind": [148],
-          "required": false
-        },
-        {
-          "name": "disabled",
-          "defaultValue": "false",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "optional": false,
-          "description": "<p>Model for the disabled state of the checkbox.</p>\n",
-          "line": 63,
-          "rawdescription": "\nModel for the disabled state of the checkbox.",
           "modifierKind": [148],
           "required": false
         }
@@ -266,21 +351,8 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the checkbox.</p>\n",
-          "line": 60,
+          "line": 65,
           "rawdescription": "\nModel for the checked state of the checkbox.",
-          "modifierKind": [148],
-          "required": false
-        },
-        {
-          "name": "disabled",
-          "defaultValue": "false",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "optional": false,
-          "description": "<p>Model for the disabled state of the checkbox.</p>\n",
-          "line": 63,
-          "rawdescription": "\nModel for the disabled state of the checkbox.",
           "modifierKind": [148],
           "required": false
         },
@@ -292,7 +364,7 @@
           "type": "OnChangeFn",
           "optional": false,
           "description": "",
-          "line": 87,
+          "line": 92,
           "modifierKind": [123]
         },
         {
@@ -303,7 +375,7 @@
           "type": "OnTouchedFn",
           "optional": false,
           "description": "",
-          "line": 88,
+          "line": 93,
           "modifierKind": [123]
         }
       ],
@@ -314,7 +386,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 134,
+          "line": 139,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nInitializes the indeterminate state of the checkbox based on the checked state.\nIf the checked state is 'mixed', the checkbox will be set to indeterminate.\n",
@@ -327,7 +399,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 122,
+          "line": 127,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nToggles the checkbox value and notifies the change.\nIf the component is disabled, no action is performed.\n",
@@ -346,7 +418,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 100,
+          "line": 105,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nRegisters a function to be called when the value changes.\n",
@@ -376,7 +448,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 107,
+          "line": 112,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nRegisters a function to be called when the component is touched.\n",
@@ -406,7 +478,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 114,
+          "line": 119,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nSets the disabled state of the component.\n",
@@ -436,7 +508,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 93,
+          "line": 98,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nWrites a new value to the component.\n",
@@ -468,14 +540,14 @@
       "description": "<p>ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-checkbox /&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
       "rawdescription": "\n\nZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\nIt supports a tri-state checkbox (checked, unchecked, and indeterminate).\n\n```html\n<zen-checkbox />\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\r\n  AfterViewInit,\r\n  ChangeDetectionStrategy,\r\n  Component,\r\n  DestroyRef,\r\n  ElementRef,\r\n  forwardRef,\r\n  inject,\r\n  model,\r\n  Renderer2,\r\n  viewChild,\r\n} from '@angular/core';\r\nimport { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';\r\nimport {\r\n  ControlValueAccessor,\r\n  FormsModule,\r\n  NG_VALUE_ACCESSOR,\r\n} from '@angular/forms';\r\nimport { map } from 'rxjs';\r\n\r\ntype CheckedState = boolean | 'mixed';\r\ntype OnChangeFn = (value: CheckedState) => void;\r\ntype OnTouchedFn = () => void;\r\n\r\n/**\r\n * ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\r\n * It supports a tri-state checkbox (checked, unchecked, and indeterminate).\r\n *\r\n * @example\r\n * <zen-checkbox />\r\n *\r\n * @export\r\n * @class ZenCheckboxComponent\r\n * @implements {ControlValueAccessor}\r\n * @implements {AfterViewInit}\r\n *\r\n * @license BSD-2-Clause\r\n * @author Konrad Stępień\r\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\r\n */\r\n@Component({\r\n  selector: 'zen-checkbox',\r\n  standalone: true,\r\n  templateUrl: './checkbox.component.html',\r\n  styleUrl: './checkbox.component.scss',\r\n  changeDetection: ChangeDetectionStrategy.OnPush,\r\n  providers: [\r\n    {\r\n      provide: NG_VALUE_ACCESSOR,\r\n      useExisting: forwardRef(() => ZenCheckboxComponent),\r\n      multi: true,\r\n    },\r\n  ],\r\n  imports: [FormsModule],\r\n})\r\nexport class ZenCheckboxComponent\r\n  implements ControlValueAccessor, AfterViewInit\r\n{\r\n  /** Model for the checked state of the checkbox. */\r\n  readonly checked = model<CheckedState>(false);\r\n\r\n  /** Model for the disabled state of the checkbox. */\r\n  readonly disabled = model<boolean>(false);\r\n\r\n  /** @ignore */\r\n  private readonly checked$ = toObservable(this.checked);\r\n\r\n  /** @ignore */\r\n  private readonly destroyRef = inject(DestroyRef);\r\n  /** @ignore */\r\n  private readonly renderer2 = inject(Renderer2);\r\n\r\n  /** @ignore */\r\n  private readonly inputElement =\r\n    viewChild.required<ElementRef<HTMLInputElement>>('inputElement');\r\n\r\n  /**\r\n   * Lifecycle hook called after Angular has fully initialized a component's view.\r\n   * Initializes the indeterminate state of the checkbox.\r\n   *\r\n   * @ignore\r\n   */\r\n  ngAfterViewInit(): void {\r\n    this.initIndeterminate();\r\n  }\r\n\r\n  private onChange: OnChangeFn = () => {};\r\n  private onTouched: OnTouchedFn = () => {};\r\n\r\n  /**\r\n   * Writes a new value to the component.\r\n   */\r\n  writeValue(value: boolean): void {\r\n    this.checked.set(value);\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the value changes.\r\n   */\r\n  registerOnChange(fn: OnChangeFn): void {\r\n    this.onChange = fn;\r\n  }\r\n\r\n  /**\r\n   * Registers a function to be called when the component is touched.\r\n   */\r\n  registerOnTouched(fn: OnTouchedFn): void {\r\n    this.onTouched = fn;\r\n  }\r\n\r\n  /**\r\n   * Sets the disabled state of the component.\r\n   */\r\n  setDisabledState(isDisabled: boolean): void {\r\n    this.disabled.set(isDisabled);\r\n  }\r\n\r\n  /**\r\n   * Toggles the checkbox value and notifies the change.\r\n   * If the component is disabled, no action is performed.\r\n   */\r\n  onToggle(): void {\r\n    if (this.disabled()) return;\r\n\r\n    this.checked.update(value => !value);\r\n    this.onChange(this.checked());\r\n    this.onTouched();\r\n  }\r\n\r\n  /**\r\n   * Initializes the indeterminate state of the checkbox based on the checked state.\r\n   * If the checked state is 'mixed', the checkbox will be set to indeterminate.\r\n   */\r\n  private initIndeterminate(): void {\r\n    this.checked$\r\n      .pipe(\r\n        takeUntilDestroyed(this.destroyRef),\r\n        map((value: CheckedState) => value === 'mixed')\r\n      )\r\n      .subscribe((value: boolean) => {\r\n        this.renderer2.setProperty(\r\n          this.inputElement().nativeElement,\r\n          'indeterminate',\r\n          value\r\n        );\r\n      });\r\n  }\r\n}\r\n",
+      "sourceCode": "import {\n  AfterViewInit,\n  ChangeDetectionStrategy,\n  Component,\n  DestroyRef,\n  ElementRef,\n  forwardRef,\n  inject,\n  model,\n  Renderer2,\n  viewChild,\n} from '@angular/core';\nimport { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\nimport {\n  ZenDisabledDirective,\n  ZenHostDirective,\n} from 'ng-zen/directives/disabled';\nimport { map } from 'rxjs';\n\ntype CheckedState = boolean | 'mixed';\ntype OnChangeFn = (value: CheckedState) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenCheckboxComponent is a custom checkbox component implementing ControlValueAccessor.\n * It supports a tri-state checkbox (checked, unchecked, and indeterminate).\n *\n * @example\n * <zen-checkbox />\n *\n * @export\n * @class ZenCheckboxComponent\n * @implements {ControlValueAccessor}\n * @implements {AfterViewInit}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  selector: 'zen-checkbox',\n  standalone: true,\n  templateUrl: './checkbox.component.html',\n  styleUrl: './checkbox.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenCheckboxComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n  hostDirectives: [ZenHostDirective],\n})\nexport class ZenCheckboxComponent\n  implements ControlValueAccessor, AfterViewInit\n{\n  /** Model for the checked state of the checkbox. */\n  readonly checked = model<CheckedState>(false);\n\n  /** @ignore */\n  readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });\n\n  /** @ignore */\n  private readonly checked$ = toObservable(this.checked);\n\n  /** @ignore */\n  private readonly destroyRef = inject(DestroyRef);\n  /** @ignore */\n  private readonly renderer2 = inject(Renderer2);\n\n  /** @ignore */\n  private readonly inputElement =\n    viewChild.required<ElementRef<HTMLInputElement>>('inputElement');\n\n  /**\n   * Lifecycle hook called after Angular has fully initialized a component's view.\n   * Initializes the indeterminate state of the checkbox.\n   *\n   * @ignore\n   */\n  ngAfterViewInit(): void {\n    this.initIndeterminate();\n  }\n\n  private onChange: OnChangeFn = () => {};\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.zenDisabledDirective.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the checkbox value and notifies the change.\n   * If the component is disabled, no action is performed.\n   */\n  onToggle(): void {\n    if (this.zenDisabledDirective.disabledBoolean()) return;\n\n    this.checked.update(value => !value);\n    this.onChange(this.checked());\n    this.onTouched();\n  }\n\n  /**\n   * Initializes the indeterminate state of the checkbox based on the checked state.\n   * If the checked state is 'mixed', the checkbox will be set to indeterminate.\n   */\n  private initIndeterminate(): void {\n    this.checked$\n      .pipe(\n        takeUntilDestroyed(this.destroyRef),\n        map((value: CheckedState) => value === 'mixed')\n      )\n      .subscribe((value: boolean) => {\n        this.renderer2.setProperty(\n          this.inputElement().nativeElement,\n          'indeterminate',\n          value\n        );\n      });\n  }\n}\n",
       "styleUrl": "./checkbox.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
       "stylesData": "",
       "extends": [],
       "implements": ["ControlValueAccessor", "AfterViewInit"],
-      "templateData": "<input\n  #inputElement\n  [attr.aria-checked]=\"checked()\"\n  [checked]=\"checked()\"\n  [attr.aria-disabled]=\"disabled()\"\n  [disabled]=\"disabled()\"\n  (change)=\"onToggle()\"\n  (keydown.enter)=\"onToggle()\"\n  type=\"checkbox\"\n/>\n@switch (checked()) {\n  @case (false) {\n    ✕\n  }\n  @case (true) {\n    ✓\n  }\n  @case ('mixed') {\n    -\n  }\n}\n"
+      "templateData": "<input\n  #inputElement\n  [attr.aria-checked]=\"checked()\"\n  [checked]=\"checked()\"\n  [attr.aria-disabled]=\"zenDisabledDirective.disabledBoolean()\"\n  [disabled]=\"zenDisabledDirective.disabledBoolean()\"\n  (change)=\"onToggle()\"\n  (keydown.enter)=\"onToggle()\"\n  type=\"checkbox\"\n/>\n@switch (checked()) {\n  @case (false) {\n    ✕\n  }\n  @case (true) {\n    ✓\n  }\n  @case ('mixed') {\n    -\n  }\n}\n"
     },
     {
       "name": "ZenPinComponent",
@@ -549,7 +621,7 @@
     },
     {
       "name": "ZenSwitchComponent",
-      "id": "component-ZenSwitchComponent-b3b3fce32b2c958eec1a9e7280d5c74341687e1242de9c06582d0d7a6f42a63fa6e77fa338931595d4b48358755e53dbc306b90987c88bdfb2915d22a2d17087",
+      "id": "component-ZenSwitchComponent-7085bee4f9ac13326ba9917aaf2ac34781eed0bc1302b09863d30ce3431544e18a1f08d551dfc7f5f4133f4059919c99d3348a24385fcd5a3b61466814f678bd",
       "file": "projects/cli/schematics/components/files/switch/zen-switch.component.ts",
       "changeDetection": "ChangeDetectionStrategy.OnPush",
       "encapsulation": [],
@@ -567,7 +639,11 @@
       "styles": [],
       "templateUrl": ["./zen-switch.component.html"],
       "viewProviders": [],
-      "hostDirectives": [],
+      "hostDirectives": [
+        {
+          "name": "ZenHostDirective"
+        }
+      ],
       "inputsClass": [
         {
           "name": "checked",
@@ -577,20 +653,8 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the switch.</p>\n",
-          "line": 46,
+          "line": 53,
           "rawdescription": "\nModel for the checked state of the switch.",
-          "required": false
-        },
-        {
-          "name": "disabled",
-          "defaultValue": "false",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "optional": false,
-          "description": "<p>Model for the disabled state of the switch.</p>\n",
-          "line": 49,
-          "rawdescription": "\nModel for the disabled state of the switch.",
           "required": false
         }
       ],
@@ -604,20 +668,8 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the checked state of the switch.</p>\n",
-          "line": 46,
+          "line": 53,
           "rawdescription": "\nModel for the checked state of the switch.",
-          "required": false
-        },
-        {
-          "name": "disabled",
-          "defaultValue": "false",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "optional": false,
-          "description": "<p>Model for the disabled state of the switch.</p>\n",
-          "line": 49,
-          "rawdescription": "\nModel for the disabled state of the switch.",
           "required": false
         }
       ],
@@ -635,7 +687,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 104,
+          "line": 111,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nHandles keyboard events for accessibility.\n",
@@ -666,7 +718,7 @@
           "optional": false,
           "returnType": "void",
           "typeParameters": [],
-          "line": 91,
+          "line": 98,
           "deprecated": false,
           "deprecationMessage": "",
           "rawdescription": "\n\nToggles the switch value and notifies the change.\n",
@@ -696,17 +748,17 @@
           "type": "module"
         }
       ],
-      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\"></code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
-      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
+      "description": "<p>ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-switch /&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
+      "rawdescription": "\n\nZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n\n```html\n<zen-switch />\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
       "type": "component",
-      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** Model for the disabled state of the switch. */\n  disabled = model<boolean>(false);\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.disabled()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
+      "sourceCode": "import {\n  ChangeDetectionStrategy,\n  Component,\n  forwardRef,\n  inject,\n  model,\n} from '@angular/core';\nimport {\n  ControlValueAccessor,\n  FormsModule,\n  NG_VALUE_ACCESSOR,\n} from '@angular/forms';\nimport {\n  ZenDisabledDirective,\n  ZenHostDirective,\n} from 'ng-zen/directives/disabled';\n\ntype OnChangeFn = (value: boolean) => void;\ntype OnTouchedFn = () => void;\n\n/**\n * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.\n *\n * @example\n * <zen-switch />\n *\n * @export\n * @class ZenSwitchComponent\n * @implements {ControlValueAccessor}\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień <kord.stp@gmail.com>\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n */\n@Component({\n  selector: 'zen-switch',\n  standalone: true,\n  templateUrl: './zen-switch.component.html',\n  styleUrl: './zen-switch.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => ZenSwitchComponent),\n      multi: true,\n    },\n  ],\n  imports: [FormsModule],\n  hostDirectives: [ZenHostDirective],\n})\nexport class ZenSwitchComponent implements ControlValueAccessor {\n  /** Model for the checked state of the switch. */\n  checked = model<boolean>(false);\n\n  /** @ignore */\n  readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });\n\n  /** @ignore */\n  private onChange: OnChangeFn = () => {};\n  /** @ignore */\n  private onTouched: OnTouchedFn = () => {};\n\n  /**\n   * Writes a new value to the component.\n   * @ignore\n   */\n  writeValue(value: boolean): void {\n    this.checked.set(value);\n  }\n\n  /**\n   * Registers a function to be called when the value changes.\n   * @ignore\n   */\n  registerOnChange(fn: OnChangeFn): void {\n    this.onChange = fn;\n  }\n\n  /**\n   * Registers a function to be called when the component is touched.\n   * @ignore\n   */\n  registerOnTouched(fn: OnTouchedFn): void {\n    this.onTouched = fn;\n  }\n\n  /**\n   * Sets the disabled state of the component.\n   * @ignore\n   */\n  setDisabledState(isDisabled: boolean): void {\n    this.zenDisabledDirective.disabled.set(isDisabled);\n  }\n\n  /**\n   * Toggles the switch value and notifies the change.\n   */\n  onToggle(check?: boolean): void {\n    if (this.zenDisabledDirective.disabledBoolean()) return;\n\n    const value = check ?? !this.checked();\n\n    this.checked.set(value);\n    this.onChange(value);\n    this.onTouched();\n  }\n\n  /**\n   * Handles keyboard events for accessibility.\n   */\n  onKeyDown(event: KeyboardEvent): void {\n    switch (event.code) {\n      case 'Enter':\n      case 'Space': {\n        event.preventDefault();\n        this.onToggle();\n        break;\n      }\n      case 'ArrowRight': {\n        this.onToggle(true);\n        break;\n      }\n      case 'ArrowLeft': {\n        this.onToggle(false);\n        break;\n      }\n    }\n  }\n}\n",
       "styleUrl": "./zen-switch.component.scss",
       "assetsDirs": [],
       "styleUrlsData": "",
       "stylesData": "",
       "extends": [],
       "implements": ["ControlValueAccessor"],
-      "templateData": "<button\r\n  class=\"switch\"\r\n  [attr.aria-checked]=\"checked()\"\r\n  [attr.aria-disabled]=\"disabled()\"\r\n  [disabled]=\"disabled()\"\r\n  (click)=\"onToggle()\"\r\n  (keydown)=\"onKeyDown($event)\"\r\n  role=\"switch\"\r\n>\r\n  <span class=\"slider\"></span>\r\n</button>\r\n"
+      "templateData": "<button\n  class=\"switch\"\n  [attr.aria-checked]=\"checked()\"\n  [attr.aria-disabled]=\"zenDisabledDirective.disabledBoolean()\"\n  [disabled]=\"zenDisabledDirective.disabledBoolean()\"\n  (click)=\"onToggle()\"\n  (keydown)=\"onKeyDown($event)\"\n  role=\"switch\"\n>\n  <span class=\"slider\"></span>\n</button>\n"
     },
     {
       "name": "ZenTagComponent",
@@ -746,7 +798,228 @@
       "extends": []
     }
   ],
-  "modules": [],
+  "modules": [
+    {
+      "name": "ZenButtonModule",
+      "id": "module-ZenButtonModule-036d719a97a807eb1cf0c885a21105573731c7c76e7be2303c3316252d930efe23aed39e2791cfc7e756ae4e0bbd32d959f6b59c762d2a1f2dc0e040fd264529",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "projects/cli/schematics/components/files/button/index.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\r\n\r\nimport { ZenButtonComponent } from './button.component';\r\n\r\n@NgModule({\r\n  imports: [ZenButtonComponent],\r\n  exports: [ZenButtonComponent],\r\n})\r\nexport class ZenButtonModule {}\r\nexport * from './button.component';\r\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "ZenButtonComponent"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ZenButtonComponent"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "ZenCheckboxModule",
+      "id": "module-ZenCheckboxModule-a79aac6a899d446a76903f767bf666f4d1e87994fdf0faafeeebb280d430ed4393fbecdd46731719cf8c1afb34ed11cfce83e39e1b0c8dc6dc85335203d7ec98",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "projects/cli/schematics/components/files/checkbox/index.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { ZenCheckboxComponent } from './checkbox.component';\n\n@NgModule({\n  imports: [ZenCheckboxComponent],\n  exports: [ZenCheckboxComponent],\n})\nexport class ZenCheckboxModule {}\nexport * from './checkbox.component';\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "ZenCheckboxComponent"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ZenCheckboxComponent"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "ZenDisabledModule",
+      "id": "module-ZenDisabledModule-76c7b61a8da87ed98614b4d26aa9a4f6b40ee29abcdaa5605867a2a0e7e424fa4fe5a9aae02ab9e50cf2494da86ff5743a2a17e8e054ee19255b685c9719a9f3",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "projects/cli/schematics/directives/files/disabled/index.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { ZenDisabledDirective } from './disabled.directive';\n\n@NgModule({\n  imports: [ZenDisabledDirective],\n  exports: [ZenDisabledDirective],\n})\nexport class ZenDisabledModule {}\nexport * from './disabled.directive';\n\nexport const ZenHostDirective = {\n  directive: ZenDisabledDirective,\n  inputs: ['zenDisabled: disabled'],\n};\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "ZenDisabledDirective"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ZenDisabledDirective"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "ZenSwitchModule",
+      "id": "module-ZenSwitchModule-e79f6b3b82d4b8edbb0e803c94f3903138853e23f711fffb386e7bd4f728b54e94ec1cccf880fd41b0f1bfe86aa884c4c79a19860c6632e25aeaa82ab3169cc1",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "projects/cli/schematics/components/files/switch/index.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\r\n\r\nimport { ZenSwitchComponent } from './zen-switch.component';\r\n\r\n@NgModule({\r\n  imports: [ZenSwitchComponent],\r\n  exports: [ZenSwitchComponent],\r\n})\r\nexport class ZenSwitchModule {}\r\nexport * from './zen-switch.component';\r\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "ZenSwitchComponent"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ZenSwitchComponent"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "ZenTagModule",
+      "id": "module-ZenTagModule-d1855d78216334f6caef6148d0cde339c1fda40b9ed4eb80c906168dc259044070ed399040f4c5111f6e9f55c39f3737e60dd494e13fd753bdfb59f1008e3f43",
+      "description": "",
+      "deprecationMessage": "",
+      "deprecated": false,
+      "file": "projects/cli/schematics/components/files/tag/index.ts",
+      "methods": [],
+      "sourceCode": "import { NgModule } from '@angular/core';\r\n\r\nimport { ZenTagComponent } from './tag.component';\r\n\r\n@NgModule({\r\n  imports: [ZenTagComponent],\r\n  exports: [ZenTagComponent],\r\n})\r\nexport class ZenTagModule {}\r\nexport * from './tag.component';\r\n",
+      "children": [
+        {
+          "type": "providers",
+          "elements": []
+        },
+        {
+          "type": "declarations",
+          "elements": []
+        },
+        {
+          "type": "imports",
+          "elements": [
+            {
+              "name": "ZenTagComponent"
+            }
+          ]
+        },
+        {
+          "type": "exports",
+          "elements": [
+            {
+              "name": "ZenTagComponent"
+            }
+          ]
+        },
+        {
+          "type": "bootstrap",
+          "elements": []
+        },
+        {
+          "type": "classes",
+          "elements": []
+        }
+      ]
+    }
+  ],
   "miscellaneous": {
     "variables": [
       {
@@ -757,7 +1030,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
       },
       {
         "name": "Avatar",
@@ -768,16 +1041,6 @@
         "deprecationMessage": "",
         "type": "",
         "defaultValue": "OnElement"
-      },
-      {
-        "name": "AvatarWithATag",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "projects/cli/stories/components/avatar.stories.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "_AvatarWithTag"
       },
       {
         "name": "AvatarWithATag",
@@ -817,7 +1080,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -870,7 +1133,17 @@
         "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
       },
       {
-        "name": "Diabled",
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/stories/directives/disabled.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: false,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
+      },
+      {
+        "name": "Disabled",
         "ctype": "miscellaneous",
         "subtype": "variable",
         "file": "projects/cli/stories/components/button.stories.ts",
@@ -880,7 +1153,7 @@
         "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button disabled>Test</button>\r\n    `,\r\n  }),\r\n}"
       },
       {
-        "name": "Diabled",
+        "name": "Disabled",
         "ctype": "miscellaneous",
         "subtype": "variable",
         "file": "projects/cli/stories/components/checkbox.stories.ts",
@@ -907,7 +1180,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-avatar src=\"https://picsum.photos/33\" />\r\n        <b topRight>💬</b>\r\n      </zen-badge>\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-avatar src=\"https://picsum.photos/33\" />\n        <b topRight>💬</b>\n      </zen-badge>\n    `,\n  }),\n}"
       },
       {
         "name": "Image",
@@ -917,7 +1190,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  args: {\r\n    src: 'https://picsum.photos/32',\r\n  },\r\n}"
+        "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
       },
       {
         "name": "OnElement",
@@ -957,17 +1230,17 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; color:white\">\r\n        <zen-avatar>MI</zen-avatar>\r\n        <zen-avatar>IB</zen-avatar>\r\n        <zen-avatar>WP</zen-avatar>\r\n        <zen-avatar>AI</zen-avatar>\r\n      </div> `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
       },
       {
-        "name": "WithBadge",
+        "name": "ZenHostDirective",
         "ctype": "miscellaneous",
         "subtype": "variable",
-        "file": "projects/cli/stories/components/avatar.stories.ts",
+        "file": "projects/cli/schematics/directives/files/disabled/index.ts",
         "deprecated": false,
         "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "OnElement"
+        "type": "object",
+        "defaultValue": "{\n  directive: ZenDisabledDirective,\n  inputs: ['zenDisabled: disabled'],\n}"
       }
     ],
     "functions": [],
@@ -1103,6 +1376,17 @@
         "deprecationMessage": "",
         "description": "",
         "kind": 183
+      },
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenDisabledDirective>",
+        "file": "projects/cli/stories/directives/disabled.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
       }
     ],
     "enumerations": [],
@@ -1116,7 +1400,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <div zenBadge style=\"background: lightgray;\r\n        height: 254px;\r\n        width: 254px;\r\n        border-radius: 16px;\">\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n    </div>\r\n  `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
         },
         {
           "name": "Avatar",
@@ -1146,7 +1430,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n    <zen-badge>\r\n      <small topLeft>TOP-LEFT</small>\r\n      <small top>TOP</small>\r\n      <small topRight>TOP-RIGHT</small>\r\n      <small left>LEFT</small>\r\n      <small right>RIGHT</small>\r\n      <small bottomLeft>BOTTOM-LEFT</small>\r\n      <small bottom>BOTTOM</small>\r\n      <small bottomRight>BOTTOM-RIGHT</small>\r\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\r\n    </zen-badge>\r\n  `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n    <zen-badge>\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n      <img src=\"https://picsum.photos/200/200\"  alt=\"picsum\"/>\n    </zen-badge>\n  `,\n  }),\n}"
         },
         {
           "name": "Emoji",
@@ -1156,49 +1440,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-avatar src=\"https://picsum.photos/33\" />\r\n        <b topRight>💬</b>\r\n      </zen-badge>\r\n    `,\r\n  }),\r\n}"
-        }
-      ],
-      "projects/cli/stories/components/avatar.stories.ts": [
-        {
-          "name": "AvatarWithATag",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/avatar.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "_AvatarWithTag"
-        },
-        {
-          "name": "Image",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/avatar.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "Story",
-          "defaultValue": "{\r\n  args: {\r\n    src: 'https://picsum.photos/32',\r\n  },\r\n}"
-        },
-        {
-          "name": "Text",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/avatar.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <div style=\"display: flex; gap: 1rem; color:white\">\r\n        <zen-avatar>MI</zen-avatar>\r\n        <zen-avatar>IB</zen-avatar>\r\n        <zen-avatar>WP</zen-avatar>\r\n        <zen-avatar>AI</zen-avatar>\r\n      </div> `,\r\n  }),\r\n}"
-        },
-        {
-          "name": "WithBadge",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/avatar.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "OnElement"
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-avatar src=\"https://picsum.photos/33\" />\n        <b topRight>💬</b>\n      </zen-badge>\n    `,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/tag.stories.ts": [
@@ -1267,7 +1509,7 @@
           "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button>Test</button>\r\n    `,\r\n  }),\r\n}"
         },
         {
-          "name": "Diabled",
+          "name": "Disabled",
           "ctype": "miscellaneous",
           "subtype": "variable",
           "file": "projects/cli/stories/components/button.stories.ts",
@@ -1289,7 +1531,7 @@
           "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox />\r\n        <zen-checkbox [checked]=\"true\" />\r\n        <zen-checkbox checked=\"mixed\" />\r\n    `,\r\n  }),\r\n}"
         },
         {
-          "name": "Diabled",
+          "name": "Disabled",
           "ctype": "miscellaneous",
           "subtype": "variable",
           "file": "projects/cli/stories/components/checkbox.stories.ts",
@@ -1331,6 +1573,40 @@
           "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenPinComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  args: {\n    stream: true,\n  },\n  render: args => ({\n    template: `\n        <zen-badge style=\"--zen-badge-offset: -4px\">\n          <zen-pin ${args.stream ? 'stream' : ''} topRight style=\"border: 2px solid white\"/>\n          <zen-avatar src=\"https://github.com/Kordrad.png\" />\n        </zen-badge>\n     `,\n  }),\n}"
         }
       ],
+      "projects/cli/stories/directives/disabled.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/directives/disabled.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: false,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
+        }
+      ],
+      "projects/cli/stories/components/avatar.stories.ts": [
+        {
+          "name": "Image",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
+        },
+        {
+          "name": "Text",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/stories/components/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem; color:white\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
+        }
+      ],
       "projects/cli/.storybook/preview.ts": [
         {
           "name": "preview",
@@ -1341,6 +1617,18 @@
           "deprecationMessage": "",
           "type": "Preview",
           "defaultValue": "{\r\n  parameters: {\r\n    layout: 'centered',\r\n  },\r\n}"
+        }
+      ],
+      "projects/cli/schematics/directives/files/disabled/index.ts": [
+        {
+          "name": "ZenHostDirective",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/schematics/directives/files/disabled/index.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "object",
+          "defaultValue": "{\n  directive: ZenDisabledDirective,\n  inputs: ['zenDisabled: disabled'],\n}"
         }
       ]
     },
@@ -1496,6 +1784,19 @@
           "description": "",
           "kind": 183
         }
+      ],
+      "projects/cli/stories/directives/disabled.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenDisabledDirective>",
+          "file": "projects/cli/stories/directives/disabled.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
       ]
     }
   },
@@ -1546,8 +1847,8 @@
         "type": "component",
         "linktype": "component",
         "name": "ZenCheckboxComponent",
-        "coveragePercent": 84,
-        "coverageCount": "11/13",
+        "coveragePercent": 81,
+        "coverageCount": "9/11",
         "status": "very-good"
       },
       {
@@ -1565,7 +1866,7 @@
         "linktype": "component",
         "name": "ZenSwitchComponent",
         "coveragePercent": 100,
-        "coverageCount": "7/7",
+        "coverageCount": "5/5",
         "status": "very-good"
       },
       {
@@ -1578,11 +1879,20 @@
         "status": "very-good"
       },
       {
-        "filePath": "projects/cli/stories/components/avatar.stories.ts",
+        "filePath": "projects/cli/schematics/directives/files/disabled/disabled.directive.ts",
+        "type": "directive",
+        "linktype": "directive",
+        "name": "ZenDisabledDirective",
+        "coveragePercent": 40,
+        "coverageCount": "2/5",
+        "status": "medium"
+      },
+      {
+        "filePath": "projects/cli/schematics/directives/files/disabled/index.ts",
         "type": "variable",
         "linktype": "miscellaneous",
         "linksubtype": "variable",
-        "name": "AvatarWithATag",
+        "name": "ZenHostDirective",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
@@ -1603,16 +1913,6 @@
         "linktype": "miscellaneous",
         "linksubtype": "variable",
         "name": "Text",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "projects/cli/stories/components/avatar.stories.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "WithBadge",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
@@ -1682,7 +1982,7 @@
         "type": "variable",
         "linktype": "miscellaneous",
         "linksubtype": "variable",
-        "name": "Diabled",
+        "name": "Disabled",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
@@ -1702,7 +2002,7 @@
         "type": "variable",
         "linktype": "miscellaneous",
         "linksubtype": "variable",
-        "name": "Diabled",
+        "name": "Disabled",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
@@ -1779,6 +2079,16 @@
       },
       {
         "filePath": "projects/cli/stories/components/tag.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/stories/directives/disabled.stories.ts",
         "type": "variable",
         "linktype": "miscellaneous",
         "linksubtype": "variable",
