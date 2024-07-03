@@ -14,7 +14,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
  *
  * @license BSD-2-Clause
  * @author Konrad Stępień <kord.stp@gmail.com>
- * @link https://github.com/Kordrad/ng-zen
+ * @see {https://github.com/Kordrad/ng-zen GitHub Repository}
  */
 @Component({
   selector: 'zen-tag',

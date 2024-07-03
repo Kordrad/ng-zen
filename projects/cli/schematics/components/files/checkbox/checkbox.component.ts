@@ -36,7 +36,7 @@ type OnTouchedFn = () => void;
  *
  * @license BSD-2-Clause
  * @author Konrad Stępień
- * @link https://github.com/Kordrad/ng-zen
+ * @see {https://github.com/Kordrad/ng-zen GitHub Repository}
  */
 @Component({
   selector: 'zen-checkbox',
