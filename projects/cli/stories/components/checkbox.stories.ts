@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-
-import { ZenCheckboxComponent } from '../../schematics/components/files/checkbox/checkbox.component';
+import { ZenCheckboxComponent } from 'ng-zen/components/checkbox';
 
 export default {
   title: 'Components/Checkbox',
@@ -21,7 +20,7 @@ export const Default: Story = {
   }),
 };
 
-export const Diabled: Story = {
+export const Disabled: Story = {
   render: () => ({
     template: `
         <zen-checkbox disabled="true"/>

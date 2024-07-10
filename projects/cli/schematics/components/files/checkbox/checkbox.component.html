@@ -2,8 +2,8 @@
   #inputElement
   [attr.aria-checked]="checked()"
   [checked]="checked()"
-  [attr.aria-disabled]="disabled()"
-  [disabled]="disabled()"
+  [attr.aria-disabled]="zenDisabledDirective.disabledBoolean()"
+  [disabled]="zenDisabledDirective.disabledBoolean()"
   (change)="onToggle()"
   (keydown.enter)="onToggle()"
   type="checkbox"

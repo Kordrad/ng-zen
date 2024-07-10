@@ -14,12 +14,19 @@ ng add @ng-zen/cli
 
 This command will add the necessary dependencies and configurations to your Angular project.
 
-## Generating Components
+## Generating
 
-You can generate components using the ng-zen CLI. Components are generated using the following command format:
+You can generate code using the ng-zen CLI.
 
+
+#### Components
 ```bash
 ng generate @ng-zen/cli:component
+```
+
+#### Directives
+```bash
+ng generate @ng-zen/cli:directive 
 ```
 
 ## License
