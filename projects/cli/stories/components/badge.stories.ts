@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
+import { ZenAvatarComponent } from 'ng-zen/components/avatar';
+import { ZenBadgeComponent } from 'ng-zen/components/badge';
 
-import { ZenAvatarComponent } from '../../schematics/components/files/avatar';
-import { ZenBadgeComponent } from '../../schematics/components/files/badge';
 import { OnElement } from './pin.stories';
-import { AvatarWithTag as _AvatarWithTag } from './tag.stories';
+import { AvatarWithTag } from './tag.stories';
 
 export default {
   title: 'Components/Badge',
@@ -67,5 +67,5 @@ export const Emoji: Story = {
     `,
   }),
 };
-export const Avatar = OnElement;
-export const AvatarWithATag = _AvatarWithTag;
+
+export { AvatarWithTag, OnElement };

@@ -1,6 +1,6 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 
-import { addPathToTsconfigUtil } from '../utils/add-path-to-tsconfig.util';
+import { addPathToTsconfigUtil } from '../_utils/add-path-to-tsconfig.util';
 import { NgZenGeneratorSchema } from './ng-zen-generator';
 
 export function ngAdd(options: NgZenGeneratorSchema): Rule {

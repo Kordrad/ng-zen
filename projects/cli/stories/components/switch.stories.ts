@@ -1,8 +1,7 @@
 import { FormsModule } from '@angular/forms';
 import type { Meta, StoryObj } from '@storybook/angular';
 import { moduleMetadata } from '@storybook/angular';
-
-import { ZenSwitchComponent } from '../../schematics/components/files/switch';
+import { ZenSwitchComponent } from 'ng-zen/components/switch';
 
 export default {
   title: 'Components/Switch',

@@ -7,6 +7,9 @@
       "style": "scss",
       "standalone": true,
       "changeDetection": "OnPush"
+    },
+    "@schematics/angular:directive": {
+      "standalone": true
     }
   },
   "projects": {

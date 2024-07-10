@@ -38,8 +38,8 @@ input[type='checkbox'] {
 }
 
 /* DISABLED STATE */
-:host[disabled],
-:host:has([disabled]) {
+:host[aria-disabled='true'],
+:host:has([aria-disabled='true']) {
   background-color: $checkbox-disabled-bg-color;
   border-color: $checkbox-disabled-bg-color;
   opacity: 0.6;

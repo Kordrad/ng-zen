@@ -16,6 +16,10 @@ import {
   FormsModule,
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
+import {
+  ZenDisabledDirective,
+  ZenHostDirective,
+} from 'ng-zen/directives/disabled';
 import { map } from 'rxjs';
 
 type CheckedState = boolean | 'mixed';
@@ -52,6 +56,7 @@ type OnTouchedFn = () => void;
     },
   ],
   imports: [FormsModule],
+  hostDirectives: [ZenHostDirective],
 })
 export class ZenCheckboxComponent
   implements ControlValueAccessor, AfterViewInit
@@ -59,8 +64,8 @@ export class ZenCheckboxComponent
   /** Model for the checked state of the checkbox. */
   readonly checked = model<CheckedState>(false);
 
-  /** Model for the disabled state of the checkbox. */
-  readonly disabled = model<boolean>(false);
+  /** @ignore */
+  readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });
 
   /** @ignore */
   private readonly checked$ = toObservable(this.checked);
@@ -112,7 +117,7 @@ export class ZenCheckboxComponent
    * Sets the disabled state of the component.
    */
   setDisabledState(isDisabled: boolean): void {
-    this.disabled.set(isDisabled);
+    this.zenDisabledDirective.disabled.set(isDisabled);
   }
 
   /**
@@ -120,7 +125,7 @@ export class ZenCheckboxComponent
    * If the component is disabled, no action is performed.
    */
   onToggle(): void {
-    if (this.disabled()) return;
+    if (this.zenDisabledDirective.disabledBoolean()) return;
 
     this.checked.update(value => !value);
     this.onChange(this.checked());

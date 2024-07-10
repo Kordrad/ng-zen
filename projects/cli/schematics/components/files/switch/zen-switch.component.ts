@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   forwardRef,
+  inject,
   model,
 } from '@angular/core';
 import {
@@ -9,6 +10,10 @@ import {
   FormsModule,
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
+import {
+  ZenDisabledDirective,
+  ZenHostDirective,
+} from 'ng-zen/directives/disabled';
 
 type OnChangeFn = (value: boolean) => void;
 type OnTouchedFn = () => void;
@@ -16,7 +21,8 @@ type OnTouchedFn = () => void;
 /**
  * ZenSwitchComponent is a custom switch component that implements ControlValueAccessor to work seamlessly with Angular forms.
  *
- * @example <zen-switch />
+ * @example
+ * <zen-switch />
  *
  * @export
  * @class ZenSwitchComponent
@@ -40,13 +46,14 @@ type OnTouchedFn = () => void;
     },
   ],
   imports: [FormsModule],
+  hostDirectives: [ZenHostDirective],
 })
 export class ZenSwitchComponent implements ControlValueAccessor {
   /** Model for the checked state of the switch. */
   checked = model<boolean>(false);
 
-  /** Model for the disabled state of the switch. */
-  disabled = model<boolean>(false);
+  /** @ignore */
+  readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });
 
   /** @ignore */
   private onChange: OnChangeFn = () => {};
@@ -82,14 +89,14 @@ export class ZenSwitchComponent implements ControlValueAccessor {
    * @ignore
    */
   setDisabledState(isDisabled: boolean): void {
-    this.disabled.set(isDisabled);
+    this.zenDisabledDirective.disabled.set(isDisabled);
   }
 
   /**
    * Toggles the switch value and notifies the change.
    */
   onToggle(check?: boolean): void {
-    if (this.disabled()) return;
+    if (this.zenDisabledDirective.disabledBoolean()) return;
 
     const value = check ?? !this.checked();
 

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NgZenCliDirectives",
+  "title": "Schema to create Zen UI directives",
+  "type": "object",
+  "description": "Adds Zen UI directive 📦",
+  "properties": {
+    "directives": {
+      "description": "Select directive to generate (e.g: --directives=avatar pin)",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["disabled"]
+      },
+      "multiselect": true,
+      "x-prompt": "Which directive should be generated?"
+    },
+    "path": {
+      "description": "Where should be created the directives",
+      "type": "string",
+      "format": "path",
+      "default": "/projects/ng-zen/directives"
+    }
+  }
+}
