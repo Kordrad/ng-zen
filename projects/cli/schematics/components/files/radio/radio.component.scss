@@ -1,0 +1,8 @@
+$radio-disabled-bg-color: lightgrey;
+
+:host[aria-disabled='true'],
+:host:has([aria-disabled='true']) {
+  &, & > * {
+    cursor: not-allowed;
+  }
+}
