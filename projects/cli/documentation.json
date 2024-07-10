@@ -8,12 +8,12 @@
   "directives": [
     {
       "name": "ZenDisabledDirective",
-      "id": "directive-ZenDisabledDirective-03d0b4c435692619bea230d443e9c8118e3abaf7303f1f01fd4ca83d9c104ecf97501da599ddb1a21c23cd40313455b902cc1ee07b7ef597b1fc8bd527312a63",
+      "id": "directive-ZenDisabledDirective-a749f799a9e1cf8727a197ec2ff238d187a94897581632f9d2e9342778e28184cd18cb14cfa6faa23794da536e3bbc4ad30fbb4b9ed911e0b0c20f3cceb9ee05",
       "file": "projects/cli/schematics/directives/files/disabled/disabled.directive.ts",
       "type": "directive",
       "description": "<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;button zenDisabled&gt; ... &lt;/button&gt;</code></pre></div><p>See {<a href=\"https://github.com/Kordrad/ng-zen\">https://github.com/Kordrad/ng-zen</a> GitHub Repository}</p>\n",
       "rawdescription": "\n\n```html\n<button zenDisabled> ... </button>\n```\n\nSee {https://github.com/Kordrad/ng-zen GitHub Repository}\n",
-      "sourceCode": "import { computed, Directive, HostBinding, model } from '@angular/core';\n\n/**\n * @example\n * <button zenDisabled> ... </button>\n *\n * @export\n * @class ZenDisabledDirective\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n * */\n@Directive({\n  selector: '[zenDisabled]',\n  standalone: true,\n})\nexport class ZenDisabledDirective {\n  /** Model for the disabled state of the checkbox. */\n\n  readonly disabled = model<boolean | 'true' | 'false' | ''>(false, {\n    alias: 'zenDisabled',\n  });\n\n  /** @ignore */\n  readonly disabledBoolean = computed(() =>\n    [true, 'true', ''].includes(this.disabled())\n  );\n\n  @HostBinding('disabled')\n  get disabledAttr(): boolean {\n    return this.disabledBoolean();\n  }\n\n  @HostBinding('attr.aria-disabled')\n  get ariaDisabledAttr(): boolean {\n    return this.disabledBoolean();\n  }\n\n  @HostBinding('class.zen-disabled')\n  get disabledClass(): boolean {\n    return this.disabledBoolean();\n  }\n}\n",
+      "sourceCode": "import { computed, Directive, HostBinding, model } from '@angular/core';\n\n/**\n * @example\n * <button zenDisabled> ... </button>\n *\n * @export\n * @class ZenDisabledDirective\n *\n * @license BSD-2-Clause\n * @author Konrad Stępień\n * @see {https://github.com/Kordrad/ng-zen GitHub Repository}\n * */\n@Directive({\n  selector: '[zenDisabled]',\n  standalone: true,\n})\nexport class ZenDisabledDirective {\n  /** Model for the disabled state of the checkbox. */\n  readonly disabled = model<boolean | 'true' | 'false' | ''>(false, {\n    alias: 'zenDisabled',\n  });\n\n  /** @ignore */\n  readonly disabledBoolean = computed(() =>\n    [true, 'true', ''].includes(this.disabled())\n  );\n\n  @HostBinding('disabled')\n  get disabledAttr(): string | null | boolean {\n    return this.disabledBoolean() || null;\n  }\n\n  @HostBinding('attr.aria-disabled')\n  get ariaDisabledAttr(): boolean {\n    return this.disabledBoolean();\n  }\n\n  @HostBinding('class.zen-disabled')\n  get disabledClass(): boolean {\n    return this.disabledBoolean();\n  }\n}\n",
       "selector": "[zenDisabled]",
       "providers": [],
       "hostDirectives": [],
@@ -27,7 +27,7 @@
           "name": "attr.aria-disabled",
           "deprecated": false,
           "deprecationMessage": "",
-          "line": 36,
+          "line": 35,
           "type": "boolean",
           "decorators": []
         },
@@ -35,7 +35,7 @@
           "name": "class.zen-disabled",
           "deprecated": false,
           "deprecationMessage": "",
-          "line": 41,
+          "line": 40,
           "type": "boolean",
           "decorators": []
         },
@@ -43,8 +43,8 @@
           "name": "disabled",
           "deprecated": false,
           "deprecationMessage": "",
-          "line": 31,
-          "type": "boolean",
+          "line": 30,
+          "type": "string | null | boolean",
           "decorators": []
         }
       ],
@@ -58,7 +58,7 @@
           "type": "",
           "optional": false,
           "description": "<p>Model for the disabled state of the checkbox.</p>\n",
-          "line": 21,
+          "line": 20,
           "rawdescription": "\nModel for the disabled state of the checkbox.",
           "modifierKind": [148]
         }
@@ -70,9 +70,9 @@
           "name": "disabledAttr",
           "getSignature": {
             "name": "disabledAttr",
-            "type": "boolean",
-            "returnType": "boolean",
-            "line": 31
+            "type": "",
+            "returnType": "string | null | boolean",
+            "line": 30
           }
         },
         "ariaDisabledAttr": {
@@ -81,7 +81,7 @@
             "name": "ariaDisabledAttr",
             "type": "boolean",
             "returnType": "boolean",
-            "line": 36
+            "line": 35
           }
         },
         "disabledClass": {
@@ -90,7 +90,7 @@
             "name": "disabledClass",
             "type": "boolean",
             "returnType": "boolean",
-            "line": 41
+            "line": 40
           }
         }
       }
@@ -1033,26 +1033,6 @@
         "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
       },
       {
-        "name": "Avatar",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "projects/cli/stories/components/badge.stories.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "OnElement"
-      },
-      {
-        "name": "AvatarWithATag",
-        "ctype": "miscellaneous",
-        "subtype": "variable",
-        "file": "projects/cli/stories/components/badge.stories.ts",
-        "deprecated": false,
-        "deprecationMessage": "",
-        "type": "",
-        "defaultValue": "_AvatarWithTag"
-      },
-      {
         "name": "AvatarWithTag",
         "ctype": "miscellaneous",
         "subtype": "variable",
@@ -1060,7 +1040,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenTagComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-tag bottom>KS</zen-tag>\r\n        <zen-avatar src=\"https://github.com/Kordrad.png\" style=\"height: 64px; width: 64px\"/>\r\n      </zen-badge>`,\r\n  }),\r\n}"
+        "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenTagComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-tag bottom>KS</zen-tag>\n        <zen-avatar src=\"https://github.com/Kordrad.png\" style=\"height: 64px; width: 64px\"/>\n      </zen-badge>`,\n  }),\n}"
       },
       {
         "name": "Checked",
@@ -1070,7 +1050,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <zen-switch [ngModel]=\"true\" />\r\n      <br/>\r\n      <zen-switch [checked]=\"true\" />\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <zen-switch [ngModel]=\"true\" />\n      <br/>\n      <zen-switch [checked]=\"true\" />\n    `,\n  }),\n}"
       },
       {
         "name": "Component",
@@ -1090,7 +1070,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button>Test</button>\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -1100,7 +1080,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox />\r\n        <zen-checkbox [checked]=\"true\" />\r\n        <zen-checkbox checked=\"mixed\" />\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -1120,7 +1100,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-switch />\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch />\n    `,\n  }),\n}"
       },
       {
         "name": "Default",
@@ -1130,7 +1110,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
+        "defaultValue": "{\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\n}"
       },
       {
         "name": "Default",
@@ -1140,7 +1120,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: false,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
+        "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: true,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
       },
       {
         "name": "Disabled",
@@ -1150,7 +1130,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button disabled>Test</button>\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button disabled>Test</button>\n    `,\n  }),\n}"
       },
       {
         "name": "Disabled",
@@ -1160,7 +1140,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox disabled=\"true\"/>\r\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\r\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\r\n    `,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n    `,\n  }),\n}"
       },
       {
         "name": "Disabled",
@@ -1170,7 +1150,7 @@
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\r\n  render: () => ({\r\n    template: `<zen-switch [disabled]=\"true\" />`,\r\n  }),\r\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `<zen-switch [disabled]=\"true\" />`,\n  }),\n}"
       },
       {
         "name": "Emoji",
@@ -1403,26 +1383,6 @@
           "defaultValue": "{\n  render: () => ({\n    template: `\n    <div zenBadge style=\"background: lightgray;\n        height: 254px;\n        width: 254px;\n        border-radius: 16px;\">\n      <small topLeft>TOP-LEFT</small>\n      <small top>TOP</small>\n      <small topRight>TOP-RIGHT</small>\n      <small left>LEFT</small>\n      <small right>RIGHT</small>\n      <small bottomLeft>BOTTOM-LEFT</small>\n      <small bottom>BOTTOM</small>\n      <small bottomRight>BOTTOM-RIGHT</small>\n    </div>\n  `,\n  }),\n}"
         },
         {
-          "name": "Avatar",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/badge.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "OnElement"
-        },
-        {
-          "name": "AvatarWithATag",
-          "ctype": "miscellaneous",
-          "subtype": "variable",
-          "file": "projects/cli/stories/components/badge.stories.ts",
-          "deprecated": false,
-          "deprecationMessage": "",
-          "type": "",
-          "defaultValue": "_AvatarWithTag"
-        },
-        {
           "name": "Component",
           "ctype": "miscellaneous",
           "subtype": "variable",
@@ -1452,7 +1412,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ZenTagComponent, ZenAvatarComponent, ZenBadgeComponent],\r\n    }),\r\n  ],\r\n  render: () => ({\r\n    template: `\r\n      <zen-badge style=\"--zen-badge-offset: -4px\">\r\n        <zen-tag bottom>KS</zen-tag>\r\n        <zen-avatar src=\"https://github.com/Kordrad.png\" style=\"height: 64px; width: 64px\"/>\r\n      </zen-badge>`,\r\n  }),\r\n}"
+          "defaultValue": "{\n  decorators: [\n    moduleMetadata({\n      imports: [ZenTagComponent, ZenAvatarComponent, ZenBadgeComponent],\n    }),\n  ],\n  render: () => ({\n    template: `\n      <zen-badge style=\"--zen-badge-offset: -4px\">\n        <zen-tag bottom>KS</zen-tag>\n        <zen-avatar src=\"https://github.com/Kordrad.png\" style=\"height: 64px; width: 64px\"/>\n      </zen-badge>`,\n  }),\n}"
         },
         {
           "name": "Default",
@@ -1462,7 +1422,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\r\n}"
+          "defaultValue": "{\n  render: () => ({ template: `<zen-tag>Zen Tag</zen-tag>` }),\n}"
         }
       ],
       "projects/cli/stories/components/switch.stories.ts": [
@@ -1474,7 +1434,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n      <zen-switch [ngModel]=\"true\" />\r\n      <br/>\r\n      <zen-switch [checked]=\"true\" />\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <zen-switch [ngModel]=\"true\" />\n      <br/>\n      <zen-switch [checked]=\"true\" />\n    `,\n  }),\n}"
         },
         {
           "name": "Default",
@@ -1484,7 +1444,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-switch />\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-switch />\n    `,\n  }),\n}"
         },
         {
           "name": "Disabled",
@@ -1494,7 +1454,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `<zen-switch [disabled]=\"true\" />`,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `<zen-switch [disabled]=\"true\" />`,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/button.stories.ts": [
@@ -1506,7 +1466,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button>Test</button>\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
         },
         {
           "name": "Disabled",
@@ -1516,7 +1476,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <button zen-button disabled>Test</button>\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button disabled>Test</button>\n    `,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/checkbox.stories.ts": [
@@ -1528,7 +1488,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox />\r\n        <zen-checkbox [checked]=\"true\" />\r\n        <zen-checkbox checked=\"mixed\" />\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox />\n        <zen-checkbox [checked]=\"true\" />\n        <zen-checkbox checked=\"mixed\" />\n    `,\n  }),\n}"
         },
         {
           "name": "Disabled",
@@ -1538,7 +1498,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\r\n  render: () => ({\r\n    template: `\r\n        <zen-checkbox disabled=\"true\"/>\r\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\r\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\r\n    `,\r\n  }),\r\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-checkbox disabled=\"true\"/>\n        <zen-checkbox [checked]=\"true\" disabled=\"true\"/>\n        <zen-checkbox checked=\"mixed\" disabled=\"true\"/>\n    `,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/pin.stories.ts": [
@@ -1582,7 +1542,7 @@
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: false,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
+          "defaultValue": "{\n  argTypes: {\n    disabled: { control: 'boolean' },\n  },\n  args: {\n    disabled: true,\n  },\n\n  render: args => ({\n    moduleMetadata: { imports: [ZenDisabledDirective] },\n    props: { ...args },\n    template: `\n    <button [zenDisabled]=\"${args.disabled}\">...</button>\n\n    <button ${args.disabled ? 'zenDisabled' : ''}>...</button>`,\n  }),\n}"
         }
       ],
       "projects/cli/stories/components/avatar.stories.ts": [
@@ -1802,7 +1762,7 @@
   },
   "routes": [],
   "coverage": {
-    "count": 22,
+    "count": 24,
     "status": "low",
     "files": [
       {
@@ -1923,26 +1883,6 @@
         "linktype": "miscellaneous",
         "linksubtype": "variable",
         "name": "Attribute",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "projects/cli/stories/components/badge.stories.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "Avatar",
-        "coveragePercent": 0,
-        "coverageCount": "0/1",
-        "status": "low"
-      },
-      {
-        "filePath": "projects/cli/stories/components/badge.stories.ts",
-        "type": "variable",
-        "linktype": "miscellaneous",
-        "linksubtype": "variable",
-        "name": "AvatarWithATag",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"

@@ -17,7 +17,6 @@ import { computed, Directive, HostBinding, model } from '@angular/core';
 })
 export class ZenDisabledDirective {
   /** Model for the disabled state of the checkbox. */
-
   readonly disabled = model<boolean | 'true' | 'false' | ''>(false, {
     alias: 'zenDisabled',
   });
