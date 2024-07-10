@@ -12,6 +12,7 @@ describe('ZenRadioComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(ZenRadioComponent);
+    fixture.componentRef.setInput('name', 'name-value');
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
