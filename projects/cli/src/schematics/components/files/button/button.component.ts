@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ZenHostDirective } from 'ng-zen/directives/disabled';
+import { ZenDisabledHostDirective } from 'ng-zen/directives/disabled';
 
 /**
  * ZenButtonComponent is a reusable button component designed to provide
@@ -24,6 +24,6 @@ import { ZenHostDirective } from 'ng-zen/directives/disabled';
   template: ` <ng-content /> `,
   styleUrl: './button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  hostDirectives: [ZenHostDirective],
+  hostDirectives: [ZenDisabledHostDirective],
 })
 export class ZenButtonComponent {}

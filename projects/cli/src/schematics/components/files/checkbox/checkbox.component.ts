@@ -18,7 +18,7 @@ import {
 } from '@angular/forms';
 import {
   ZenDisabledDirective,
-  ZenHostDirective,
+  ZenDisabledHostDirective,
 } from 'ng-zen/directives/disabled';
 import { map } from 'rxjs';
 
@@ -56,7 +56,7 @@ type OnTouchedFn = () => void;
     },
   ],
   imports: [FormsModule],
-  hostDirectives: [ZenHostDirective],
+  hostDirectives: [ZenDisabledHostDirective],
 })
 export class ZenCheckboxComponent
   implements ControlValueAccessor, AfterViewInit
