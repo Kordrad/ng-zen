@@ -20,8 +20,12 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "ng-zen/components/*": ["./projects/cli/schematics/components/files/*"],
-      "ng-zen/directives/*": ["./projects/cli/schematics/directives/files/*"]
+      "ng-zen/components/*": [
+        "./projects/cli/src/schematics/components/files/*"
+      ],
+      "ng-zen/directives/*": [
+        "./projects/cli/src/schematics/directives/files/*"
+      ]
     }
   },
   "angularCompilerOptions": {
