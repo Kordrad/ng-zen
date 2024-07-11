@@ -5,6 +5,7 @@ export interface ComponentGeneratorSchema {
     | 'button'
     | 'checkbox'
     | 'pin'
+    | 'radio'
     | 'switch'
     | 'tag'
   )[];
