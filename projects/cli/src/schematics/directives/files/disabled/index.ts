@@ -9,7 +9,7 @@ import { ZenDisabledDirective } from './disabled.directive';
 export class ZenDisabledModule {}
 export * from './disabled.directive';
 
-export const ZenHostDirective = {
+export const ZenDisabledHostDirective = {
   directive: ZenDisabledDirective,
   inputs: ['zenDisabled: disabled'],
 };

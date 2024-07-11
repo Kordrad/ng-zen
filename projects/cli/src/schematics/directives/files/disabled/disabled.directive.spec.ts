@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ZenDisabledDirective } from './disabled.directive';
-import { ZenHostDirective } from './index';
+import { ZenDisabledHostDirective } from './index';
 
 @Component({
   template: ``,
-  hostDirectives: [ZenHostDirective],
+  hostDirectives: [ZenDisabledHostDirective],
   standalone: true,
 })
 class ZenDisabledComponent {}
