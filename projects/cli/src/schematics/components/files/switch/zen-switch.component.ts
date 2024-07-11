@@ -12,7 +12,7 @@ import {
 } from '@angular/forms';
 import {
   ZenDisabledDirective,
-  ZenHostDirective,
+  ZenDisabledHostDirective,
 } from 'ng-zen/directives/disabled';
 
 type OnChangeFn = (value: boolean) => void;
@@ -46,7 +46,7 @@ type OnTouchedFn = () => void;
     },
   ],
   imports: [FormsModule],
-  hostDirectives: [ZenHostDirective],
+  hostDirectives: [ZenDisabledHostDirective],
 })
 export class ZenSwitchComponent implements ControlValueAccessor {
   /** Model for the checked state of the switch. */

@@ -9,7 +9,7 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {
   ZenDisabledDirective,
-  ZenHostDirective,
+  ZenDisabledHostDirective,
 } from 'ng-zen/directives/disabled';
 
 type OnChangeFn = (value: boolean) => void;
@@ -28,7 +28,7 @@ type OnTouchedFn = () => void;
       multi: true,
     },
   ],
-  hostDirectives: [ZenHostDirective],
+  hostDirectives: [ZenDisabledHostDirective],
 })
 export class ZenRadioComponent implements ControlValueAccessor {
   readonly name = input.required<string>();
