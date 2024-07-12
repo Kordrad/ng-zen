@@ -3,7 +3,7 @@ import {
   Component,
   forwardRef,
   inject,
-  model,
+  signal,
 } from '@angular/core';
 import {
   ControlValueAccessor,
@@ -50,7 +50,7 @@ type OnTouchedFn = () => void;
 })
 export class ZenSwitchComponent implements ControlValueAccessor {
   /** Model for the checked state of the switch. */
-  checked = model<boolean>(false);
+  value = signal<boolean>(false);
 
   /** @ignore */
   readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });
@@ -65,7 +65,7 @@ export class ZenSwitchComponent implements ControlValueAccessor {
    * @ignore
    */
   writeValue(value: boolean): void {
-    this.checked.set(value);
+    this.value.set(value);
   }
 
   /**
@@ -95,13 +95,13 @@ export class ZenSwitchComponent implements ControlValueAccessor {
   /**
    * Toggles the switch value and notifies the change.
    */
-  onToggle(check?: boolean): void {
+  setValue(value?: boolean): void {
     if (this.zenDisabledDirective.disabledBoolean()) return;
 
-    const value = check ?? !this.checked();
+    const _value = value ?? !this.value();
 
-    this.checked.set(value);
-    this.onChange(value);
+    this.value.set(_value);
+    this.onChange(_value);
     this.onTouched();
   }
 
@@ -113,15 +113,15 @@ export class ZenSwitchComponent implements ControlValueAccessor {
       case 'Enter':
       case 'Space': {
         event.preventDefault();
-        this.onToggle();
+        this.setValue();
         break;
       }
       case 'ArrowRight': {
-        this.onToggle(true);
+        this.setValue(true);
         break;
       }
       case 'ArrowLeft': {
-        this.onToggle(false);
+        this.setValue(false);
         break;
       }
     }
