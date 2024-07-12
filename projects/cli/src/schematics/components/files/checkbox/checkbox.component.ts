@@ -6,8 +6,8 @@ import {
   ElementRef,
   forwardRef,
   inject,
-  model,
   Renderer2,
+  signal,
   viewChild,
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
@@ -62,13 +62,13 @@ export class ZenCheckboxComponent
   implements ControlValueAccessor, AfterViewInit
 {
   /** Model for the checked state of the checkbox. */
-  readonly checked = model<CheckedState>(false);
+  readonly value = signal<CheckedState>(false);
 
   /** @ignore */
   readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });
 
   /** @ignore */
-  private readonly checked$ = toObservable(this.checked);
+  private readonly checked$ = toObservable(this.value);
 
   /** @ignore */
   private readonly destroyRef = inject(DestroyRef);
@@ -96,7 +96,7 @@ export class ZenCheckboxComponent
    * Writes a new value to the component.
    */
   writeValue(value: boolean): void {
-    this.checked.set(value);
+    this.value.set(value);
   }
 
   /**
@@ -124,11 +124,11 @@ export class ZenCheckboxComponent
    * Toggles the checkbox value and notifies the change.
    * If the component is disabled, no action is performed.
    */
-  onToggle(): void {
+  setValue(): void {
     if (this.zenDisabledDirective.disabledBoolean()) return;
 
-    this.checked.update(value => !value);
-    this.onChange(this.checked());
+    this.value.update(value => !value);
+    this.onChange(this.value());
     this.onTouched();
   }
 

@@ -35,7 +35,7 @@ export class ZenRadioComponent implements ControlValueAccessor {
   readonly id = input<string | undefined>();
 
   /** Model for the checked state of the checkbox. */
-  readonly checked = model<boolean>(false);
+  readonly value = model<boolean>(false);
 
   /** @ignore */
   readonly zenDisabledDirective = inject(ZenDisabledDirective, { self: true });
@@ -47,7 +47,7 @@ export class ZenRadioComponent implements ControlValueAccessor {
    * Writes a new value to the component.
    */
   writeValue(value: boolean): void {
-    this.checked.set(value);
+    this.value.set(value);
   }
 
   /**

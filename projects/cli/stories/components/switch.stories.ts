@@ -27,7 +27,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   render: () => ({
-    template: `<zen-switch [disabled]="true" />`,
+    template: `<zen-switch disabled="true" />`,
   }),
 };
 
@@ -36,7 +36,7 @@ export const Checked: Story = {
     template: `
       <zen-switch [ngModel]="true" />
       <br/>
-      <zen-switch [checked]="true" />
+      <zen-switch />
     `,
   }),
 };

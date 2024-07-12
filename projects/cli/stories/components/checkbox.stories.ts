@@ -14,8 +14,8 @@ export const Default: Story = {
   render: () => ({
     template: `
         <zen-checkbox />
-        <zen-checkbox [checked]="true" />
-        <zen-checkbox checked="mixed" />
+        <zen-checkbox [value]="true" />
+        <zen-checkbox value="mixed" />
     `,
   }),
 };
@@ -24,8 +24,8 @@ export const Disabled: Story = {
   render: () => ({
     template: `
         <zen-checkbox disabled="true"/>
-        <zen-checkbox [checked]="true" disabled="true"/>
-        <zen-checkbox checked="mixed" disabled="true"/>
+        <zen-checkbox [value]="true" disabled="true"/>
+        <zen-checkbox value="mixed" disabled="true"/>
     `,
   }),
 };

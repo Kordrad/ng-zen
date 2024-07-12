@@ -1,9 +1,9 @@
 <button
   class="switch"
-  [attr.aria-checked]="checked()"
+  [attr.aria-checked]="value()"
   [attr.aria-disabled]="zenDisabledDirective.disabledBoolean()"
   [disabled]="zenDisabledDirective.disabledBoolean()"
-  (click)="onToggle()"
+  (click)="setValue()"
   (keydown)="onKeyDown($event)"
   role="switch"
 >
