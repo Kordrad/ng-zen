@@ -1,5 +1,0 @@
-{
-  "*.{js,ts,jsx,html}": ["npx eslint --fix"],
-  "*.{json,js,ts,html}": ["prettier --write --ignore-unknown"],
-  "*.{css,scss}": ["stylelint --fix"]
-}

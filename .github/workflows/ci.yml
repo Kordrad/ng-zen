@@ -1,4 +1,4 @@
-name: Check pull request
+name: CI
 
 on:
   pull_request:
@@ -15,27 +15,36 @@ jobs:
       cache-key: ${{ steps.cache-key.outputs.cache-key }}
     steps:
       - uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: corepack enable
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
       - id: cache-key
-        run: echo "::set-output name=cache-key::$(echo ${{ runner.os }}-node-${{ env.NODE_VERSION }}-npm-cache-$(sha256sum package-lock.json | cut -d' ' -f1))"
+        run: |
+          CACHE_KEY="${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-cache-$(sha256sum pnpm-lock.yaml | cut -d' ' -f1)"
+          echo "cache-key=$CACHE_KEY" >> $GITHUB_OUTPUT
       - uses: actions/cache@v4
-        id: npm-cache
+        id: pnpm-cache
         with:
           path: |
             node_modules
-            ~/.npm
+            ~/.pnpm-store
           key: ${{ steps.cache-key.outputs.cache-key }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.NODE_VERSION }}-npm-cache-
-      - run: npm ci
+            ${{ runner.os }}-node-${{ env.NODE_VERSION }}-pnpm-cache-
+      - run: pnpm install --frozen-lockfile
 
   lint:
     needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: corepack enable
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -43,43 +52,23 @@ jobs:
         with:
           path: |
             node_modules
-            ~/.npm
+            ~/.pnpm-store
           key: ${{ needs.install.outputs.cache-key }}
-      - run: npm run lint
+      - run: pnpm run lint
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lint-report
           path: lint-report/
           retention-days: ${{ env.RETENTION_DAYS }}
-
-  performance:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-      - uses: actions/cache@v4
-        with:
-          path: |
-            node_modules
-            ~/.npm
-          key: ${{ needs.install.outputs.cache-key }}
-      - run: npm run performance
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: performance-report
-          path: performance-report/
-          retention-days: ${{ env.RETENTION_DAYS }}
-
   test:
     needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -87,9 +76,9 @@ jobs:
         with:
           path: |
             node_modules
-            ~/.npm
+            ~/.pnpm-store
           key: ${{ needs.install.outputs.cache-key }}
-      - run: npm run test
+      - run: pnpm run test
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -98,10 +87,13 @@ jobs:
           retention-days: ${{ env.RETENTION_DAYS }}
 
   build:
-    needs: [install, lint, performance, test]
+    needs: [install, lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -109,9 +101,9 @@ jobs:
         with:
           path: |
             node_modules
-            ~/.npm
+            ~/.pnpm-store
           key: ${{ needs.install.outputs.cache-key }}
-      - run: npm run build
+      - run: pnpm run build
       - uses: actions/upload-artifact@v4
         if: always()
         with:

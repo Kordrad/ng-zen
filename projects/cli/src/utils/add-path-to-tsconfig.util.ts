@@ -1,11 +1,6 @@
-import { SchematicsException } from '@angular-devkit/schematics';
-import { Tree } from '@angular-devkit/schematics';
+import { SchematicsException, Tree } from '@angular-devkit/schematics';
 
-export function addPathToTsconfigUtil(
-  tree: Tree,
-  key: string,
-  value: string[]
-): void {
+export function addPathToTsconfigUtil(tree: Tree, key: string, value: string[]): void {
   const tsconfigPath = 'tsconfig.json';
 
   // Check if tsconfig.json exists
@@ -32,7 +27,7 @@ export function addPathToTsconfigUtil(
   try {
     tsconfig = JSON.parse(tsconfigContent);
   } catch (e) {
-    throw new SchematicsException('Failed to parse tsconfig.json');
+    throw new SchematicsException('Failed to parse tsconfig.json' + e);
   }
 
   // Modify compilerOptions.paths to add your new mapping

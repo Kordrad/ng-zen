@@ -1,15 +1,15 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "pnpm",
+    "schematicCollections": ["angular-eslint"]
+  },
   "newProjectRoot": "projects",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss",
-      "standalone": true,
       "changeDetection": "OnPush"
-    },
-    "@schematics/angular:directive": {
-      "standalone": true
     }
   },
   "projects": {
@@ -37,16 +37,15 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "configPath": "./jest.config.ts"
+            "configPath": "./jest.config.ts",
+            "tsConfig": "tsconfig.spec.json"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": [
-              "projects/cli/**/*.ts",
-              "projects/cli/**/*.html"
-            ]
+            "lintFilePatterns": ["projects/cli/**/*.ts", "projects/cli/**/*.html"],
+            "eslintConfig": "projects/cli/eslint.config.js"
           }
         },
         "storybook": {
@@ -71,8 +70,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

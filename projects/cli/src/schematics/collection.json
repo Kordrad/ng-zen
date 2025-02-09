@@ -11,12 +11,6 @@
       "factory": "./components/index#componentGenerator",
       "schema": "./components/schema.json",
       "aliases": ["c"]
-    },
-    "directive": {
-      "description": "This schematic generates ui directives",
-      "factory": "./directives/index#directiveGenerator",
-      "schema": "./directives/schema.json",
-      "aliases": ["d"]
     }
   }
 }

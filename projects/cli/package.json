@@ -1,8 +1,10 @@
 {
-  "name": "@ng-zen/cli",
-  "version": "0.0.1-alpha.1",
+  "name": "cli",
+  "version": "0.0.0",
+  "description": "A blank schematics",
   "license": "BSD-2-Clause",
   "private": false,
+  "builders": "./src/builders/builders.json",
   "repository": {
     "url": "https://github.com/Kordrad/ng-zen",
     "directory": "projects/cli"
@@ -21,24 +23,31 @@
     "copy-files": "copyfiles src/schematics/*/schema.json src/schematics/*/files/** src/schematics/*/templates/** src/schematics/collection.json **/README.md **/CHANGELOG.md LICENSE package.json ../../dist/@ng-zen/cli/",
     "clean-packagejson": "cd ../../dist/@ng-zen/cli && npm pkg delete scripts"
   },
-  "schematics": "./src/schematics/collection.json",
+  "keywords": [
+    "schematics"
+  ],
+  "schematics": "./src/collection.json",
   "ng-add": {
     "save": "devDependencies"
   },
   "peerDependencies": {
-    "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/common": "^19.1.6",
+    "@angular/core": "^19.1.6"
   },
   "dependencies": {
-    "@angular-devkit/core": "^17.3.0",
-    "@angular-devkit/schematics": "^17.3.0",
+    "@angular-devkit/core": "^19.1.6",
+    "@angular-devkit/schematics": "^19.1.6",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.3.5",
-    "@storybook/addon-links": "^8.1.0",
-    "@storybook/addon-essentials": "^8.1.0",
-    "@storybook/addon-interactions": "^8.1.0"
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-docs": "^8.5.3",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/angular": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/test": "^8.5.3"
   },
   "sideEffects": false
 }

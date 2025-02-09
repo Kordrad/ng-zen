@@ -18,21 +18,21 @@ This command will add the necessary dependencies and configurations to your Angu
 
 You can generate code using the ng-zen CLI.
 
-
 #### Components
+
 ```bash
 ng generate @ng-zen/cli:component
 ```
 
 #### Directives
+
 ```bash
-ng generate @ng-zen/cli:directive 
+ng generate @ng-zen/cli:directive
 ```
 
 ## License
 
 This project is licensed under the BSD 2-Clause License. For more details, refer to the LICENSE file in the repository.
-
 
 ## Author
 

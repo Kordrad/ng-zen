@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "declarationMap": false,
+    "baseUrl": "tsconfig",
     "lib": ["es2018", "dom"],
     "declaration": true,
     "module": "commonjs",
@@ -12,8 +13,7 @@
     "noImplicitThis": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "rootDir": "src",
-    "outDir": "../../dist/@ng-zen/cli/src",
+    "rootDir": "src/",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "sourceMap": true,
@@ -21,6 +21,9 @@
     "target": "es6",
     "types": ["jest", "node"]
   },
+  "angularCompilerOptions": {
+    "compilationMode": "partial"
+  },
   "include": ["src/**/*"],
-  "exclude": ["src/schematics/*/files/**/*"]
+  "exclude": ["src/*/files/**/*"]
 }
