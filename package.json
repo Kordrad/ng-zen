@@ -14,7 +14,7 @@
     "storybook:build": "ng run build-storybook",
     "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
   },
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@10",
   "private": true,
   "dependencies": {
     "@angular-devkit/schematics": "^19.1.6",

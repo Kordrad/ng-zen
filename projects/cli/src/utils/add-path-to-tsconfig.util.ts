@@ -27,7 +27,7 @@ export function addPathToTsconfigUtil(tree: Tree, key: string, value: string[]):
   try {
     tsconfig = JSON.parse(tsconfigContent);
   } catch (e) {
-    throw new SchematicsException('Failed to parse tsconfig.json', e);
+    throw new SchematicsException('Failed to parse tsconfig.json' + e);
   }
 
   // Modify compilerOptions.paths to add your new mapping
