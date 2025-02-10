@@ -40,6 +40,15 @@
     "@angular-devkit/schematics": "^19.1.6",
     "typescript": "~5.7.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-docs": "^8.5.3",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/angular": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/test": "^8.5.3"
+  },
   "sideEffects": false
 }

@@ -13,6 +13,21 @@
       "sourceRoot": "projects/cli/src",
       "prefix": "lib",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/cli/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cli/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/cli/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -25,6 +40,26 @@
           "options": {
             "lintFilePatterns": ["projects/cli/**/*.ts", "projects/cli/**/*.html"],
             "eslintConfig": "projects/cli/eslint.config.js"
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/cli/.storybook",
+            "browserTarget": "cli:build",
+            "compodoc": true,
+            "compodocArgs": ["-e", "json", "-d", "projects/cli"],
+            "outputDir": "storybook-static"
           }
         }
       }

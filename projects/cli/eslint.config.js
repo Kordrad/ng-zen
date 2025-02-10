@@ -1,6 +1,6 @@
 // @ts-check
 const tseslint = require('typescript-eslint');
-const rootConfig = require('../../eslint.config.js');
+const rootConfig = require('../../eslint.config');
 
 module.exports = tseslint.config(
   ...rootConfig,
@@ -11,7 +11,7 @@ module.exports = tseslint.config(
         'error',
         {
           type: 'attribute',
-          prefix: 'lib',
+          prefix: 'zen',
           style: 'camelCase',
         },
       ],
@@ -19,7 +19,7 @@ module.exports = tseslint.config(
         'error',
         {
           type: 'element',
-          prefix: 'lib',
+          prefix: 'zen',
           style: 'kebab-case',
         },
       ],

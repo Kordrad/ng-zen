@@ -8,7 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "lint:fix": "ng lint --fix"
+    "lint:fix": "ng lint --fix",
+    "prepare": "husky",
+    "storybook": "ng run cli:storybook",
+    "storybook:build": "ng run build-storybook",
+    "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
   },
   "packageManager": "pnpm",
   "private": true,
@@ -28,8 +32,19 @@
   "devDependencies": {
     "@angular/cli": "^19.1.6",
     "@angular/compiler-cli": "^19.1.5",
+    "@angular-devkit/build-angular": "^19.1.5",
+    "@chromatic-com/storybook": "^3.2.4",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@compodoc/compodoc": "^1.1.26",
+    "@eslint/js": "^9.20.0",
+    "@storybook/addon-docs": "^8.5.3",
+    "@storybook/addon-essentials": "^8.5.3",
+    "@storybook/addon-interactions": "^8.5.3",
+    "@storybook/addon-onboarding": "^8.5.3",
+    "@storybook/angular": "^8.5.3",
+    "@storybook/blocks": "^8.5.3",
+    "@storybook/test": "^8.5.3",
     "@types/jasmine": "~5.1.5",
     "angular-eslint": "19.0.2",
     "copyfiles": "^2.4.1",
@@ -38,6 +53,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-storybook": "^0.11.2",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
@@ -50,9 +66,15 @@
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
+    "storybook": "^8.5.3",
     "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "~5.7.3",
     "typescript-eslint": "8.18.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
