@@ -8,18 +8,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
  * the `zen-button` attribute.
  *
  * @example
- * <button zen-button> ... </button>
+ * <button zen-btn> ... </button>
  *
- * @export
- * @class ZenButtonComponent
- *
- * @license BSD-2-Clause
  * @author Konrad Stępień
- * @see https://github.com/Kordrad/ng-zen
+ * @license {@link https://github.com/Kordrad/ng-zen?tab=BSD-2-Clause-1-ov-file|BSD-2-Clause}
+ * @see [GitHub](https://github.com/Kordrad/ng-zen)
  */
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'button[zen-button], a[zen-button]',
+  selector: 'button[zen-button], button[zen-btn], a[zen-button], a[zen-btn]',
   template: `
     <ng-content />
   `,
