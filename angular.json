@@ -10,8 +10,8 @@
     "cli": {
       "projectType": "library",
       "root": "projects/cli",
-      "sourceRoot": "projects/cli/src",
-      "prefix": "lib",
+      "sourceRoot": "projects/cli/schematics",
+      "prefix": "zen",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -29,10 +29,10 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "tsConfig": "projects/cli/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
+            "configPath": "./jest.config.ts",
+            "tsConfig": "tsconfig.spec.json"
           }
         },
         "lint": {

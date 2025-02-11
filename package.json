@@ -14,7 +14,7 @@
     "storybook:build": "ng run build-storybook",
     "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
   },
-  "packageManager": "pnpm@10",
+  "packageManager": "pnpm@10.0.0",
   "private": true,
   "dependencies": {
     "@angular-devkit/schematics": "^19.1.6",
@@ -30,9 +30,10 @@
     "tslib": "^2.8.1"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^19.0.0",
+    "@angular-devkit/build-angular": "^19.1.5",
     "@angular/cli": "^19.1.6",
     "@angular/compiler-cli": "^19.1.5",
-    "@angular-devkit/build-angular": "^19.1.5",
     "@chromatic-com/storybook": "^3.2.4",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
@@ -45,7 +46,7 @@
     "@storybook/angular": "^8.5.3",
     "@storybook/blocks": "^8.5.3",
     "@storybook/test": "^8.5.3",
-    "@types/jasmine": "~5.1.5",
+    "@types/jest": "29.5.14",
     "angular-eslint": "19.0.2",
     "copyfiles": "^2.4.1",
     "eslint": "^9.20.0",
@@ -58,11 +59,8 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
     "jasmine-core": "~5.5.0",
-    "karma": "~6.4.4",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.1",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
+    "jest": "^29.7.0",
+    "jest-preset-angular": "^14.5.1",
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
