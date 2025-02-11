@@ -1,28 +1,46 @@
-# Getting Started With Schematics
+# @ng-zen/cli
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## Overview
 
-### Testing
+The ng-zen CLI is a command-line tool designed to facilitate the generation of UI-kit elements for Angular applications using Angular schematics. It provides out-of-the-box components that can be quickly integrated into Angular projects.
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+## Installation
 
-Check the documentation with
-
-```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
+To install ng-zen CLI, use the following command:
 
 ```bash
-npm run build
-npm publish
+ng add @ng-zen/cli
 ```
 
-That's it!
+This command will add the necessary dependencies and configurations to your Angular project.
+
+## Generating
+
+You can generate code using the ng-zen CLI.
+
+#### Components
+
+```bash
+ng generate @ng-zen/cli:component
+```
+
+#### Directives
+
+```bash
+ng generate @ng-zen/cli:directive
+```
+
+## License
+
+This project is licensed under the BSD 2-Clause License. For more details, refer to the LICENSE file in the repository.
+
+## Author
+
+**@ng-zen/cli** is maintained by Konrad Stępień.
+
+- Email: kord.stp@gmail.com
+- LinkedIn: [Konrad Stępień](https://www.linkedin.com/in/konradstepien/)
+
+## Documentation
+
+The ng-zen CLI is documented using Storybook for component examples and JSDoc, as well as Compodoc for Angular project documentation.

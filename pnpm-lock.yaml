@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@angular-devkit/core':
+        specifier: ^19.1.6
+        version: 19.1.6(chokidar@4.0.3)
       '@angular-devkit/schematics':
         specifier: ^19.1.6
         version: 19.1.6(chokidar@4.0.3)

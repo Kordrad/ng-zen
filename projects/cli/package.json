@@ -35,10 +35,9 @@
     "@angular/core": "^19.1.6"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
     "@angular-devkit/core": "^19.1.6",
     "@angular-devkit/schematics": "^19.1.6",
-    "typescript": "~5.7.2"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",

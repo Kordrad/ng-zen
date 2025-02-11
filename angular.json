@@ -6,6 +6,12 @@
     "schematicCollections": ["angular-eslint"]
   },
   "newProjectRoot": "projects",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush"
+    }
+  },
   "projects": {
     "cli": {
       "projectType": "library",
