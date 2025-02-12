@@ -20,19 +20,20 @@
       "prefix": "zen",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "./projects/cli:build",
           "options": {
-            "project": "projects/cli/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/cli/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/cli/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
+            "files": [
+              "projects/cli/src/schematics/*/schema.json",
+              "projects/cli/src/schematics/*/files/**",
+              "projects/cli/src/schematics/*/templates/**",
+              "projects/cli/src/schematics/collection.json",
+              "projects/cli/README.md",
+              "projects/cli/package.json",
+              "LICENSE"
+            ],
+            "tsConfig": "projects/cli/tsconfig.schematics.json",
+            "outputDir": "/dist/@ng-zen/cli/"
+          }
         },
         "test": {
           "builder": "@angular-builders/jest:run",
