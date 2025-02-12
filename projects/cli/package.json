@@ -4,7 +4,7 @@
   "description": "A blank schematics",
   "license": "BSD-2-Clause",
   "private": false,
-  "builders": "./src/builders/builders.json",
+  "builders": "./builders/builders.json",
   "repository": {
     "url": "https://github.com/Kordrad/ng-zen",
     "directory": "projects/cli"
@@ -16,12 +16,6 @@
     "name": "Konrad Stępień",
     "email": "kord.stp@gmail.com",
     "url": "https://www.linkedin.com/in/KonradStepien/"
-  },
-  "scripts": {
-    "build": "tsc -p tsconfig.schematics.json",
-    "postbuild": "npm run copy-files && npm run clean-packagejson",
-    "copy-files": "copyfiles src/schematics/*/schema.json src/schematics/*/files/** src/schematics/*/templates/** src/schematics/collection.json **/README.md **/CHANGELOG.md LICENSE package.json ../../dist/@ng-zen/cli/",
-    "clean-packagejson": "cd ../../dist/@ng-zen/cli && npm pkg delete scripts"
   },
   "keywords": [
     "schematics"
