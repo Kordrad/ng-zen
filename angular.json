@@ -22,17 +22,8 @@
         "build": {
           "builder": "./projects/cli:build",
           "options": {
-            "files": [
-              "projects/cli/src/schematics/*/schema.json",
-              "projects/cli/src/schematics/*/files/**",
-              "projects/cli/src/schematics/*/templates/**",
-              "projects/cli/src/schematics/collection.json",
-              "projects/cli/README.md",
-              "projects/cli/package.json",
-              "LICENSE"
-            ],
-            "tsConfig": "projects/cli/tsconfig.schematics.json",
-            "outputDir": "/dist/@ng-zen/cli/"
+            "files": ["projects/cli/src/**", "projects/cli/README.md", "projects/cli/package.json", "LICENSE"],
+            "tsConfig": "projects/cli/tsconfig.schematics.json"
           }
         },
         "test": {
