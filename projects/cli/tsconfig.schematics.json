@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
+    "outDir": "../../dist/@ng-zen/cli/",
     "declarationMap": false,
     "baseUrl": "tsconfig",
     "lib": ["es2018", "dom"],
