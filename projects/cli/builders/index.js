@@ -66,7 +66,7 @@ export default createBuilder(async (options, context) => {
     await copyProjectFiles(options.files, outputDir, context);
 
     context.logger.info('Cleaning package.json');
-    await cleanPackageJson(outputDir, context);
+    await cleanPackageJson(outputDir);
 
     return { success: true };
   } catch (error) {
