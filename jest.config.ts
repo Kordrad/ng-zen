@@ -12,10 +12,8 @@ export default {
   coverageProvider: 'v8',
   moduleNameMapper: {
     '^@ng-zen/cli/(.*)': '<rootDir>/projects/cli/src/$1',
-    '^ng-zen/components/(.*)':
-      '<rootDir>/projects/cli/src/schematics/components/files/$1',
-    '^ng-zen/directives/(.*)':
-      '<rootDir>/projects/cli/src/schematics/directives/files/$1',
+    '^ng-zen/components/(.*)': '<rootDir>/projects/cli/src/schematics/components/files/$1',
+    '^ng-zen/directives/(.*)': '<rootDir>/projects/cli/src/schematics/directives/files/$1',
   },
   preset: 'jest-preset-angular',
   testEnvironment: 'jsdom',
