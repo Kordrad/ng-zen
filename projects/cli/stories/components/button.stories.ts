@@ -18,10 +18,10 @@ export const Default: Story = {
   }),
 };
 
-export const Disabled: Story = {
-  render: () => ({
-    template: `
-        <button zen-button disabled>Test</button>
-    `,
-  }),
-};
+// export const Disabled: Story = {
+//   render: () => ({
+//     template: `
+//         <button zen-button disabled>Test</button>
+//     `,
+//   }),
+// };

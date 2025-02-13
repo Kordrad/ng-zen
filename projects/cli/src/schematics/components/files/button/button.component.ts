@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ZenDisabledHostDirective } from 'ng-zen/directives/disabled';
 
 /**
  * ZenButtonComponent is a reusable button component designed to provide
@@ -8,22 +7,19 @@ import { ZenDisabledHostDirective } from 'ng-zen/directives/disabled';
  * the `zen-button` attribute.
  *
  * @example
- * <button zen-button> ... </button>
+ * <button zen-btn> ... </button>
  *
- * @export
- * @class ZenButtonComponent
- *
- * @license BSD-2-Clause
  * @author Konrad Stępień
- * @see {https://github.com/Kordrad/ng-zen GitHub Repository}
+ * @license {@link https://github.com/Kordrad/ng-zen?tab=BSD-2-Clause-1-ov-file|BSD-2-Clause}
+ * @see [GitHub](https://github.com/Kordrad/ng-zen)
  */
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'button[zen-button], a[zen-button]',
-  standalone: true,
-  template: ` <ng-content /> `,
+  selector: 'button[zen-button], button[zen-btn], a[zen-button], a[zen-btn]',
+  template: `
+    <ng-content />
+  `,
   styleUrl: './button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  hostDirectives: [ZenDisabledHostDirective],
 })
 export class ZenButtonComponent {}
