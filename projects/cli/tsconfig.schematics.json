@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
+    "outDir": "../../dist/@ng-zen/cli/",
     "declarationMap": false,
     "baseUrl": "tsconfig",
     "lib": ["es2018", "dom"],
@@ -19,7 +20,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "es6",
-    "types": ["jest", "node"]
+    "types": ["jest"]
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"
