@@ -4,8 +4,8 @@
     "outDir": "../../dist/@ng-zen/cli/",
     "declarationMap": false,
     "baseUrl": "tsconfig",
-    "lib": ["es2018", "dom"],
-    "declaration": true,
+    "lib": ["es2018"],
+    "declaration": false,
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": true,
@@ -19,12 +19,12 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "es6",
+    "target": "es2022",
     "types": ["jest"]
   },
   "angularCompilerOptions": {
     "compilationMode": "partial"
   },
   "include": ["src/**/*"],
-  "exclude": ["src/*/files/**/*"]
+  "exclude": ["src/schematics/*/files/**/*"]
 }

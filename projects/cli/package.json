@@ -1,6 +1,6 @@
 {
-  "name": "cli",
-  "version": "0.0.0",
+  "name": "@ng-zen/cli",
+  "version": "19.0.0-alpha.1",
   "description": "A blank schematics",
   "license": "BSD-2-Clause",
   "private": false,
@@ -20,10 +20,10 @@
   "keywords": [
     "schematics"
   ],
-  "schematics": "./src/collection.json",
   "ng-add": {
     "save": "devDependencies"
   },
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/common": "^19.1.6",
     "@angular/core": "^19.1.6"
