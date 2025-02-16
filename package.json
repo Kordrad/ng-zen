@@ -11,7 +11,7 @@
     "prepare": "husky",
     "storybook": "ng run cli:storybook",
     "storybook:build": "ng run build-storybook",
-    "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json"
+    "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json -t"
   },
   "packageManager": "pnpm@10.0.0",
   "private": true,
