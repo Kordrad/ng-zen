@@ -8,6 +8,74 @@
   "directives": [],
   "components": [
     {
+      "name": "ZenAvatarComponent",
+      "id": "component-ZenAvatarComponent-f26ce91f1c95a5d853a968cb31902e9de930468ade56fce34140588cca4b3e82289af896feddd6915ea48dc5d1d09d6ac58c881cc01019cdefa365a1c72f8295",
+      "file": "projects/cli/src/schematics/components/files/avatar/avatar.component.ts",
+      "changeDetection": "ChangeDetectionStrategy.OnPush",
+      "encapsulation": [],
+      "entryComponents": [],
+      "inputs": [],
+      "outputs": [],
+      "providers": [],
+      "selector": "zen-avatar",
+      "styleUrls": [],
+      "styles": [],
+      "template": "@if (src()) {\n  <img [alt]=\"alt()\" [ngSrc]=\"src()\" fill onerror=\"console.log('test')\" />\n} @else {\n  <ng-content />\n}\n",
+      "templateUrl": [],
+      "viewProviders": [],
+      "hostDirectives": [],
+      "inputsClass": [],
+      "outputsClass": [],
+      "propertiesClass": [
+        {
+          "name": "alt",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Sets or retrieves a text alternative to the graphic.</p>\n",
+          "line": 65,
+          "rawdescription": "\n\nSets or retrieves a text alternative to the graphic.\n",
+          "modifierKind": [148]
+        },
+        {
+          "name": "src",
+          "defaultValue": "input<string>('')",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "",
+          "indexKey": "",
+          "optional": false,
+          "description": "<p>Name of the source image. Image name will be processed by the image loader,\nand the final URL will be applied as the src property of the image.</p>\n",
+          "line": 61,
+          "rawdescription": "\n\nName of the source image. Image name will be processed by the image loader,\nand the final URL will be applied as the src property of the image.\n",
+          "modifierKind": [148]
+        }
+      ],
+      "methodsClass": [],
+      "deprecated": false,
+      "deprecationMessage": "",
+      "hostBindings": [],
+      "hostListeners": [],
+      "standalone": false,
+      "imports": [
+        {
+          "name": "NgOptimizedImage"
+        }
+      ],
+      "description": "<p>A component to display an avatar image.\nIf a valid image source URL is provided, it will render an image element.\nOtherwise, it will display projected content.</p>\n<p>This component utilizes Angular&#39;s optimized image directives for enhanced performance.</p>\n<h3>Usage</h3>\n<p>To use the component, you can provide an image source or project content:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;!-- If an image source is provided, it will display the image --&gt;\n&lt;zen-avatar [src]=&quot;&#39;/path/to/image.jpg&#39;&quot; /&gt;\n\n&lt;!-- If no image source is provided, it will display the projected content --&gt;\n&lt;zen-avatar&gt; A &lt;/zen-avatar&gt;</code></pre></div><h3>CSS Custom Properties</h3>\n<p>You can customize the avatar using CSS custom properties:</p>\n<b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-css\">zen-avatar {\n --zen-avatar-size: 16px;\n --zen-avatar-bg-color: black;\n --zen-avatar-color: white;\n --zen-avatar-font-size: small;\n}</code></pre></div><b>Example :</b><div><pre class=\"line-numbers\"><code class=\"language-html\">&lt;zen-avatar src=&quot;https://picsum.photos/32&quot; /&gt;</code></pre></div><p>See <a href=\"https://github.com/Kordrad/ng-zen\">GitHub</a></p>\n",
+      "rawdescription": "\n\nA component to display an avatar image.\nIf a valid image source URL is provided, it will render an image element.\nOtherwise, it will display projected content.\n\nThis component utilizes Angular's optimized image directives for enhanced performance.\n\n### Usage\n\nTo use the component, you can provide an image source or project content:\n\n```html\n<!-- If an image source is provided, it will display the image -->\n<zen-avatar [src]=\"'/path/to/image.jpg'\" />\n\n<!-- If no image source is provided, it will display the projected content -->\n<zen-avatar> A </zen-avatar>\n```\n\n### CSS Custom Properties\n\nYou can customize the avatar using CSS custom properties:\n\n```css\nzen-avatar {\n --zen-avatar-size: 16px;\n --zen-avatar-bg-color: black;\n --zen-avatar-color: white;\n --zen-avatar-font-size: small;\n}\n```\n\n```html\n<zen-avatar src=\"https://picsum.photos/32\" />\n```\nSee [GitHub](https://github.com/Kordrad/ng-zen)\n",
+      "type": "component",
+      "sourceCode": "import { NgOptimizedImage } from '@angular/common';\nimport { ChangeDetectionStrategy, Component, input } from '@angular/core';\n\n/**\n * A component to display an avatar image.\n * If a valid image source URL is provided, it will render an image element.\n * Otherwise, it will display projected content.\n *\n * This component utilizes Angular's optimized image directives for enhanced performance.\n *\n * ### Usage\n *\n * To use the component, you can provide an image source or project content:\n *\n * ```html\n * <!-- If an image source is provided, it will display the image -->\n * <zen-avatar [src]=\"'/path/to/image.jpg'\" />\n *\n * <!-- If no image source is provided, it will display the projected content -->\n * <zen-avatar> A </zen-avatar>\n * ```\n *\n * ### CSS Custom Properties\n *\n * You can customize the avatar using CSS custom properties:\n *\n * ```css\n * zen-avatar {\n *  --zen-avatar-size: 16px;\n *  --zen-avatar-bg-color: black;\n *  --zen-avatar-color: white;\n *  --zen-avatar-font-size: small;\n * }\n * ```\n *\n * @example\n * <zen-avatar src=\"https://picsum.photos/32\" />\n *\n * @author Konrad Stępień\n * @license {@link https://github.com/Kordrad/ng-zen?tab=BSD-2-Clause-1-ov-file|BSD-2-Clause}\n * @see [GitHub](https://github.com/Kordrad/ng-zen)\n */\n@Component({\n  selector: 'zen-avatar',\n  imports: [NgOptimizedImage],\n  template: `\n    @if (src()) {\n      <img [alt]=\"alt()\" [ngSrc]=\"src()\" fill onerror=\"console.log('test')\" />\n    } @else {\n      <ng-content />\n    }\n  `,\n  styleUrl: './avatar.component.scss',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class ZenAvatarComponent {\n  /**\n   * Name of the source image. Image name will be processed by the image loader,\n   * and the final URL will be applied as the src property of the image.\n   */\n  readonly src = input<string>('');\n  /**\n   * Sets or retrieves a text alternative to the graphic.\n   */\n  readonly alt = input<string>('');\n}\n",
+      "styleUrl": "./avatar.component.scss",
+      "assetsDirs": [],
+      "styleUrlsData": "",
+      "stylesData": "",
+      "extends": []
+    },
+    {
       "name": "ZenButtonComponent",
       "id": "component-ZenButtonComponent-3cf692f2e38f4805b6b777a8b90ee71a48d68b8c50ea63a0c8490edc11009f4233f459017923bf930081aa50981a9f4b21b8280fe8dc95e4db2cb604a9c0073e",
       "file": "projects/cli/src/schematics/components/files/button/button.component.ts",
@@ -45,54 +113,19 @@
       "extends": []
     }
   ],
-  "modules": [
-    {
-      "name": "ZenButtonModule",
-      "id": "module-ZenButtonModule-e850081c9bb56a5380116559e66bcd7cb03e421018e7173bc4cdb8dd471508c6280e0b85030c2cce1b00bf4e0517969538d9f5add3be8406b7f6e6c9f080bff5",
-      "description": "",
-      "deprecationMessage": "",
-      "deprecated": false,
-      "file": "projects/cli/src/schematics/components/files/button/index.ts",
-      "methods": [],
-      "sourceCode": "import { NgModule } from '@angular/core';\n\nimport { ZenButtonComponent } from './button.component';\n\n@NgModule({\n  imports: [ZenButtonComponent],\n  exports: [ZenButtonComponent],\n})\nexport class ZenButtonModule {}\nexport * from './button.component';\n",
-      "children": [
-        {
-          "type": "providers",
-          "elements": []
-        },
-        {
-          "type": "declarations",
-          "elements": []
-        },
-        {
-          "type": "imports",
-          "elements": [
-            {
-              "name": "ZenButtonComponent"
-            }
-          ]
-        },
-        {
-          "type": "exports",
-          "elements": [
-            {
-              "name": "ZenButtonComponent"
-            }
-          ]
-        },
-        {
-          "type": "bootstrap",
-          "elements": []
-        },
-        {
-          "type": "classes",
-          "elements": []
-        }
-      ]
-    }
-  ],
+  "modules": [],
   "miscellaneous": {
     "variables": [
+      {
+        "name": "Default",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-avatar src=\"https://github.com/Kordrad.png\" alt=\"Author\" style=\"--zen-avatar-size: 64px\"/>\n    `,\n  }),\n}"
+      },
       {
         "name": "Default",
         "ctype": "miscellaneous",
@@ -104,6 +137,16 @@
         "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-btn>Test</button>\n    `,\n  }),\n}"
       },
       {
+        "name": "Image",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
+      },
+      {
         "name": "preview",
         "ctype": "miscellaneous",
         "subtype": "variable",
@@ -112,10 +155,31 @@
         "deprecationMessage": "",
         "type": "Preview",
         "defaultValue": "{\n  parameters: {\n    layout: 'centered',\n  },\n}"
+      },
+      {
+        "name": "Text",
+        "ctype": "miscellaneous",
+        "subtype": "variable",
+        "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "type": "Story",
+        "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem;\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
       }
     ],
     "functions": [],
     "typealiases": [
+      {
+        "name": "Story",
+        "ctype": "miscellaneous",
+        "subtype": "typealias",
+        "rawtype": "StoryObj<ZenAvatarComponent>",
+        "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "deprecated": false,
+        "deprecationMessage": "",
+        "description": "",
+        "kind": 183
+      },
       {
         "name": "Story",
         "ctype": "miscellaneous",
@@ -130,6 +194,38 @@
     ],
     "enumerations": [],
     "groupedVariables": {
+      "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts": [
+        {
+          "name": "Default",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <zen-avatar src=\"https://github.com/Kordrad.png\" alt=\"Author\" style=\"--zen-avatar-size: 64px\"/>\n    `,\n  }),\n}"
+        },
+        {
+          "name": "Image",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  args: {\n    src: 'https://picsum.photos/32',\n  },\n}"
+        },
+        {
+          "name": "Text",
+          "ctype": "miscellaneous",
+          "subtype": "variable",
+          "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "type": "Story",
+          "defaultValue": "{\n  render: () => ({\n    template: `\n      <div style=\"display: flex; gap: 1rem;\">\n        <zen-avatar>MI</zen-avatar>\n        <zen-avatar>IB</zen-avatar>\n        <zen-avatar>WP</zen-avatar>\n        <zen-avatar>AI</zen-avatar>\n      </div> `,\n  }),\n}"
+        }
+      ],
       "projects/cli/src/schematics/components/files/button/button.stories.ts": [
         {
           "name": "Default",
@@ -158,6 +254,19 @@
     "groupedFunctions": {},
     "groupedEnumerations": {},
     "groupedTypeAliases": {
+      "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts": [
+        {
+          "name": "Story",
+          "ctype": "miscellaneous",
+          "subtype": "typealias",
+          "rawtype": "StoryObj<ZenAvatarComponent>",
+          "file": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+          "deprecated": false,
+          "deprecationMessage": "",
+          "description": "",
+          "kind": 183
+        }
+      ],
       "projects/cli/src/schematics/components/files/button/button.stories.ts": [
         {
           "name": "Story",
@@ -175,7 +284,7 @@
   },
   "routes": [],
   "coverage": {
-    "count": 25,
+    "count": 22,
     "status": "low",
     "files": [
       {
@@ -184,6 +293,55 @@
         "linktype": "miscellaneous",
         "linksubtype": "variable",
         "name": "preview",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/src/schematics/components/files/avatar/avatar.component.ts",
+        "type": "component",
+        "linktype": "component",
+        "name": "ZenAvatarComponent",
+        "coveragePercent": 100,
+        "coverageCount": "3/3",
+        "status": "very-good"
+      },
+      {
+        "filePath": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Default",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Image",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "type": "variable",
+        "linktype": "miscellaneous",
+        "linksubtype": "variable",
+        "name": "Text",
+        "coveragePercent": 0,
+        "coverageCount": "0/1",
+        "status": "low"
+      },
+      {
+        "filePath": "projects/cli/src/schematics/components/files/avatar/avatar.stories.ts",
+        "type": "type alias",
+        "linktype": "miscellaneous",
+        "linksubtype": "typealias",
+        "name": "Story",
         "coveragePercent": 0,
         "coverageCount": "0/1",
         "status": "low"
