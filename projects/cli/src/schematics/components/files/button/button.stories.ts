@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { ZenButtonComponent } from 'ng-zen/components/button';
+import { ZenButtonComponent } from './index';
 
 export default {
   title: 'Components/Button',
@@ -13,15 +13,7 @@ type Story = StoryObj<ZenButtonComponent>;
 export const Default: Story = {
   render: () => ({
     template: `
-        <button zen-button>Test</button>
+        <button zen-btn>Test</button>
     `,
   }),
 };
-
-// export const Disabled: Story = {
-//   render: () => ({
-//     template: `
-//         <button zen-button disabled>Test</button>
-//     `,
-//   }),
-// };

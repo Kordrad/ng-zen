@@ -97,11 +97,11 @@
         "name": "Default",
         "ctype": "miscellaneous",
         "subtype": "variable",
-        "file": "projects/cli/stories/components/button.stories.ts",
+        "file": "projects/cli/src/schematics/components/files/button/button.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "type": "Story",
-        "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
+        "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-btn>Test</button>\n    `,\n  }),\n}"
       },
       {
         "name": "preview",
@@ -121,7 +121,7 @@
         "ctype": "miscellaneous",
         "subtype": "typealias",
         "rawtype": "StoryObj<ZenButtonComponent>",
-        "file": "projects/cli/stories/components/button.stories.ts",
+        "file": "projects/cli/src/schematics/components/files/button/button.stories.ts",
         "deprecated": false,
         "deprecationMessage": "",
         "description": "",
@@ -130,16 +130,16 @@
     ],
     "enumerations": [],
     "groupedVariables": {
-      "projects/cli/stories/components/button.stories.ts": [
+      "projects/cli/src/schematics/components/files/button/button.stories.ts": [
         {
           "name": "Default",
           "ctype": "miscellaneous",
           "subtype": "variable",
-          "file": "projects/cli/stories/components/button.stories.ts",
+          "file": "projects/cli/src/schematics/components/files/button/button.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "type": "Story",
-          "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-button>Test</button>\n    `,\n  }),\n}"
+          "defaultValue": "{\n  render: () => ({\n    template: `\n        <button zen-btn>Test</button>\n    `,\n  }),\n}"
         }
       ],
       "projects/cli/.storybook/preview.ts": [
@@ -158,13 +158,13 @@
     "groupedFunctions": {},
     "groupedEnumerations": {},
     "groupedTypeAliases": {
-      "projects/cli/stories/components/button.stories.ts": [
+      "projects/cli/src/schematics/components/files/button/button.stories.ts": [
         {
           "name": "Story",
           "ctype": "miscellaneous",
           "subtype": "typealias",
           "rawtype": "StoryObj<ZenButtonComponent>",
-          "file": "projects/cli/stories/components/button.stories.ts",
+          "file": "projects/cli/src/schematics/components/files/button/button.stories.ts",
           "deprecated": false,
           "deprecationMessage": "",
           "description": "",
@@ -198,7 +198,7 @@
         "status": "very-good"
       },
       {
-        "filePath": "projects/cli/stories/components/button.stories.ts",
+        "filePath": "projects/cli/src/schematics/components/files/button/button.stories.ts",
         "type": "variable",
         "linktype": "miscellaneous",
         "linksubtype": "variable",
@@ -208,7 +208,7 @@
         "status": "low"
       },
       {
-        "filePath": "projects/cli/stories/components/button.stories.ts",
+        "filePath": "projects/cli/src/schematics/components/files/button/button.stories.ts",
         "type": "type alias",
         "linktype": "miscellaneous",
         "linksubtype": "typealias",
