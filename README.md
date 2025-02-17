@@ -2,25 +2,57 @@
 
 ## Overview
 
-**ng-zen** is a comprehensive library designed to enhance Angular development by providing a collection of UI-kit elements and utilities. It includes a CLI tool with Angular schematics to streamline the generation of these components directly into Angular projects.
+**ng-zen** is a comprehensive Angular development accelerator featuring:
 
-## License
-
-ng-zen is licensed under the BSD 2-Clause License. See the LICENSE file in the repository for detailed information.
+- Ready-to-use UI-kit components
+- Angular schematics integration
+- CLI tool for streamlined component generation
 
 ## Repository Structure
 
-Repository Structure
+The repository contains:
 
-- `/packages/cli`: Contains the ng-zen CLI tool with Angular schematics for generating UI-kit components.
+- `/packages/cli`: Core CLI implementation with Angular schematics
+- Configuration files for publishing and local development
 
-## Author
+## Local development
 
-**@ng-zen/cli** is maintained by Konrad Stępień.
+1. **[Set up Verdaccio](https://verdaccio.org/docs/installation#installing-the-cli)**
+2. **Start local registry**
 
-- Email: kord.stp@gmail.com
-- LinkedIn: [Konrad Stępień](https://www.linkedin.com/in/konradstepien/)
+```bash
+verdaccio
+```
+
+3. **Configure npm to use local registry (follow Verdaccio CLI prompts)**
+4. **Publish locally**
+
+```bash
+pnpm run publish:local
+```
+
+5. **Test in Angular project**
+
+```bash
+ng add @ng-zen/cli --registry http://localhost:4873/
+```
+
+## Author & Maintenance
+
+**Core Maintainer**: Konrad Stępień
+
+- 📧 [kord.stp@gmail.com](mailto:kord.stp@gmail.com)
+- 💼 [LinkedIn Profile](https://www.linkedin.com/in/konradstepien/)
+
+## License
+
+BSD 2-Clause License - [View Full License](LICENSE)
 
 ## Contribution
 
-Contributions to ng-zen are welcome. Fork the repository, make improvements, and submit a pull request.
+To contribute:
+
+1. Fork the repository
+2. Create feature branch
+3. Submit PR with detailed description
+4. Ensure code follows project standards
