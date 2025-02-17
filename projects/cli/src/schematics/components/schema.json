@@ -22,7 +22,7 @@
       "default": "/projects/ng-zen/components"
     },
     "stories": {
-      "description": "Include component story files for better documentation and testing.",
+      "description": "Include component's stories for better documentation and testing",
       "type": "boolean",
       "default": false
     }
