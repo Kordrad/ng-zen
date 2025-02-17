@@ -12,6 +12,7 @@
     "storybook": "ng run cli:storybook",
     "storybook:build": "ng run build-storybook",
     "storybook:doc": "compodoc -e json -d projects/cli -p projects/cli/.storybook/tsconfig.json -t",
+    "verdaccio": "verdaccio",
     "prepublish:verdaccio": "pnpm unpublish @ng-zen/cli --registry http://localhost:4873 --force && pnpm run build",
     "publish:verdaccio": "cd dist/@ng-zen/cli && npm publish --registry http://localhost:4873/"
   },
