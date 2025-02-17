@@ -1,4 +1,5 @@
-export interface ComponentGeneratorSchema {
+import { GeneratorSchemaBase } from '../../types';
+
+export interface ComponentGeneratorSchema extends GeneratorSchemaBase {
   components: 'button'[];
-  path: string;
 }
