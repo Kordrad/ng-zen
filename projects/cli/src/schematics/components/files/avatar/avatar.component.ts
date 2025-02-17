@@ -33,11 +33,8 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
  * }
  * ```
  *
- * ### Example
- *
- * ```html
+ * @example
  * <zen-avatar src="https://picsum.photos/32" />
- * ```
  *
  * @author Konrad Stępień
  * @license {@link https://github.com/Kordrad/ng-zen?tab=BSD-2-Clause-1-ov-file|BSD-2-Clause}
