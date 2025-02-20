@@ -12,8 +12,8 @@ importers:
         specifier: ^19.1.7
         version: 19.1.7(chokidar@4.0.3)
       '@angular-devkit/schematics':
-        specifier: ^19.1.6
-        version: 19.1.6(chokidar@4.0.3)
+        specifier: ^19.1.7
+        version: 19.1.7(chokidar@4.0.3)
       '@angular/animations':
         specifier: ^19.1.5
         version: 19.1.5(@angular/core@19.1.5(rxjs@7.8.1)(zone.js@0.15.0))
@@ -289,10 +289,6 @@ packages:
 
   '@angular-devkit/schematics@18.2.8':
     resolution: {integrity: sha512-i/h2Oji5FhJMC7wDSnIl5XUe/qym+C1ZwScaATJwDyRLCUIynZkj5rLgdG/uK6l+H0PgvxigkF+akWpokkwW6w==}
-    engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-
-  '@angular-devkit/schematics@19.1.6':
-    resolution: {integrity: sha512-6ljZSVTFqnk0utnXLLd82wM6nj68984n5gfrpT1PlOff6MHHNH2YCfwNSlwg6Q5UfDxhEDIT9/MTLnXd6znIRQ==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
 
   '@angular-devkit/schematics@19.1.7':
@@ -7762,16 +7758,6 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/schematics@19.1.6(chokidar@4.0.3)':
-    dependencies:
-      '@angular-devkit/core': 19.1.6(chokidar@4.0.3)
-      jsonc-parser: 3.3.1
-      magic-string: 0.30.17
-      ora: 5.4.1
-      rxjs: 7.8.1
-    transitivePeerDependencies:
-      - chokidar
-
   '@angular-devkit/schematics@19.1.7(chokidar@4.0.3)':
     dependencies:
       '@angular-devkit/core': 19.1.7(chokidar@4.0.3)
@@ -11267,7 +11253,7 @@ snapshots:
   angular-eslint@19.0.2(chokidar@4.0.3)(eslint@9.20.0(jiti@2.4.2))(typescript-eslint@8.24.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(typescript@5.7.3):
     dependencies:
       '@angular-devkit/core': 19.1.7(chokidar@4.0.3)
-      '@angular-devkit/schematics': 19.1.6(chokidar@4.0.3)
+      '@angular-devkit/schematics': 19.1.7(chokidar@4.0.3)
       '@angular-eslint/builder': 19.0.2(chokidar@4.0.3)(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)
       '@angular-eslint/eslint-plugin': 19.0.2(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)
       '@angular-eslint/eslint-plugin-template': 19.0.2(@typescript-eslint/types@8.23.0)(@typescript-eslint/utils@8.23.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)
