@@ -1,11 +1,15 @@
 import { booleanAttribute, Component, input } from '@angular/core';
 
+export type ZenBadgeSize = 'sm' | 'md' | 'lg';
+
 /**
  * ZenBadge is a reusable badge component for displaying labels,
- * statuses, or counts with customizable colors and variants.
+ * statuses, or counts with customizable colors, sizes, and variants.
  *
  * @example
  * <zen-badge>Default</zen-badge>
+ * <zen-badge size="sm">Small</zen-badge>
+ * <zen-badge size="lg">Large</zen-badge>
  * <zen-badge color="primary" variant="outline">Primary</zen-badge>
  * <zen-badge variant="filled">Filled</zen-badge>
  * <zen-badge disabled>Disabled</zen-badge>
@@ -22,6 +26,18 @@ import { booleanAttribute, Component, input } from '@angular/core';
  *   --zen-badge-warning: hsl(36deg 72% 46%);
  *   --zen-badge-danger: hsl(348deg 52% 42%);
  *   --zen-badge-info: hsl(214deg 34% 46%);
+ *   --zen-badge-sm-height: 1.125rem;
+ *   --zen-badge-sm-padding: 0.125rem 0.5rem;
+ *   --zen-badge-sm-font-size: 0.625rem;
+ *   --zen-badge-sm-line-height: 1;
+ *   --zen-badge-md-height: 1.25rem;
+ *   --zen-badge-md-padding: 0.125rem 0.5rem;
+ *   --zen-badge-md-font-size: 0.75rem;
+ *   --zen-badge-md-line-height: 1;
+ *   --zen-badge-lg-height: 1.5rem;
+ *   --zen-badge-lg-padding: 0.1875rem 0.625rem;
+ *   --zen-badge-lg-font-size: 0.875rem;
+ *   --zen-badge-lg-line-height: 1;
  *   --zen-disabled-opacity: 0.6;
  * }
  * ```
@@ -37,10 +53,14 @@ import { booleanAttribute, Component, input } from '@angular/core';
   host: {
     '[attr.data-color]': 'color()',
     '[attr.data-variant]': 'variant()',
+    '[attr.data-size]': 'size()',
     '[attr.data-disabled]': 'disabled() ? "" : null',
   },
 })
 export class ZenBadge {
+  /** The size of the badge. */
+  readonly size = input<ZenBadgeSize>('md');
+
   /** The color theme of the badge. */
   readonly color = input<'neutral' | 'primary' | 'success' | 'warning' | 'danger' | 'info'>('neutral');
 
