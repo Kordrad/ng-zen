@@ -26,18 +26,10 @@ export type ZenBadgeSize = 'sm' | 'md' | 'lg';
  *   --zen-badge-warning: hsl(36deg 72% 46%);
  *   --zen-badge-danger: hsl(348deg 52% 42%);
  *   --zen-badge-info: hsl(214deg 34% 46%);
- *   --zen-badge-sm-height: 1.125rem;
- *   --zen-badge-sm-padding: 0.125rem 0.5rem;
- *   --zen-badge-sm-font-size: 0.625rem;
- *   --zen-badge-sm-line-height: 1;
- *   --zen-badge-md-height: 1.25rem;
- *   --zen-badge-md-padding: 0.125rem 0.5rem;
- *   --zen-badge-md-font-size: 0.75rem;
- *   --zen-badge-md-line-height: 1;
- *   --zen-badge-lg-height: 1.5rem;
- *   --zen-badge-lg-padding: 0.1875rem 0.625rem;
- *   --zen-badge-lg-font-size: 0.875rem;
- *   --zen-badge-lg-line-height: 1;
+ *   --zen-badge-font-size: 0.75rem;
+ *   --zen-badge-padding: 0.2em 0.6em;
+ *   --zen-badge-gap: 0.25em;
+ *   --zen-badge-color: contrast-color(var(--zen-badge-neutral));
  *   --zen-disabled-opacity: 0.6;
  * }
  * ```
